@@ -25,6 +25,18 @@ p.task {
 p.answer {
     
     color: black;
-    font-size: 100%;
+    font-size: 140%;
     
 }
+
+
+.psw {
+    color: red;
+}
+
+.title {
+    padding-top: 3%;
+    padding-left: 10%;
+    
+}
+
