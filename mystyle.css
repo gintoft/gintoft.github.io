@@ -1,0 +1,30 @@
+a {
+    
+    color: aqua
+}
+
+.alert-warning {
+    
+}
+
+p.taskHeader {
+    
+    color: aquamarin;
+    font-family: serif;
+    font-size: 150%;
+    
+}
+
+p.task {
+    
+    color: black;
+    
+    
+}
+
+p.answer {
+    
+    color: black;
+    font-size: 100%;
+    
+}
