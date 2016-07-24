@@ -40,3 +40,9 @@ p.answer {
     
 }
 
+
+.tr:hover {
+    
+    background-color: cornflowerblue;
+    
+}
