@@ -9,8 +9,10 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-body {
+.body {
   margin: 0;
+    background-color: aliceblue;
+    
 }
 article,
 aside,
@@ -192,7 +194,7 @@ th {
   *,
   *:before,
   *:after {
-    color: #000 !important;
+    color: aliceblue;
     text-shadow: none !important;
     background: transparent !important;
     -webkit-box-shadow: none !important;
