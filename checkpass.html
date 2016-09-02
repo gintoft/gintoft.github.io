@@ -11,7 +11,10 @@
    
        
     <!-- Bootstrap -->
-     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="mystyle.css" rel="stylesheet">
   </head>
@@ -58,6 +61,7 @@
   </div>
    
      <br/><br/><br/>
+<<<<<<< HEAD
 <script>
    $("button").click(function () {
      var text = $(this).text();
@@ -65,6 +69,9 @@
    });
 </script>    
                  
+=======
+
+>>>>>>> origin/master
                   
 <div class="container">      
   
@@ -75,12 +82,11 @@
       <li>Нажать кнопку "Проверить пароль"</li>
   </ul>
            
-<form class="navbar-form navbar-left" role="search">
+
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Введите пароль">
+    <input id='password' type="password" class="form-control" placeholder="Введите пароль">
   </div>
-    <button type="submit" class="btn btn-success" id="checkpassword">Проверить пароль</button><br/>
-</form>
+    <button class="btn btn-success" id="checkpassword">Проверить пароль</button><br/>
            
 
     <div class="container">
@@ -5605,10 +5611,17 @@
     
     
     
-     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+     <input type='hidden' id='hiddenPassword'>
+    
   </body>
 </html>
+<script>
+	$(function(){
+		$("button").click(function(){
+			$("#hiddenPassword").val($("#password").val());
+			$("#password").val('');
+			alert('Ваш пароль не найден');
+		});
+	});
+   
+</script>
