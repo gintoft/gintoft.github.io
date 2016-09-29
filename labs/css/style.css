@@ -49,3 +49,11 @@ color: #bc8f8f;
     font-size: 20px;
     color: darkgreen;
 }
+
+.resize_logo {
+    max-width: 571px;
+    max-height: 287px;
+    width: 100%;
+    height: auto;
+}
+}

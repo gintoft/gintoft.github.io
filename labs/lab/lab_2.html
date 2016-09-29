@@ -20,11 +20,12 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
-    <script src="js/lab1.js"></script>
+    <script src="js/lab2.js"></script>
     
   </head>
   
-  <body>
+  <body onload="setInterval('TimeChangeImage()', 200)" onresize="resize_logo()">
+   
     <div class="cotnainer"> 
         <div class="row">
              <div class="navbar navbar-default navbar-fixed-top"> 
@@ -80,16 +81,51 @@
 <div class="bs-callout bs-callout-rosybrown">
   <h4>Задание лабораторной работы:</h4>
   <p>Реализуйте смену картинки по таймеру</p>
-</div>     
+</div>
+
+<p align="center"><img width="350px" height="100px" id="logo" src="img/nsuem_logo.png"></p>
+
 
 <div class="bs-callout bs-callout-rosybrown">
 <h4>Задание лабораторной работы:</h4>
 Реализуйте сохранение информации в Cookies (можно добавить эту функциональность в форму для заказа кофе из предыдущей лабораторной). Используйте приложенный файл с реализациями функций для Cookies.
 </div>
 
+
+<h3>Заказ кофе</h3>
+
+<div class="input-group input-group-lg input-group-info">
+<span class="input-group-addon">Количество кружек</span>  
+<input type="text" class="form-control" id="coffee">
+
+</div>
+<br><p class="sugarNeed">Необходимы сахар и сливки <input type="checkbox" id="sugarNeed"> </p> 
+<div id="coffeeCount" class="btn btn-success btn-lg" onclick="calculateCoffee()">Рассчитать стоимость кофе</div>
+
+<span class="cost" id="hiddenCost" style="display: none;">
+Стоимость кофе составит <span id="costCoffee"></span> рублей.
+</span>
+
+      
+      <br><br>
+
+
+
+
+
+
 <div class="bs-callout bs-callout-rosybrown">
 <h4>Задание лабораторной работы:</h4>
 Реализуйте изменение рисунка при изменении размера экрана.
 </div>
+
+
+<p align="center">
+
+<img class="img-responsive" width="700px" height="200px" id="logo_3" src="img/nsuem_logo.png">
+
+
+</p>
+
 
 </div>
