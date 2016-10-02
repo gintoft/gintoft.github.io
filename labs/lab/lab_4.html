@@ -8,22 +8,16 @@
     <title>ТИМП</title>
     
       <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-   
-       
-    <!-- Bootstrap -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    
-    <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/npm.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
-    <script src="js/lab1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="js/lab4.js"></script>
     
   </head>
-  
   <body>
     <div class="cotnainer"> 
          <div class="row">
@@ -61,10 +55,8 @@
   </div>
    
    <br/><br/><br/>
-
+   
 <div class="container">      
-
-
 <ul class="nav nav-pills">
     <li><a href="https://gintoft.github.io/labs/">Главная</a></li>
     <li><a href="lab_1.html">Лабораторная работа 1</a></li>
@@ -76,8 +68,56 @@
 
 
 <h3>Лабораторная работа №4</h3>
- 
+
 <div class="bs-callout bs-callout-rosybrown">
   <h4>Задание лабораторной работы:</h4>
-  <p>Чета пусто пока ...</p>
+  <p>Реализуйте форму с проверкой корректности данных</p>
 </div>
+
+<h4>Для регистрации Вам нужно заполнить следующие поля:</h4><br>
+
+    
+
+<div class="input-group">    
+<span class="input-group-addon"><i class="fa fa-user" ></i></span>  
+<input type="text" class="form-control" id="name" placeholder="Имя">
+<input type="text" class="form-control" id="lastName" placeholder="Фамилия">
+</div>
+
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span>  
+<input type="text" class="form-control" id="postIndex" placeholder="Почтовый индекс">
+
+</div>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-envelope"></i></span>  
+<input type="text" class="form-control" id="email" placeholder="Электронная почта">
+
+</div>
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-phone"></i></span>  
+<input type="text" class="form-control" id="phone" placeholder="Номер телефона">
+</div>
+
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-calendar"></i></span>  
+<input type="text" class="form-control" id="brithday" placeholder="Дата рождения">
+</div>
+
+<br>
+
+<din class="btn  btn-success" id="registr">Зарегистрироваться</din>
+<br>
+<br>
+
+<div class="alert alert-danger" id="errorRegistration" style="display: none;"></div>
+<div class="alert alert-success" id="successRegistration" style="display: none;"></div>
+
+
+<style>
+    i.fa {        
+        width: 20px;
+        font-size: 140%;
+        text-align: center;
+    }
+</style>

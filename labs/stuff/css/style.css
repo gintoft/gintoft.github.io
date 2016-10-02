@@ -57,3 +57,18 @@ color: #bc8f8f;
     height: auto;
 }
 }
+
+i.fa fa-phone {
+  font-size: 50px;
+color: black;
+}
+
+.errorRegistration {
+    font-size: 20px;
+    color: firebrick;
+    background-color: aliceblue;
+}
+
+div #errorRegistration {
+    color: brown;
+}

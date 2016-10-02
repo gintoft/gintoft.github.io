@@ -10,17 +10,13 @@
       <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
    
        
-    <!-- Bootstrap -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    
-    <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/npm.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
-    <script src="js/lab1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="js/lab3.js"></script>
     
   </head>
   
@@ -84,6 +80,15 @@
   </p>
 </div>
 
+<div class="input-group input-group-xl input-group-info">
+<span class="input-group-addon">Введите страну-производителя автомобиля</span>  
+<input type="text" class="form-control" id="country">
+</div>
+<br>
+<div id="getAuto" class="btn btn-success btn-xl">Предложить автомобили</div>
+<br><br>
+<div class="alert alert-success" id="autoListSwitch" style="display: none;"></div>
+
 <div class="bs-callout bs-callout-rosybrown">
   <h4>Задание лабораторной работы:</h4>
   <p>
@@ -91,6 +96,16 @@
   </p>
 </div>
 
+ <h3>Выберите страну-производителя автомобиля:</h3>
+    <input type="radio" name="category" id="Russia"> Россия<br>
+    <input type="radio" name="category" id="Germany"> Германия<br>
+    <input type="radio" name="category" id="USA"> Соединенные штаты Америки<br>
+    <input type="radio" name="category" id="France"> Франция<br>
+    <input type="radio" name="category" id="AnyCountry"> Любая страна<br><br>
+
+<div class="btn btn-info" id="getList">Подобрать транспорт</div>
+<br><br>
+<div class="alert alert-success" id="autoList" style="display: none;"></div>
 
 <div class="bs-callout bs-callout-rosybrown">
   <h4>Задание лабораторной работы:</h4>
