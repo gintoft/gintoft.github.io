@@ -1,3 +1,6 @@
+// Задание 1.
+
+
 $(document).ready (function(){
 
     $("#getAuto").click (function (){
@@ -22,6 +25,10 @@ $(document).ready (function(){
     })
 })
 
+
+// Задание 2.
+
+
 $(document).ready (function(){
 
     $("#getList").click (function (){
@@ -44,4 +51,53 @@ $(document).ready (function(){
         alert("Ошибка! Выберите одну из стран!");}
         
 })})
+
+
+// Задание 3.
+
+$(document).ready (function(){
+
+$("#getNumbersList").click (function (){
+$("#numberList").hide();
+$("#error").hide();
+    
+var countNumber = parseInt($("#countNumber").val());    
+var res = "Диапазон чисел: ";        
+    
+if ($("#ordered").prop("checked")) { 
+    
+    for (var i=1; i < countNumber; i++) {
+        res+= (i + ', ');    
+    } if (i = countNumber) {
+        res += (countNumber + '.');
+}}
+
+if ($("#reverse").prop("checked")) { 
+       
+    for (var i=countNumber; i > 1; i--) {
+        res+= (i + ', ');    
+    } if (i = 1) {
+        res += (1 + '.');
+}}
+       
+if ($("#random").prop("checked")) { 
+    
+    for (var i=1; i < countNumber; i++) {
+        res+= (Math.floor(1000*Math.random()) + ', ');    
+    } if (i = countNumber) {
+        res += (Math.floor(1000*Math.random()) + '.');
+}} 
+        
+if(res != "Диапазон чисел: ") {
+    $("#numberList").html (res);
+    $("#numberList").show();
+} else {
+    $("#error").show();
+}      
+        
+})})
+
+
+
+
 

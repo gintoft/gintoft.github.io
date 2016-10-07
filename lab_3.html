@@ -16,10 +16,9 @@
 
 <iframe width="100%" height="55px" src="header.html" frameborder="0"></iframe>
 
-  <body>
+<body>
 
 <div class="container">      
-
 <div class="container" style="text-align: center;">
 <ul class="pagination" class="nav nav-pills" style="display:inline-table;">
    
@@ -39,18 +38,15 @@
 </ul>
 </div>
 
-
 <h3>Лабораторная работа №3</h3>
  
 <div class="bs-callout bs-callout-rosybrown">
   <h4>Задание лабораторной работы:</h4>
-  <p>
-Реализуйте программу, определяющую транспортные средства, соответствующие категории (switch-case).
-  </p>
+  <p>Реализуйте программу, определяющую транспортные средства, соответствующие категории (switch-case).</p>
 </div>
 
 <div class="input-group input-group-xl input-group-info">
-<span class="input-group-addon">Введите страну-производителя автомобиля</span>  
+<span class="input-group-addon">Введите страну-производителя автомобиля</span> 
 <input type="text" class="form-control" id="country">
 </div>
 <br>
@@ -72,7 +68,7 @@
     <input type="radio" name="category" id="France"> Франция<br>
     <input type="radio" name="category" id="AnyCountry"> Любая страна<br><br>
 
-<div class="btn btn-info" id="getList">Подобрать транспорт</div>
+<div class="btn btn-primary" id="getList">Подобрать транспорт</div>
 <br><br>
 <div class="alert alert-success" id="autoList" style="display: none;"></div>
 
@@ -81,4 +77,39 @@
   <p>
  Используя динамическую привязку функций реализуйте вывод последовательностей по выбору пользователя.      
   </p>
+</div>  
+
+<span style="font-size: 14pt;">
+  <h4>Укажите, какие числа необходимо отобразить: </h4>
+  <ul style="padding:10pt;">
+      <input type="radio" name="type" id="ordered"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i> По возрастанию от 1 до n  <br>
+      <input type="radio" name="type" id="reverse"> <i class="fa fa-sort-numeric-desc" aria-hidden="true"></i> По убыванию от 1 до n <br>
+      <input type="radio" name="type" id="random"> <i class="fa fa-list-ol" aria-hidden="true"></i> n случайных <br>
+  </ul>
+</span>
+ 
+<input type="text" style="width: 150px; height: 34px;" id="countNumber" placeholder="Количество чисел">
+
+<div class="btn btn-primary" style="width: 150px; height: 35px;" id="getNumbersList">Вывести числа</div>
+
+<br><br>
+
+<div class="alert alert-success" id="numberList" style="display: none;"></div>
+<div class="alert alert-danger" id="error" style="display: none;">Ошибка! Укажите количество чисел или выберите алгоритм отображения.</div>
+
+
+<br>
+<br>
+<br>
+
+<style>
+    i.fa {        
+        width: 20px;
+        font-size: 110%;
+        text-align: center;
+    }
+</style>
+
 </div>
+</body>
+</html>
