@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ТИМП</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/npm.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -52,48 +52,66 @@
 
 <div class="input-group">    
 <span class="input-group-addon"><i class="fa fa-user" ></i></span>  
-<input style="width: 250px; height: 34px;" type="text" class="form-control" id="name" placeholder="Имя">
+<input onchange="checkName(this)" style="width: 250px; height: 34px;" type="text" class="form-control" id="name" placeholder="Имя">
 </div>
 
 <div class="input-group">    
 <span class="input-group-addon"><i class="fa fa-user" ></i></span>  
-<input style="width: 250px; height: 34px;" type="text" class="form-control" id="lastName" placeholder="Фамилия">
+<input onchange="checkLastName(this)" style="width: 250px; height: 34px;" type="text" class="form-control" id="lastName" placeholder="Фамилия">
 </div>
 
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span>  
-<input style="width: 250px; height: 34px;" type="text" class="form-control" id="postIndex" placeholder="Почтовый индекс">
+<input onchange="checkPostIndex(this)" style="width: 250px; height: 34px;" type="text" class="form-control" id="postIndex" placeholder="Почтовый индекс">
 
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>  
-<input style="width: 250px; height: 34px;" type="text" class="form-control" id="email" placeholder="Электронная почта">
+<input style="width: 250px; height: 34px;" onchange="checkEmail(this)" type="text" class="form-control" id="email" placeholder="Электронная почта">
 
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-phone"></i></span>  
-<input style="width: 250px; height: 34px;" type="text" class="form-control" id="phone" placeholder="Номер телефона">
+<input style="width: 250px; height: 34px;" type="text" onchange="checkPhone(this)" class="form-control" id="phone" placeholder="Номер телефона">
 </div>
 
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>  
-<input style="width: 250px; height: 34px;" type="text" class="form-control" id="brithday" placeholder="Дата рождения">
+<input style="width: 250px; height: 34px;" type="text" class="form-control" id="brithday" onchange="checkBrithday(this)" placeholder="Дата рождения">
 </div>
 
 <br>
 
-<din class="btn  btn-success" id="registr">Зарегистрироваться</din>
+<din class="btn  btn-success" onclick="isCorrectForm()" id="registr">Зарегистрироваться</din>
 <br>
 <br>
 
-<div class="alert alert-danger" id="errorRegistration" style="display: none;"></div>
-<div class="alert alert-success" id="successRegistration" style="display: none;"></div>
 
+<div class="alert alert-danger" id="nameError" style="display: none;"></div>
+<div class="alert alert-danger" id="lastNameError" style="display: none;"></div>
+<div class="alert alert-danger" id="postIndexError" style="display: none;"></div>
+<div class="alert alert-danger" id="emailError" style="display: none;"></div>
+<div class="alert alert-danger" id="phoneError" style="display: none;"></div>
+<div class="alert alert-danger" id="brithdayError" style="display: none;"></div>
 
 <style>
     i.fa {        
         width: 20px;
         font-size: 140%;
         text-align: center;
+    }
+    
+    .error {
+
+    background-color: #ffcccc;    
+    border-color: red; 
+        
+    }
+    
+    .success {
+       
+    background-color: #d6f5d6;    
+    border-color: green;
+        
     }
 </style>
