@@ -16,7 +16,7 @@
 
 <iframe width="100%" height="55px" src="header.html" frameborder="0"></iframe>
 
-<body>
+<body onload="displayRecords();">
 
 <div class="container">      
 
@@ -52,8 +52,28 @@
   </ul>
 </div>
 
+<br>
+<br>
+  <div id="heading">
+    <h2>МОЙ БЛОГ</h2>
+  </div>
+  <div id="toolbar">
+    <input type="text" id="newtext">
+    <input type="button" value="Добавить запись" onclick="send();">
+    <input type="button" value="Найти" onclick="findAll();">
+    <input type="button" value="Только утренние" onclick="showMorning();">
+    <input type="button" value="По дате ->" onclick="sort(comparers[0]);">
+    <input type="button" value="По дате <-" onclick="sort(comparers[1]);">
+    <input type="button" value="По алфавиту ->" onclick="sort(comparers[2]);">
+    <input type="button" value="По алфавиту <-" onclick="sort(comparers[3]);">
+  </div><br><br>
+  <div id="records_place"></div>
 
-
-<div class="container">
+<br>
+<br>
+<br>
+<br>
 
 </div>
+</body>
+</html>
