@@ -1,0 +1,80 @@
+var tabs = {
+
+start: function(){
+
+    tabs.createLi();
+    tabs.createDiv();
+
+},
+
+createLi: function () {
+
+        var tabs = document.querySelectorAll('.tab');
+        var tabsLen = tabs.length;
+        var newLi = document.createElement('li');
+
+        newLi.onclick = function () {
+
+            var tabs = document.querySelectorAll('.tab')
+            var tabsLen = tabs.length;
+
+            console.log(this.dataset.tab);
+
+            for (var i = 0, len = tabsLen; i < len; i++) {
+
+                if (this.dataset.tab === tabs[i].dataset.tab) {
+
+                tabs[i].classList.add('active');
+//                tabs[i].style.display = ('block');
+
+            } else {
+                tabs[i].classList.remove('active');
+//                tabs[i].style.display = ('none');
+            }}
+
+            var text = document.querySelectorAll('.text');
+            var textLen = text.length;
+
+//            console.log(this.dataset.tab);
+
+            for (var i = 0, len = textLen; i < len; i++) {
+
+            if (this.dataset.tab === text[i].dataset.tab) {
+
+                text[i].classList.add('active');
+//                text[i].style.display = ('block');
+
+            } else {
+                text[i].classList.remove('active');
+//                text[i].style.display = ('none');
+            }}
+
+
+        }
+
+        newLi.classList.add('tab');
+        newLi.dataset.tab = tabsLen+1;
+        newLi.innerHTML = 'ТАБ ' + (tabsLen+1);
+
+        document.querySelector('#tabs').appendChild(newLi);
+
+},
+
+createDiv: function () {
+
+        var text = document.querySelectorAll('.text');
+        var textLen = text.length;
+        var newDiv = document.createElement('div');
+
+        newDiv.classList.add('text');
+        newDiv.dataset.tab = textLen+1;
+
+        newDiv.innerHTML += document.querySelector('#tab-text').value;
+
+        document.querySelector('#box').appendChild(newDiv);
+
+    }
+
+}
+
+tabs.start();

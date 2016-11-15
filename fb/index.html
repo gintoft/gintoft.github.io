@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Footbal</title>
+    
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+<script>  
+    
+</script>
+
+<style>
+
+    
+    body {
+        
+        background: url(bg.jpg);
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    .power {
+        
+        height: 350px;
+        width: 50px;
+        background-color: #d8ff00;
+        float: right;
+        margin: 10px;
+        
+    }
+    
+    #ball {
+        
+        position: absolute;
+        bottom: 50px;
+        left: 150px;
+        height: 75px;
+        width: 75px;
+        
+        
+    }
+    
+    #footballer {
+        
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        bottom: 30px;
+        left: -300px;
+        
+        
+    }
+    
+    #kick{
+        
+        position: fixed;
+        height: 180px;
+        top: 160px;
+        left: 30px;
+        width: 330px;
+        font-size: 5em;
+        
+    }
+    
+    #more {
+        
+        display: none;
+        position: fixed;
+        height: 180px;
+        top: 160px;
+        left: 30px;
+        width: 330px;
+        font-size: 3em;
+            
+    }
+    
+    #goal {
+
+        position: absolute;
+        bottom: 35px;
+        right: 30px;
+        height: 200px;
+        width: 250px;
+        
+    }
+    
+    #scoreboard {
+    
+        position: fixed;
+        text-align: center;
+        height: 100px;
+        width: 700px;
+        top: 30px;
+        left: 30px;
+        font-size: 3em;
+        
+    }
+    
+</style>
+
+</head>
+
+
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+<div class="alert alert-info" id='scoreboard'>
+  ТАБЛО
+</div>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-success" id="kick">УДАР!</button>
+  <button type="button" class="btn btn-info" id="more">Попробовать<br>еще раз!</button>
+</div>
+    
+<div class="power"></div> <br>
+<div><img id="footballer" src="man.png" alt="Футболист"></div>
+<div><img id="goal" src="goal.png" alt="Ворота"></div>
+<div><img id="ball" src="ball.png" alt="Мяч"></div><br>
+
+</div>
+
+<script>
+    
+//    $('#more').hide();
+    
+function power (h){
+    
+    h = h ? 350 : 0;
+    
+    $('.power').animate({ height: h + 'px'}, 700, 'swing', function () { power(!h) })
+}
+    
+power(350);
+    
+    
+function showMoreButton () {
+    
+    $('#kick').hide();
+    $('#more').show();
+    
+}
+    
+$('#more').on('click', function () {
+    location.reload()
+})    
+
+$('#kick').on('click', function () {
+
+    var power = parseInt($('.power').css('height'));
+    var sc = $('#scoreboard');
+    var more = $('#more');
+    
+    if (power >= 200) {
+        
+        $('#ball').animate({
+            
+            left: 1220 + 'px',
+            opacity: '0.9',
+            
+        }, 800, 'swing')
+        
+        $('#footballer').animate({
+            
+            left: 300 + 'px',
+            opacity: '0.9',
+            
+        }, 300, 'swing')
+        
+        
+        
+        sc.removeClass('alert-info');
+        sc.addClass('alert-success');
+        sc.html('!!! GOAL !!!');
+        
+        more.removeClass('alert-info');
+        more.addClass('alert-success');
+        
+        showMoreButton();
+        
+        
+    } else {
+        
+        var left = parseInt($('#ball').css('left'))
+        
+        $('#ball').animate({
+            
+            left: left + power*3 + 'px'
+            
+        }, 700, 'swing')
+        
+         $('#footballer').animate({
+            
+            left: 70 + 'px',
+            opacity: '0.9',
+            
+        }, 300, 'swing')
+        
+        sc.removeClass('alert-info');
+        sc.addClass('alert-danger');
+        more.removeClass('alert-info');
+        more.addClass('alert-danger');
+        
+        sc.html('Недостаточно сильно!');
+        
+        showMoreButton();
+    
+    }
+    
+
+})
+
+
+    
+
+</script>
+
+</body>
+
+</html>
