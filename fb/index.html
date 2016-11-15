@@ -15,7 +15,6 @@
 </script>
 
 <style>
-
     
     body {
         
@@ -24,7 +23,6 @@
         height: 100%;
         
     }
-    
     .power {
         
         height: 350px;
@@ -34,7 +32,6 @@
         margin: 10px;
         
     }
-    
     #ball {
         
         position: absolute;
@@ -45,7 +42,6 @@
         
         
     }
-    
     #footballer {
         
         position: absolute;
@@ -56,7 +52,6 @@
         
         
     }
-    
     #kick{
         
         position: fixed;
@@ -67,7 +62,6 @@
         font-size: 5em;
         
     }
-    
     #more {
         
         display: none;
@@ -79,7 +73,6 @@
         font-size: 3em;
             
     }
-    
     #goal {
 
         position: absolute;
@@ -89,7 +82,6 @@
         width: 250px;
         
     }
-    
     #scoreboard {
     
         position: fixed;
@@ -134,45 +126,43 @@
 
 <script>
     
-//    $('#more').hide();
-    
-function power (h){
+function power (h){ // функция определяет силу удара
     
     h = h ? 350 : 0;
     
     $('.power').animate({ height: h + 'px'}, 700, 'swing', function () { power(!h) })
 }
     
-power(350);
+power(350); // первоначальный запуск функции
     
     
-function showMoreButton () {
+function showMoreButton () { // меняет кнопку "УДАР" при нажатии
     
     $('#kick').hide();
     $('#more').show();
     
 }
     
-$('#more').on('click', function () {
+$('#more').on('click', function () { // перезагрузка страницы для еще одной попытки
     location.reload()
 })    
 
-$('#kick').on('click', function () {
+$('#kick').on('click', function () { // обработчик клика на кнопку "УДАР"
 
     var power = parseInt($('.power').css('height'));
     var sc = $('#scoreboard');
     var more = $('#more');
     
-    if (power >= 200) {
+    if (power >= 200) { // если достаточно силы 
         
-        $('#ball').animate({
+        $('#ball').animate({ // анимировать мяч
             
             left: 1220 + 'px',
             opacity: '0.9',
             
         }, 800, 'swing')
         
-        $('#footballer').animate({
+        $('#footballer').animate({ // анимировать футболиста
             
             left: 300 + 'px',
             opacity: '0.9',
@@ -180,34 +170,37 @@ $('#kick').on('click', function () {
         }, 300, 'swing')
         
         
+        // добавление и удаление классов
         
-        sc.removeClass('alert-info');
+        sc.removeClass('alert-info'); 
         sc.addClass('alert-success');
         sc.html('!!! GOAL !!!');
         
         more.removeClass('alert-info');
         more.addClass('alert-success');
         
-        showMoreButton();
+        showMoreButton(); // показ кнопки для новой игры
         
         
-    } else {
+    } else { // если силы недостаточно
         
         var left = parseInt($('#ball').css('left'))
         
-        $('#ball').animate({
+        $('#ball').animate({ // анимировать мяч, прибавив небольшое кол-во расстояния
             
             left: left + power*3 + 'px'
             
         }, 700, 'swing')
         
-         $('#footballer').animate({
+         $('#footballer').animate({ // анимировать футболиста
             
             left: 70 + 'px',
             opacity: '0.9',
             
         }, 300, 'swing')
         
+        // добавление и удаление классов
+         
         sc.removeClass('alert-info');
         sc.addClass('alert-danger');
         more.removeClass('alert-info');
