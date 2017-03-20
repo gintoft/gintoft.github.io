@@ -4,9 +4,9 @@ $(function () {
 
 var cost = {
     
-    hot: 80.23,
-    cold: 15.34,
-    sliv: 12.54
+    hot: 96.26,
+    cold: 16.50,
+    sliv: 12.66
     
 }
 
