@@ -19,6 +19,8 @@ var total = {
 var hot = 0;
 var cold = 0;
 
+
+
 document.querySelector("#hot_more").onclick = function (e) {
 
     hot += 1;
