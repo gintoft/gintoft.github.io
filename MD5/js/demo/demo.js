@@ -16,13 +16,6 @@
         alert("Пароль введент неверно!");
       }
 
-      //document.getElementById('result').value = md5(input.value)
-      // result.value = ''
-
     }
   )
-//  input.value = ''
-
-
-
 }())

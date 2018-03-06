@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Демо</title>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/npm.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+<!-- <span class="label label-success">Демо-режим</span> -->
+
+<h3>Демонстрация работы сайта для получения информации о контакте</h3>
+
+<br>
+
+<div class="alert alert-info">
+  <p>В качестве оценки функциональности прототипа можно осуществить поиск по следующим данным:</p>
+  <ul>
+    <li>По серии и номеру паспорта: <b>0000123456</b></li>
+    <li>По номеру телефона: <b>89130172628</b></li>
+    <li>По гос. номеру авто: <b>Р123СТ54</b></li>
+  </ul>
+</div>
+
+<div class="alert alert-success">
+
+<p>Система автоматически определит, по каким атрибутам следует производить поиск.</p>
+</div>
+
+<div class="input-group input-group-lg input-group-info">
+<span class="input-group-addon">Введите данные</span>
+<input type="text" class="form-control" id="inputInfo">
+</div>
+
+<br>
+
+<div id="find" class="btn btn-success btn-lg" onclick="find()">Получить информацию!</div>
+<br><br>
+<div id="FIO">ФИО: <span id="place_FIO"></span></div>
+<div id="PASSPORT">Паспорт РФ: <span id="place_PASSPORT"></span></div>
+<div id="GN">Гос. номер: <span id="place_GN"></span></div>
+<div id="PHONE">Телефон: <span id="place_PHONE"></span></div>
+
+</body>
+</html>
