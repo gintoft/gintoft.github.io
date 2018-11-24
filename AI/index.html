@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="JS/jsaes.js"></script>
+  <script src="js/jquery-3.1.0.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/AI.js"></script>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>ИИ ПК</title>
+</head>
+<body>
+
+<div class="container">
+
+<h3>users.getSubscriptions</h3>
+
+  <div class="bs-callout bs-callout-rosybrown">
+    <h4>Идентификатор пользователя</h4>
+    <input type="text" class="form-control" id="usersID" value="165118486">
+    <!-- <input type="text" class="form-control" id="usersID" value="229077949, 229356161, 97954248, 282874003, 203508465, 177385489, 127803291, 194978462, 164047910, 143095174, 70663067, 50087854, 431364281, 316474272, 314976595, 136722180, 329225322, 240211030, 189885485, 187291359, 185806047, 173659536, 164049439, 316182022, 269925181, 234695639, 211337504, 194977927, 189665746, 183777686, 173973015, 168827047, 166128562, 162711833, 158834368, 140441584, 137872965, 100748051, 74432100, 25333522, 4649413, 472700746, 224299408, 457195385, 427960097, 397133556, 395777159, 394587038, 393719244, 380665560, 361909231, 346686427, 341597464, 330996558, 329705337, 301074876, 297436276, 286217897, 285564017, 284317624, 277918739, 261826628, 249810691, 248419178, 248158615, 241823427, 227267660, 224730219, 220206986, 212657712, 212180335, 203817995, 199522127, 198788934, 197819362, 197436519, 195321535, 195079330, 192459431, 192153674, 186851771, 312989771, 364635303, 183994105, 181170172, 180993235, 180668224, 180435919, 179787503, 179549122, 65303752"> -->
+  </div>
+
+  <div id="getsub" class="btn btn-success" onclick="getSub()">Получить список публичных страниц</div>
+
+  <span class="cost" id="hiddenPlaceSub"> 
+  <br>
+  <br>
+  Список страниц: <span id="placeSub"></span>
+  </span>
+
+  </div>
+
+</body>
+</head>
