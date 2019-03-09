@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Калькулятор премии ELS</title>
+<!--
+    <script src="js/jquery-3.1.0.js"></script>
+    
+-->
+<!--    <script src="js/npm.js"></script>-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+   
+   <script src="https://unpkg.com/popper.js"></script>
+   <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	
+<style>
+	
+	.table td, .table th, .table thead th {
+		vertical-align: middle;
+		padding-bottom: 0px;
+		padding: 3px
+	}
+	
+	.table thead th {
+		text-align:  center
+	}
+	
+	input{
+		text-align: center
+	}
+
+	
+</style>	
+	
+
+</head>
+
+<!--<iframe width="100%" height="55px" src="header.html" frameborder="0"></iframe>-->
+<br>
+<br>
+<body>
+
+<div class="container">      
+<h3>Выберите Бизнес-пакет для старта</h3>
+<br>
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+<button type="button" class="btn btn-light"> Start (22 420 ₽) </button>
+<button type="button" class="btn btn-light" checked> Standart (60 180 ₽) </button>
+<button type="button" class="btn btn-light"> Business PRO (173 460 ₽) </button>
+</div>
+<br>
+<br><button type="button" class="btn btn-success" id="fill" onclick="fillTable()">Сколько я заработаю?</button>
+
+<br><br>
+<h3>Заполните объем Вашей структуры</h3>
+
+<table class="table" style="height: 10px">
+   <thead class="thead-light">
+    <tr>
+        <th scope="col">Уровень</th>
+        <th scope="col">Бизнес-пакет</th>
+        <th scope="col">Привлечено человек</th>
+        <th scope="col">Сумма баллов категории</th>
+        <th scope="col">Сумма баллов линии</th>
+    </tr>
+	</thead>
+    <tr>
+        <td rowspan="3">1 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="1_Start" placeholder="" value="1"></td>
+        <td id="1_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="1_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="1_Standart" placeholder="" value="2"></td>
+        <td id="1_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="1_BusinessPRO" placeholder="" value="3"><td id="1_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td rowspan="3">2 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="2_Start" placeholder="" value="3"></td>
+        <td id="2_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="2_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="2_Standart" placeholder="" value="2"></td>
+        <td id="2_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="2_BusinessPRO" placeholder="" value="8"><td id="2_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+    
+    
+    <tr>
+        <td rowspan="3">3 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="3_Start" placeholder="" value="4"></td>
+        <td id="3_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="3_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="3_Standart" placeholder="" value="3"></td>
+        <td id="3_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="3_BusinessPRO" placeholder="" value="1"><td id="3_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+    
+    
+    <tr>
+        <td rowspan="3">4 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="4_Start" placeholder="" value="0"></td>
+        <td id="4_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="4_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="4_Standart" placeholder="" value="0"></td>
+        <td id="4_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="4_BusinessPRO" placeholder="" value="2"><td id="4_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+    
+     <tr>
+        <td rowspan="3">5 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="5_Start" placeholder="" value="2"></td>
+        <td id="5_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="5_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="5_Standart" placeholder="" value="1"></td>
+        <td id="5_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="5_BusinessPRO" placeholder="" value="3"><td id="5_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+    
+        <tr>
+        <td rowspan="3">6 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="6_Start" placeholder="" value="4"></td>
+        <td id="6_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="6_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="6_Standart" placeholder="" value="3"></td>
+        <td id="6_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="6_BusinessPRO" placeholder="" value="2"><td id="6_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+    
+        <tr>
+        <td rowspan="3">7 уровень</td>
+        <td>Start</td>
+        <td> <input type="text" class="form-control" id="7_Start" placeholder="" value="1"></td>
+        <td id="7_Start_Point" style="text-align: center"></td>
+        <td rowspan="3" id="7_SUM" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Standart</td>
+        <td> <input type="text" class="form-control" id="7_Standart" placeholder="" value="2"></td>
+        <td id="7_Standart_Point" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>Business PRO</td>
+        <td> <input type="text" class="form-control" id="7_BusinessPRO" placeholder="" value="1"><td id="7_BusinessPRO_Point" style="text-align: center"></td>
+    </tr>
+	
+</table>
+
+
+<br><br><br><br>
+
+
+<h3>Ваш доход от создания структуры</h3>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Вид премии</th>
+      <th scope="col">Описание</th>
+      <th scope="col">Формула</th>
+      <th scope="col">Ваш результат</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <th scope="row" style="width: 10%">Стартовая</th>
+      <td style="width: 60%">Каждый раз, когда Вы приглашаете Партнера в свою 1-ю линию, Компания вознаграждает Вас, выплачивая 16% от баллов его стартового бизнес пакета.</td>
+      <td id="formula_start" style="width: 20%"></td>
+      <td id="start" style="text-align: center"></td>
+	  </tr>
+    
+    <tr>
+      <th scope="row" style="width: 10%">Развития</th>
+      <td>Каждый раз, когда Партнеры Вашей 1 и 2 линии подключают в свой бизнес новых Партнеров, Компания выплачивает Вам 20% от баллов их закупок.</td>
+      <td id="formula_rasv"></td>
+      <td id="rasv" style="text-align: center"></td>
+    </tr>
+    
+    <tr>
+      <th scope="row"style="width: 10%">Групповая</th>
+      <td>Для ее получения нужен статус АС – наличие Партнеров в 1 линии в двух маркетинговых ветках: слева и справа. Это бинарная выплата, она позволяет значительно увеличить скорость бизнеса и получать доход от командного взаимодействия.</td>
+      <td id="formula_group"></td>
+      <td id="group" style="text-align: center"></td>
+    </tr>
+    
+    <tr>
+      <th scope="row" style="width: 10%">За Базовый объем</th>
+      <td>Премия выплачивается, если Вы пригласили за месяц от 3-х новых Партнеров (в Первую линию) на сумму от 500 баллов.</td>
+      <td id="formula_baseValue"></td>
+      <td id="baseValue" style="text-align: center"></td>
+    </tr>
+   
+    
+	<tr>
+      <th scope="row" style="width: 10%">Спонсорская премия</th>
+      <td>Она выплачивается не от баллов, а от дохода. По сути – это доход от дохода наших Партнеров: от 25% до 50% группового дохода Партнеров, которых мы лично подключили, и по 7% со 2-ой по 7-ю линию. Важно и выгодно подключать в свою 1 линию как можно больше Партнеров, чтобы получать 25% по этой премии, а не 7%.</td>
+      <td></td>
+      <td></td>
+    </tr>
+     
+	<tr>
+      <th scope="row" style="width: 10%">Розничный доход</th>
+      <td>Когда Клиенты приобретают у Вас розничный тариф онлайн или офлайн, Вы получаете Розничный доход. Он составляет 100%, т.е. разницу между оптовой и розничной стоимостью продукции.</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+	<tr>
+      <th scope="row" style="width: 10%">Лидерская премия</th>
+      <td>Премия выплачивается каждый раз, когда Вы подтверждаете свой статус от Директора и выше. Эта премия составляет от $100 / 6000РУБ. до $3000 / 180000РУБ.</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    
+	<tr>
+      <th scope="row" style="width: 10%">Автомобильная премия</th>
+      <td>Авто премию от $250/15000РУБ. до $3000/180000РУБ. Вы получаете каждый раз, когда подтверждаете свой статус от Регионального директора и выше.</td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+	<tr>
+      <th scope="row" style="width: 10%">Итоговый результат</th>
+      <td>Сумма всех премий</td>
+      <td></td>
+      <td id="totalCash" style="text-align: center"></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+</div>
+
+
+</body>
+</html>
