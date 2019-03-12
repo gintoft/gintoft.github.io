@@ -1,10 +1,11 @@
 function checkPassword(){
 	
-	passList = ['Жанна', 'Еврей'];
+	passList = ['Жанна', 'Еврей', 'Андрей', "123"];
 	pass = $("#password").val();
 	passInd = passList.indexOf(pass);
 
 	if(passInd != -1){
+//	if(true){
 	   
 		$("#hiddenTable").show();
 		$("#auth").hide();
@@ -91,7 +92,10 @@ function fillTable() {
 }
 
 
+
 function calcProfit(){
+	
+	$("#hiddenProfit").show();
 	
 	var SUM_POINT_1 = parseInt($("#1_Start").val() * 100) +	parseInt($("#1_Standart").val() * 300) + parseInt($("#1_BusinessPRO").val() * 900)
 	var SUM_POINT_2 = parseInt($("#2_Start").val() * 100) +	parseInt($("#2_Standart").val() * 300) + parseInt($("#2_BusinessPRO").val() * 900)
@@ -105,6 +109,7 @@ function calcProfit(){
 	var rasv = (SUM_POINT_2 + SUM_POINT_3) * 0.2 * 60;
 	
 	$("#start").html(start + "₽");
+	
 	$("#formula_start").html(SUM_POINT_1 + " * 16% * 60₽");
 	
 	$("#rasv").html(rasv + "₽");
@@ -113,19 +118,22 @@ function calcProfit(){
 	var baseValue = 0;
 	var sumPeopleFirstLine = parseInt($("#1_Start").val()) + parseInt($("#1_Standart").val()) + parseInt($("#1_BusinessPRO").val());
 	
-	$("#baseValue").html("0₽");
-	
 	if(sumPeopleFirstLine >= 3 && SUM_POINT_1 >= 500 && SUM_POINT_1 < 1500) {
 		
 	   baseValue = 6000;
 	   $("#baseValue").html(baseValue + "₽");
+	   $("#formula_baseValue").html("Начислена премия 6000₽ за приглашение " + sumPeopleFirstLine + " чел. в 1 линию на сумму " + SUM_POINT_1 + " баллов.");
 	   
 	} else if(sumPeopleFirstLine >= 3 && SUM_POINT_1 >= 1500) {
 	   baseValue = 30000;
+	   $("#formula_baseValue").html("Начислена премия 30000₽ за приглашение " + sumPeopleFirstLine + " чел. в 1 линию на сумму " + SUM_POINT_1 + " баллов.");
 	   $("#baseValue").html(baseValue + "₽");
+	} else {
+		$("#formula_baseValue").html("Не выполнены условия начисления премии.");
+		$("#baseValue").html("0₽");
 	}
 	
-	$("#formula_baseValue").html("-");
+	
 	$("#formula_group").html("(" + SUM_POINT_1 + " + " + SUM_POINT_2 + " + " + SUM_POINT_3 + " + " + SUM_POINT_4 + " + " + SUM_POINT_5 + " + " + SUM_POINT_6 + " + " + SUM_POINT_7 + ") * 20% * 60₽");
 	
 	
@@ -134,11 +142,56 @@ function calcProfit(){
 	if(sumPeopleFirstLine >= 2) {
 		
 		group = (SUM_POINT_1 + SUM_POINT_2 + SUM_POINT_3 + SUM_POINT_4 + SUM_POINT_5 + SUM_POINT_6 + SUM_POINT_7) * 0.2 * 60;
-		$("#group").html(group + "₽");
+		$("#group").html(parseInt(group) + "₽");
 		
 	};
 	
-	var totalCash = start + rasv + baseValue + group;
-	$("#totalCash").html(totalCash + "₽");
+	var rosn = 0;
+	
+	rosn = $("#rosn").val();
+	
+	var totalCash = parseInt(start) + parseInt(rasv) + parseInt(baseValue) + parseInt(group) + parseInt(rosn);
+
+	$("#totalCash").html(parseInt(totalCash));
+	
+	
+	
+  var ctxB = document.getElementById("barChart").getContext('2d');
+  var myBarChart = new Chart(ctxB, {
+    type: 'bar',
+    data: {
+      labels: ["Стартовая", "Развития", "Групповая", "За базовый объем", "Спонсорская", "Розничный доход"],
+      datasets: [{
+        label: 'Размер премии, ₽',
+        data: [start, rasv, baseValue, group, 0, rosn],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
 	
 }

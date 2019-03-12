@@ -3,22 +3,31 @@
 	.table td, .table th, .table thead th {
 		vertical-align: middle;
 		padding-bottom: 0px;
-		padding: 3px
+/*		padding: 3px;*/
+		padding: 0.25rem
 	}
 	
 	.table thead th {
 		text-align:  center
 	}
 	
-/*
-	input{
-		text-align: center
-	}
-*/
+.table td, .table th {
+    padding: .2rem;
+    vertical-align: middle;
+	border: 1px solid #dee2e6;
+/*    border-top: 1px solid #dee2e6;*/
+}
 
-	
-/* BASIC */
 
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  vertical-align: middle
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
 
 .wrapper {
   display: flex;
@@ -71,13 +80,14 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  
+  background-color: #28a745;
   border: none;
   color: white;
   padding: 15px 80px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   text-transform: uppercase;
   font-size: 13px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
@@ -93,7 +103,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #28a745;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -102,6 +112,27 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   -o-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
+}
+
+input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 input[type=text] {
@@ -128,6 +159,8 @@ input[type=text] {
 input[type=text]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
+	border: none;
+	text-align: center;
 }
 
 input[type=text]:placeholder {
