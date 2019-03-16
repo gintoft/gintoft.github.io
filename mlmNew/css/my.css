@@ -14,14 +14,34 @@
 .table td, .table th {
     padding: .2rem;
     vertical-align: middle;
+	text-align: center;
 	border: 1px solid #dee2e6;
 /*    border-top: 1px solid #dee2e6;*/
 }
 
+.tableProfit td, .tableProfit th, .tableProfit thead th {
+		vertical-align: middle;
+		padding-bottom: 0px;
+		padding-left: 5px;
+/*		padding: 3px;*/
+		padding: 0.5rem
+	}
+
+	.tableProfit thead th {
+		text-align:  center
+	}
+
+
+.tableProfit td, .tableProfit th {
+    padding: .5rem;
+    vertical-align: middle;
+	text-align: left;
+	border: 1px solid #dee2e6;
+}
 
 .my-custom-scrollbar {
   position: relative;
-  height: 500px;
+  height: 586px;
   overflow: auto;
   vertical-align: middle
 }
@@ -124,7 +144,7 @@ input[type=password] {
   display: inline-block;
   font-size: 16px;
   margin: 5px;
-  width: 85%;
+  width: 50%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -145,13 +165,15 @@ input[type=text] {
   display: inline-block;
   font-size: 16px;
   margin: 5px;
-  width: 85%;
+  width: 75%;
   border: 2px solid #f6f6f6;
+/*
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+*/
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }

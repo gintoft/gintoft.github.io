@@ -5,18 +5,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькулятор премии ELS</title>
+
 <script src="js/main.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/my.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"crossorigin="anonymous">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+
 </head>
 
 <body>
 <br>
+<!--
 <div class="wrapper fadeInDown" id="auth">
     
 <div style="align-content: center">
@@ -24,175 +27,250 @@
 <input type="button" placeholder="Введите пароль" id="password" style="text-align: center" onclick="checkPassword()" value="OK">
 </div>
 </div>
+-->
 
-<div id="hiddenTable" style="display: none">
+<div id="hiddenTable">
+<!--<div id="hiddenTable" style="display: none">-->
 <div class="container">      
 <h3>Выберите Бизнес-пакет для старта</h3>
 <br>
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-<button type="button" class="btn btn-light"> Start (22 420 ₽) </button>
-<button type="button" class="btn btn-light"> Standart (60 180 ₽) </button>
-<button type="button" class="btn btn-light"> Business PRO (173 460 ₽) </button>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Выберите Бизнес-пакет для старта</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option value="22420" onclick="alert(22420)">Start (22 420 ₽)</option>
+    <option selected value="60180" onclick="alert(60180)">Standart (60 180 ₽)</option>
+    <option value="1734603">Business PRO (173 460 ₽)</option>
+  </select>
 </div>
-<br>
 <!--<div class="alert alert-success" role="alert"><span id="packetType">asd</span></div>-->
 
 <br>
 
+
 <h3>Заполните объем Вашей структуры</h3>
-<table class="table table-wrapper-scroll-y my-custom-scrollbar" style="height: 500px vertical-align: middle">
-<!--<table class="table table-wrapper-scroll-y my-custom-scrollbar" style="height: 500px vertical-align: middle">-->
-   <thead class="thead-light">
-    <tr>
-        <th scope="col">Уровень</th>
-        <th scope="col">Бизнес-пакет</th>
-        <th scope="col">Привлечено человек</th>
-        <th scope="col">Сумма баллов категории</th>
-        <th scope="col">Сумма баллов линии</th>
-    </tr>
-	</thead>
-    <tr>
-        <td rowspan="3">1 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="1_Start" placeholder="" value="1"></td>
-        <td id="1_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="1_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="1_Standart" placeholder="" value="2"></td>
-        <td id="1_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="1_BusinessPRO" placeholder="" value="3"><td id="1_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td rowspan="3">2 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="2_Start" placeholder="" value="3"></td>
-        <td id="2_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="2_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="2_Standart" placeholder="" value="2"></td>
-        <td id="2_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="2_BusinessPRO" placeholder="" value="8"><td id="2_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-    
-    
-    <tr>
-        <td rowspan="3">3 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="3_Start" placeholder="" value="4"></td>
-        <td id="3_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="3_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="3_Standart" placeholder="" value="3"></td>
-        <td id="3_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="3_BusinessPRO" placeholder="" value="1"><td id="3_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-    
-    
-    <tr>
-        <td rowspan="3">4 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="4_Start" placeholder="" value="0"></td>
-        <td id="4_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="4_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="4_Standart" placeholder="" value="0"></td>
-        <td id="4_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="4_BusinessPRO" placeholder="" value="2"><td id="4_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-    
-     <tr>
-        <td rowspan="3">5 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="5_Start" placeholder="" value="2"></td>
-        <td id="5_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="5_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="5_Standart" placeholder="" value="1"></td>
-        <td id="5_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="5_BusinessPRO" placeholder="" value="3"><td id="5_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-    
-        <tr>
-        <td rowspan="3">6 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="6_Start" placeholder="" value="4"></td>
-        <td id="6_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="6_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="6_Standart" placeholder="" value="3"></td>
-        <td id="6_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="6_BusinessPRO" placeholder="" value="2"><td id="6_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-    
-        <tr>
-        <td rowspan="3">7 уровень</td>
-        <td>Start</td>
-        <td> <input type="text" class="form-control" id="7_Start" placeholder="" value="1"></td>
-        <td id="7_Start_Point" style="text-align: center"></td>
-        <td rowspan="3" id="7_SUM" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Standart</td>
-        <td> <input type="text" class="form-control" id="7_Standart" placeholder="" value="2"></td>
-        <td id="7_Standart_Point" style="text-align: center"></td>
-    </tr>
-    <tr>
-        <td>Business PRO</td>
-        <td> <input type="text" class="form-control" id="7_BusinessPRO" placeholder="" value="1"><td id="7_BusinessPRO_Point" style="text-align: center"></td>
-    </tr>
-	
-</table>
-<br><br>
-<button type="button" class="btn btn-success" id="fill" onclick="fillTable()" data-toggle="tooltip">Расчитать доход</button>
-<br><br>
 
-<div id="hiddenProfit" style="display: none">
-<h3>Ваш доход от создания структуры</h3>
-<!--
+<button type="button" class="btn btn-light" onclick="fillDemo()" data-toggle="tooltip" data-placement="bottom" title="Таблица будет заполнена демонстрационными данными, как если бы Вы пригласили 5 человек, которые бы тоже пригласили по 5 человек.">
+<i class="fas fa-table"></i> | Заполнить демо-данными</button>
+
+<button type="button" class="btn btn-light" onclick="clearTable()" data-toggle="tooltip" data-placement="bottom" title="Все значения в таблице будут очищены.">
+<i class="fas fa-broom"></i> | Очистить таблицу</button>
+
+<button type="button" class="btn btn-light" onclick="hideStructTable()" data-toggle="tooltip" data-placement="bottom" title="Скрыть/Отобразить таблицу.">
+<i class="fas fa-caret-down"></i> | Скрыть/Отобразить таблицу</button>
+
+<button type="button" class="btn btn-success" onclick="fillTable()" data-toggle="tooltip" data-placement="right" title="Размеры Ваших премий будут расчитаны исходя из введенных данных об объеме Вашей структуры.">
+<i class="fas fa-dollar-sign"></i> | Расчитать доход</button>
+
 <br>
- <div class="progress" style="height: 70px">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 30%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">Стартовая<br>ХХХ руб.</div>
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 15%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">Развития<br>ХХХ руб.</div>
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 5%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Групповая<br>ХХХ руб.</div>
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0x%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">За базовый объем<br>ХХХ руб.</div>
-  <div class="progress-bar" role="progressbar" style="width: 22%" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">Спонсорская<br>ХХХ руб.</div>
-  <div class="progress-bar" role="progressbar" style="width: 24%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Розничный доход<br>ХХХ руб.</div>
-</div>
--->
+<br>
+	
+<table class="table table-wrapper-scroll-y my-custom-scrollbar" style="height: 1000px vertical-align: middle" id="structTable">
+<tbody>
+<tr>
+	<td rowspan="2">Линия</td>
+	<td colspan="2">Структура ветвей</td>
+	<td colspan="2">Сумма баллов</td>
+	<td colspan="2">Итог линии по веткам</td>
+	<td rowspan="2">Итоговая сумма</td>
+</tr>
+<tr>
+	<td>Левая</td>
+	<td>Правая</td>
+	<td>По левой ветви</td>
+	<td>По правой ветви</td>
+	<td>Левая</td>
+	<td>Правая</td>
+</tr>
+
+<!--1 LINE-->
+<tr>
+	<td rowspan="3">1 линия</td>
+	<td><input type="text" class="form-control" id="L1LStartMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L1RStartMan" placeholder="" value="2"></td>
+	<td id="L1LStartPoint"></td>
+	<td id="L1RStartPoint"></td>
+	<td rowspan="3" id="L1LSum"></td>
+	<td rowspan="3" id="L1RSum"></td>
+	<td rowspan="3" id="L1TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L1LStandartMan" placeholder="" value="4"></td>
+	<td><input type="text" class="form-control" id="L1RStandartMan" placeholder="" value="2"></td>
+	<td id="L1LStandartPoint"></td>
+	<td id="L1RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L1LBPROMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L1RBPROMan" placeholder="" value="7"></td>
+	<td id="L1LBPROPoint"></td>
+	<td id="L1RBPROPoint"></td>
+</tr>
+<!--1 LINE END-->
+
+<!--2 LINE-->
+<tr>
+	<td rowspan="3">2 линия</td>
+	<td><input type="text" class="form-control" id="L2LStartMan" placeholder="" value="2"></td>
+	<td><input type="text" class="form-control" id="L2RStartMan" placeholder="" value="5"></td>
+	<td id="L2LStartPoint"></td>
+	<td id="L2RStartPoint"></td>
+	<td rowspan="3" id="L2LSum"></td>
+	<td rowspan="3" id="L2RSum"></td>
+	<td rowspan="3" id="L2TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L2LStandartMan" placeholder="" value="0"></td>
+	<td><input type="text" class="form-control" id="L2RStandartMan" placeholder="" value="2"></td>
+	<td id="L2LStandartPoint"></td>
+	<td id="L2RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L2LBPROMan" placeholder="" value="5"></td>
+	<td><input type="text" class="form-control" id="L2RBPROMan" placeholder="" value="3"></td>
+	<td id="L2LBPROPoint"></td>
+	<td id="L2RBPROPoint"></td>
+</tr>
+<!--2 LINE END-->
+
+<!--3 LINE-->
+<tr>
+	<td rowspan="3">3 линия</td>
+	<td><input type="text" class="form-control" id="L3LStartMan" placeholder="" value="5"></td>
+	<td><input type="text" class="form-control" id="L3RStartMan" placeholder="" value="2"></td>
+	<td id="L3LStartPoint"></td>
+	<td id="L3RStartPoint"></td>
+	<td rowspan="3" id="L3LSum"></td>
+	<td rowspan="3" id="L3RSum"></td>
+	<td rowspan="3" id="L3TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L3LStandartMan" placeholder="" value="4"></td>
+	<td><input type="text" class="form-control" id="L3RStandartMan" placeholder="" value="7"></td>
+	<td id="L3LStandartPoint"></td>
+	<td id="L3RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L3LBPROMan" placeholder="" value="3"></td>
+	<td><input type="text" class="form-control" id="L3RBPROMan" placeholder="" value="1"></td>
+	<td id="L3LBPROPoint"></td>
+	<td id="L3RBPROPoint"></td>
+</tr>
+<!--3 LINE END-->
+
+<!--4 LINE-->
+<tr>
+	<td rowspan="3">4 линия</td>
+	<td><input type="text" class="form-control" id="L4LStartMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L4RStartMan" placeholder="" value="4"></td>
+	<td id="L4LStartPoint"></td>
+	<td id="L4RStartPoint"></td>
+	<td rowspan="3" id="L4LSum"></td>
+	<td rowspan="3" id="L4RSum"></td>
+	<td rowspan="3" id="L4TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L4LStandartMan" placeholder="" value="2"></td>
+	<td><input type="text" class="form-control" id="L4RStandartMan" placeholder="" value="2"></td>
+	<td id="L4LStandartPoint"></td>
+	<td id="L4RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L4LBPROMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L4RBPROMan" placeholder="" value="8"></td>
+	<td id="L4LBPROPoint"></td>
+	<td id="L4RBPROPoint"></td>
+</tr>
+<!--4 LINE END-->
+
+<!--5 LINE-->
+<tr>
+	<td rowspan="3">5 линия</td>
+	<td><input type="text" class="form-control" id="L5LStartMan" placeholder="" value="6"></td>
+	<td><input type="text" class="form-control" id="L5RStartMan" placeholder="" value="2"></td>
+	<td id="L5LStartPoint"></td>
+	<td id="L5RStartPoint"></td>
+	<td rowspan="3" id="L5LSum"></td>
+	<td rowspan="3" id="L5RSum"></td>
+	<td rowspan="3" id="L5TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L5LStandartMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L5RStandartMan" placeholder="" value="1"></td>
+	<td id="L5LStandartPoint"></td>
+	<td id="L5RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L5LBPROMan" placeholder="" value="0"></td>
+	<td><input type="text" class="form-control" id="L5RBPROMan" placeholder="" value="1"></td>
+	<td id="L5LBPROPoint"></td>
+	<td id="L5RBPROPoint"></td>
+</tr>
+<!--5 LINE END-->
+
+<!--6 LINE-->
+<tr>
+	<td rowspan="3">6 линия</td>
+	<td><input type="text" class="form-control" id="L6LStartMan" placeholder="" value="0"></td>
+	<td><input type="text" class="form-control" id="L6RStartMan" placeholder="" value="2"></td>
+	<td id="L6LStartPoint"></td>
+	<td id="L6RStartPoint"></td>
+	<td rowspan="3" id="L6LSum"></td>
+	<td rowspan="3" id="L6RSum"></td>
+	<td rowspan="3" id="L6TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L6LStandartMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L6RStandartMan" placeholder="" value="1"></td>
+	<td id="L6LStandartPoint"></td>
+	<td id="L6RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L6LBPROMan" placeholder="" value="4"></td>
+	<td><input type="text" class="form-control" id="L6RBPROMan" placeholder="" value="4"></td>
+	<td id="L6LBPROPoint"></td>
+	<td id="L6RBPROPoint"></td>
+</tr>
+<!--6 LINE END-->
+
+<!--7 LINE-->
+<tr>
+	<td rowspan="3">7 линия</td>
+	<td><input type="text" class="form-control" id="L7LStartMan" placeholder="" value="3"></td>
+	<td><input type="text" class="form-control" id="L7RStartMan" placeholder="" value="2"></td>
+	<td id="L7LStartPoint"></td>
+	<td id="L7RStartPoint"></td>
+	<td rowspan="3" id="L7LSum"></td>
+	<td rowspan="3" id="L7RSum"></td>
+	<td rowspan="3" id="L7TotalSum"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L7LStandartMan" placeholder="" value="1"></td>
+	<td><input type="text" class="form-control" id="L7RStandartMan" placeholder="" value="0"></td>
+	<td id="L7LStandartPoint"></td>
+	<td id="L7RStandartPoint"></td>
+</tr>
+<tr>
+	<td><input type="text" class="form-control" id="L7LBPROMan" placeholder="" value="0"></td>
+	<td><input type="text" class="form-control" id="L7RBPROMan" placeholder="" value="1"></td>
+	<td id="L7LBPROPoint"></td>
+	<td id="L7RBPROPoint"></td>
+</tr>
+<!--7 LINE END-->
+</tbody>
+</table>
+<br>
+
+
+
+<div id="hiddenProfit">
+<!--<div id="hiddenProfit" style="display: none">-->
+<h3>Ваш доход от создания структуры</h3>
 
 <br><br>
 
-<table class="table">
+<table class="tableProfit">
   <thead class="thead-light">
     <tr>
       <th scope="col">Вид премии</th>
@@ -203,59 +281,56 @@
   <tbody>
     
     <tr>
-      <th scope="row" style="width: 20%" title="Каждый раз, когда Вы приглашаете Партнера в свою 1-ю линию, Компания вознаграждает Вас, выплачивая 16% от баллов его стартового бизнес пакета.">Стартовая</th>
-      <td id="formula_start" style="width: 60%"></td>
+      <th scope="row" style="width: 20%" data-toggle="tooltip" data-placement="right" title="Каждый раз, когда Вы приглашаете Партнера в свою 1-ю линию, Компания вознаграждает Вас, выплачивая 16% от баллов его стартового бизнес пакета.">Стартовая</th>
+      <td id="formula_start" style="width: 60%" data-toggle="tooltip" data-placement="top" title="Сумма баллов по меньшей ветке * 16% * 60 рублей"></td>
       <td id="start" style="text-align: center"></td>
 	  </tr>
     
     <tr>
-      <th scope="row" style="width: 20%" title="Каждый раз, когда Партнеры Вашей 1 и 2 линии подключают в свой бизнес новых Партнеров, Компания выплачивает Вам 20% от баллов их закупок.">Развития</th>
-      <td id="formula_rasv"></td>
+      <th scope="row" style="width: 20%" data-toggle="tooltip" data-placement="right" title="Каждый раз, когда Партнеры Вашей 1 и 2 линии подключают в свой бизнес новых Партнеров, Компания выплачивает Вам 20% от баллов их закупок.">Развития</th>
+      <td id="formula_rasv" title="Сумма баллов по меньшей ветке второй и третьей линии * 20% * 60 рублей" data-toggle="tooltip" data-placement="top"></td>
       <td id="rasv" style="text-align: center"></td>
     </tr>
     
     <tr>
-      <th scope="row"style="width: 20%" title="Для ее получения нужен статус АС – наличие Партнеров в 1 линии в двух маркетинговых ветках: слева и справа. Это бинарная выплата, она позволяет значительно увеличить скорость бизнеса и получать доход от командного взаимодействия.">Групповая</th>
+      <th scope="row"style="width: 20%" data-toggle="tooltip" data-placement="right" title="Для ее получения нужен статус АС – наличие Партнеров в 1 линии в двух маркетинговых ветках: слева и справа. Это бинарная выплата, она позволяет значительно увеличить скорость бизнеса и получать доход от командного взаимодействия.">Групповая</th>
       <td id="formula_group"></td>
       <td id="group" style="text-align: center"></td>
     </tr>
     
     <tr>
-      <th scope="row" style="width: 20%" title="Премия выплачивается, если Вы пригласили за месяц от 3-х новых Партнеров (в Первую линию) на сумму от 500 баллов.">За Базовый объем</th>
+      <th scope="row" style="width: 20%" data-toggle="tooltip" data-placement="right" title="Премия выплачивается, если Вы пригласили за месяц от 3-х новых Партнеров (в Первую линию) на сумму от 500 баллов.">За Базовый объем</th>
       <td id="formula_baseValue"></td>
       <td id="baseValue" style="text-align: center"></td>
     </tr>
    
     
 	<tr>
-      <th scope="row" style="width: 20%" title="Она выплачивается не от баллов, а от дохода. По сути – это доход от дохода наших Партнеров: от 25% до 50% группового дохода Партнеров, которых мы лично подключили, и по 7% со 2-ой по 7-ю линию. Важно и выгодно подключать в свою 1 линию как можно больше Партнеров, чтобы получать 25% по этой премии, а не 7%.">Спонсорская премия</th>
-      <td id="formula_sponsored"></td>
-      <td></td>
+      <th scope="row" style="width: 20%" data-toggle="tooltip" data-placement="right" title="Она выплачивается не от баллов, а от дохода. По сути – это доход от дохода наших Партнеров: от 25% до 50% группового дохода Партнеров, которых мы лично подключили, и по 7% со 2-ой по 7-ю линию. Важно и выгодно подключать в свою 1 линию как можно больше Партнеров, чтобы получать 25% по этой премии, а не 7%.">Спонсорская</th>
+      <td id="formula_sponsored">Введите расчетную величину спонсорской премии.</td>
+      <td><input type="text" class="form-control" id="sponsored" placeholder="XXX ₽" onblur="fillTable()" value="0"></td>
     </tr>
      
 	<tr>
-      <th scope="row" style="width: 20%" title="Когда Клиенты приобретают у Вас розничный тариф онлайн или офлайн, Вы получаете Розничный доход. Он составляет 100%, т.е. разницу между оптовой и розничной стоимостью продукции.">Розничный доход</th>
-      <td>Введите расчетную величину премии за розничный доход.</td>
+      <th scope="row" style="width: 20%" data-toggle="tooltip" data-placement="right" title="Когда Клиенты приобретают у Вас розничный тариф онлайн или офлайн, Вы получаете Розничный доход. Он составляет 100%, т.е. разницу между оптовой и розничной стоимостью продукции.">Розничный доход</th>
+      <td id="formula_rosn">Введите расчетную величину премии за розничный доход.</td>
       <td><input type="text" class="form-control" id="rosn" placeholder="XXX ₽" onblur="fillTable()" value="0"></td>
     </tr>
     
-<!--
 	<tr>
-      <th scope="row" style="width: 10%" title="Премия выплачивается каждый раз, когда Вы подтверждаете свой статус от Директора и выше. Эта премия составляет от $100 / 6000РУБ. до $3000 / 180000РУБ.">Лидерская премия</th>
-      <td></td>
-      <td></td>
+      <th scope="row" data-toggle="tooltip" data-placement="right" style="width: 10%" title="Премия выплачивается каждый раз, когда Вы подтверждаете свой статус от Директора и выше. Эта премия составляет от $100 / 6000РУБ. до $3000 / 180000РУБ.">Лидерская премия</th>
+      <td id="formula_leader">Введите расчетную величину лидерской премии.</td>
+      <td><input type="text" class="form-control" id="leader" placeholder="XXX ₽" onblur="fillTable()" value="0"></td>
     </tr>
     
-    
 	<tr>
-      <th scope="row" style="width: 10%" title="Авто премию от $250/15000РУБ. до $3000/180000РУБ. Вы получаете каждый раз, когда подтверждаете свой статус от Регионального директора и выше.">Автомобильная премия</th>
-      <td></td>
-      <td></td>
+      <th scope="row" data-toggle="tooltip" data-placement="right" style="width: 10%" title="Авто премию от $250/15000РУБ. до $3000/180000РУБ. Вы получаете каждый раз, когда подтверждаете свой статус от Регионального директора и выше.">Автомобильная премия</th>
+      <td>Введите расчетную величину автомобильной премии.</td>
+      <td><input type="text" class="form-control" id="avto" placeholder="XXX ₽" onblur="fillTable()" value="0"></td>
     </tr>
--->
     
 	<tr>
-      <th scope="row" style="width: 10%" title="Сумма всех премий">Итоговый результат</th>
+      <th scope="row" style="width: 10%" data-toggle="tooltip" data-placement="right" title="Сумма всех премий">Итоговый результат</th>
       <td>Сумма всех расчитанных премий.</td>
       <td id="totalCash" style="text-align: center"></td>
     </tr>
@@ -268,12 +343,15 @@
 <br>
 <canvas id="barChart">asdas</canvas>
 <br>
-<br>
-<br>
 
 </div>
 </div>
 
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </body>
 
 </html>
