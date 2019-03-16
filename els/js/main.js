@@ -1,7 +1,40 @@
-(function(){
+$(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
-  $("#structTable").hide();
+  precent = 20;
 })
+
+
+function editPacket(){
+	$("#hidePacket").toggle()
+}
+
+function startPacket() {
+	
+	precent = 10;
+	$("#packet").attr("class","badge");
+	$("#packet").addClass("badge-warning");
+	$("#packet").html("Выбран бизнес-пакет Start");
+	console.log(precent);
+	
+}
+
+function standartPacket() {
+	
+	precent = 20;
+	$("#packet").attr("class","badge");
+	$("#packet").addClass("badge-success");
+	$("#packet").html("Выбран бизнес-пакет Standart");
+	console.log(precent);
+}
+
+function BPROPacket() {
+	
+	precent = 30;
+	$("#packet").attr("class","badge");
+	$("#packet").addClass("badge-primary");
+	$("#packet").html("Выбран бизнес-пакет Business PRO");
+	console.log(precent);
+}
 
 var point = {
 
@@ -472,14 +505,12 @@ function fillTable() {
 	
 getData();
 fillSumPoints();
-calcProfit2();
-
-//$("#hiddenProfit").show();
-//$("#structTable").hide();
+calcProfit();
+$("#hiddenProfit").show();
 
 }
 
-function calcProfit2(){
+function calcProfit(){
 	 
 	// Стартовая премия. Сумма баллов по меньшей ветке первой линии * 16% * 60 рублей
 	
@@ -493,75 +524,85 @@ function calcProfit2(){
 	$("#formula_rasv").html("(" + L2TotalSum + " + " + L3TotalSum + ") * 20% * 60₽");
 	$("#rasv").html(rasv + " ₽");
 	
-	// Групповая премия
-	
-	
 	// Премия за базовый объем
 	
-	
-}
-
-function calcProfit(){
-	
-	var start = L1LSum * 0.16 * 60;
-	var rasv = (SUM_POINT_2 + SUM_POINT_3) * 0.2 * 60;
-	
-	$("#start").html(start + "₽");
-	
-	$("#formula_start").html(SUM_POINT_1 + " * 16% * 60₽");
-	
-	$("#rasv").html(rasv + "₽");
-	$("#formula_rasv").html("(" + SUM_POINT_2 + " + " + SUM_POINT_3 + ") * 20% * 60₽");
-		
 	var baseValue = 0;
-	var sumPeopleFirstLine = parseInt($("#1_Start").val()) + parseInt($("#1_Standart").val()) + parseInt($("#1_BusinessPRO").val());
 	
-	if(sumPeopleFirstLine >= 3 && SUM_POINT_1 >= 500 && SUM_POINT_1 < 1500) {
+	var CountPeople_1_Line_L = L1LStartMan + L1LStandartMan + L1LBPROMan;
+	var CountPeople_1_Line_R = L1RStartMan + L1RStandartMan + L1RBPROMan;
+	var CountPeople_1_Line_Total = CountPeople_1_Line_L + CountPeople_1_Line_R;
+
+	var SumPoint_1_Line_L = L1LSum;
+	var SumPoint_1_Line_R = L1RSum;
+	var SumPoint_1_Line_Total = SumPoint_1_Line_L + SumPoint_1_Line_R;
+	
+	
+	if(CountPeople_1_Line_Total >= 3 && SumPoint_1_Line_Total >= 500 && SumPoint_1_Line_Total < 1500) {
 		
 	   baseValue = 6000;
-	   $("#baseValue").html(baseValue + "₽");
-	   $("#formula_baseValue").html("Начислена премия 6000₽ за приглашение " + sumPeopleFirstLine + " чел. в 1 линию на сумму " + SUM_POINT_1 + " баллов.");
+	   $("#baseValue").html(baseValue + " ₽");
+	   $("#formula_baseValue").html("Начислена премия 6000₽ за приглашение " + CountPeople_1_Line_Total + " чел. в 1 линию на сумму " + SumPoint_1_Line_Total + " баллов.");
 	   
-	} else if(sumPeopleFirstLine >= 3 && SUM_POINT_1 >= 1500) {
+	} else if(CountPeople_1_Line_Total >= 3 && SumPoint_1_Line_Total >= 1500) {
 	   baseValue = 30000;
-	   $("#formula_baseValue").html("Начислена премия 30000₽ за приглашение " + sumPeopleFirstLine + " чел. в 1 линию на сумму " + SUM_POINT_1 + " баллов.");
-	   $("#baseValue").html(baseValue + "₽");
+	   $("#formula_baseValue").html("Начислена премия 30000₽ за приглашение " + CountPeople_1_Line_Total + " чел. в 1 линию на сумму " + SumPoint_1_Line_Total + " баллов.");
+	   $("#baseValue").html(baseValue + " ₽");
 	} else {
-		$("#formula_baseValue").html("Не выполнены условия начисления премии.");
+		baseValue = 0;
+		$("#formula_baseValue").html("Не выполнены условия начисления премии (приглашено меньше 3 человек в 1 линию, и/или сумма баллов за приглашения в 1 линию меньше 500.");
 		$("#baseValue").html("0₽");
 	}
 	
-	
-	$("#formula_group").html("(" + SUM_POINT_1 + " + " + SUM_POINT_2 + " + " + SUM_POINT_3 + " + " + SUM_POINT_4 + " + " + SUM_POINT_5 + " + " + SUM_POINT_6 + " + " + SUM_POINT_7 + ") * 20% * 60₽");
-	
+	// Групповая премия
 	
 	var group = 0;
 	
-	if(sumPeopleFirstLine >= 2) {
+	if(CountPeople_1_Line_L > 0 && CountPeople_1_Line_R > 0) {
 		
-		group = (SUM_POINT_1 + SUM_POINT_2 + SUM_POINT_3 + SUM_POINT_4 + SUM_POINT_5 + SUM_POINT_6 + SUM_POINT_7) * 0.2 * 60;
+		group = (L1TotalSum + L2TotalSum + L3TotalSum + L4TotalSum + L5TotalSum + L6TotalSum + L7TotalSum) * precent/100 * 60;
+		
+		$("#formula_group").html("(" + L1TotalSum + " + " + L2TotalSum + " + " + L3TotalSum + " + " + L4TotalSum + " + " + L5TotalSum + " + " + L6TotalSum + " + " + L7TotalSum + ") * " + precent + "% * 60₽");
+		
 		$("#group").html(parseInt(group) + "₽");
 		
+	} else {
+		$("#formula_group").html("Не выполнены условия для получения премии - отсутствуют партнеры слева и справа.")
+		$("#group").html(parseInt(group) + "₽");
 	};
 	
-	var rosn = 0;
+	// Спонсорская премия
+	
+	sponsored = $("#sponsored").val();
+	
+	
+	// Розничная премия
 	
 	rosn = $("#rosn").val();
 	
-	var totalCash = parseInt(start) + parseInt(rasv) + parseInt(baseValue) + parseInt(group) + parseInt(rosn);
-
-	$("#totalCash").html(parseInt(totalCash));
+	// Лидерская премия
+	
+	leader = $("#leader").val();
+	
+	// Автомобильная премия
+	
+	avto = $("#avto").val();
+	
+	var totalCash = start + rasv + group + baseValue + parseInt(sponsored) + parseInt(rosn) + parseInt(leader) + parseInt(avto);
+	
+	$("#totalCash").html(totalCash + "₽");
 	
 	
+	// Отрисовка графика
 	
   var ctxB = document.getElementById("barChart").getContext('2d');
   var myBarChart = new Chart(ctxB, {
     type: 'bar',
     data: {
-      labels: ["Стартовая", "Развития", "Групповая", "За базовый объем", "Спонсорская", "Розничный доход"],
+      labels: ["Стартовая", "Развития", "Групповая", "За базовый объем", "Спонсорская", "Розничный доход", "Лидерская", "Автомобильная"],
       datasets: [{
         label: 'Размер премии, ₽',
-        data: [start, rasv, baseValue, group, 0, rosn],
+        data: [start, rasv, group, baseValue, sponsored, rosn, leader, avto],
+//        data: [100, 200, 300,400,500,600,700,800],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -593,3 +634,4 @@ function calcProfit(){
   });
 	
 }
+

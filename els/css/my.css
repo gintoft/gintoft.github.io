@@ -10,6 +10,13 @@
 	.table thead th {
 		text-align:  center
 	}
+
+	.table .thead-light th {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+		vertical-align: middle;
+}
 	
 .table td, .table th {
     padding: .2rem;
@@ -41,7 +48,7 @@
 
 .my-custom-scrollbar {
   position: relative;
-  height: 586px;
+  height: 538px;
   overflow: auto;
   vertical-align: middle
 }
