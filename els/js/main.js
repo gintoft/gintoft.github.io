@@ -51,6 +51,7 @@ var packetCost = {
 
 }
 
+
 function checkPassword(){
 	
 	passList = ['Жанна', 'Еврей', 'Андрей', "123"];
@@ -448,7 +449,6 @@ $("#L7RBPROMan").val(0);
 function hideStructTable(){
 	$("#structTable").toggle();
 }
-
 function fillDemo(){
 $("#L1LStartMan").val(0);
 $("#L1RStartMan").val(0);
@@ -501,12 +501,64 @@ $("#L7RBPROMan").val(0);
 	
 }
 
+
+function getStatus(){
+	
+	currentPoints = L1TotalSum + L2TotalSum + L3TotalSum + L4TotalSum + L5TotalSum + L6TotalSum + L7TotalSum;
+	
+	if(currentPoints < 800) {
+		
+		$("#status").attr("class","badge");
+		$("#status").addClass("badge-warning");
+		$("#status").html("До статуса Менеджер не хватает " + (800 - currentPoints) + " баллов.");
+		
+	} else if(currentPoints >= 800 && currentPoints < 2500){
+		
+		$("#status").html("Текущий статус - Менеджер" + " ( " + (currentPoints) + " баллов)");
+		  
+			  
+	} else if(currentPoints >= 2500 && currentPoints < 5000){
+		
+		$("#status").html("Текущий статус - Директор" + " ( " + (currentPoints) + " баллов)");
+			  
+	} else if(currentPoints >= 5000 && currentPoints < 10000){
+		
+		$("#status").html("Текущий статус - Региональный директор" + " ( " + (currentPoints) + " баллов)");
+			  
+	} else if(currentPoints >= 10000 && currentPoints < 20000){
+		
+		$("#status").html("Текущий статус - Федеральный директор" + " ( " + (currentPoints) + " баллов)");
+			  
+	} else if(currentPoints >= 20000 && currentPoints < 50000){
+		
+		$("#status").html("Текущий статус - Международный директор" + " ( " + (currentPoints) + " баллов)");
+			  
+	} else if(currentPoints >= 50000 && currentPoints < 100000){
+		
+		$("#status").html("Текущий статус - Вице-президент" + " ( " + (currentPoints) + " баллов)");
+			  
+	} else if(currentPoints >= 100000 && currentPoints < 200000){
+		
+		$("#status").html("Текущий статус - Старший вице-президент" + " ( " + (currentPoints) + " баллов)");
+			  
+	} else {
+		
+		$("#status").html("Текущий статус - Президент" + " ( " + (currentPoints) + " баллов)");
+		
+	}
+	
+}
+
+
+
 function fillTable() {
 	
 getData();
 fillSumPoints();
 calcProfit();
+getStatus();
 $("#hiddenProfit").show();
+
 
 }
 
