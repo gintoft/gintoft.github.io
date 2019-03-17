@@ -452,50 +452,50 @@ function hideStructTable(){
 function fillDemo(){
 $("#L1LStartMan").val(0);
 $("#L1RStartMan").val(0);
-$("#L1RStandartMan").val(0);
-$("#L1LStandartMan").val(0);
+$("#L1RStandartMan").val(5);
+$("#L1LStandartMan").val(5);
 $("#L1LBPROMan").val(0);
 $("#L1RBPROMan").val(0);
 
 $("#L2LStartMan").val(0);
 $("#L2RStartMan").val(0);
-$("#L2RStandartMan").val(0);
-$("#L2LStandartMan").val(0);
+$("#L2RStandartMan").val(25);
+$("#L2LStandartMan").val(25);
 $("#L2LBPROMan").val(0);
 $("#L2RBPROMan").val(0);
 
 $("#L3LStartMan").val(0);
 $("#L3RStartMan").val(0);
-$("#L3RStandartMan").val(0);
-$("#L3LStandartMan").val(0);
+$("#L3RStandartMan").val(125);
+$("#L3LStandartMan").val(125);
 $("#L3LBPROMan").val(0);
 $("#L3RBPROMan").val(0);
 
 $("#L4LStartMan").val(0);
 $("#L4RStartMan").val(0);
-$("#L4RStandartMan").val(0);
-$("#L4LStandartMan").val(0);
+$("#L4RStandartMan").val(625);
+$("#L4LStandartMan").val(625);
 $("#L4LBPROMan").val(0);
 $("#L4RBPROMan").val(0);
 
 $("#L5LStartMan").val(0);
 $("#L5RStartMan").val(0);
-$("#L5RStandartMan").val(0);
-$("#L5LStandartMan").val(0);
+$("#L5RStandartMan").val(3125);
+$("#L5LStandartMan").val(3125);
 $("#L5LBPROMan").val(0);
 $("#L5RBPROMan").val(0);
 
 $("#L6LStartMan").val(0);
 $("#L6RStartMan").val(0);
-$("#L6RStandartMan").val(0);
-$("#L6LStandartMan").val(0);
+$("#L6RStandartMan").val(15625);
+$("#L6LStandartMan").val(15625);
 $("#L6LBPROMan").val(0);
 $("#L6RBPROMan").val(0);
 
 $("#L7LStartMan").val(0);
 $("#L7RStartMan").val(0);
-$("#L7RStandartMan").val(0);
-$("#L7LStandartMan").val(0);
+$("#L7RStandartMan").val(78125);
+$("#L7LStandartMan").val(78125);
 $("#L7LBPROMan").val(0);
 $("#L7RBPROMan").val(0);
 	
