@@ -1,0 +1,5 @@
+function hideNSUEM(){
+	
+	$('.NSUEM').hide();
+	
+}

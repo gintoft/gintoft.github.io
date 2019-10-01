@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <title>Расписание фестиваля науки</title>
+
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+
+<script src="js/main.js"></script>
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Боковая панель -->
+    <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-text mx-3">Фестиваль науки</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+<!--
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"><i class="fas fa-fw fa-tachometer-alt"></i><span>Анализ профиля</span></a>
+      </li>
+-->
+
+<!--      <hr class="sidebar-divider">-->
+
+<!--      <div class="sidebar-heading">Дополнительно</div>-->
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+<!--        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">-->
+<!--          <i class="fas fa-fw fa-folder"></i>-->
+<!--          <span>Структура</span>-->
+        </a>
+        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Фильтры</h6>
+            <a class="collapse-item active" href="blank.html">Категория 1</a>
+            <a class="collapse-item active" href="blank.html">Категория 2</a>
+            <a class="collapse-item active" href="blank.html">Категория 3</a>
+            <a class="collapse-item active" href="blank.html">Категория 4</a>
+            <a class="collapse-item active" href="blank.html">Категория 5</a>
+          </div>
+        </div>
+      </li>
+
+     
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <div id="content" style="background-color: white">
+        
+        
+<!--		<div id="helloPage">-->
+		<div id="helloPage" style="display: none">
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+				<h2 class="display-4">Определи свою образовательную траекторию!</h2>
+				<p class="lead">Введи ссылку на свой профиль Вконтакте и получи рекомендации по построению персональной образовательной траектории, разработанные системой искусственного интеллекта.</p>
+				</div>
+			</div>
+		</div>
+      
+        <div class="row" id="preLoader" style="display: none;" style="align: center">
+        	<img src="https://loading.io/spinners/camera/lg.camera-aperture-ajax-spinner.gif" alt="Loading ..." style="align: center">
+        </div>
+       
+        <!-- Begin Page Content -->
+        <div class="container-fluid" style="display: block" id="mainContainer">
+
+<!--             <h1 class="h3 mb-4 text-gray-800">Анализ Цифрового следа пользователя</h1>-->
+             <div class="col-xl-12">
+               <div class="card-body" id="moreInfo"></div>
+             </div>  
+                
+                
+<!--
+        <div class="row">
+            <div class="col-xl-4">
+             <div class="card shadow mb-4">
+                <a href="#subscriptionsCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="subscriptionsCard"><h6 class="m-0 font-weight-bold text-primary">Семантический анализ подписок</h6></a>
+                <div class="collapse show" id="subscriptionsCard"><div class="card-body" id="subscriptions"></div></div>
+             </div>
+             </div>
+              <div class="col-xl-4"> 
+               <div class="card shadow mb-4">
+                <a href="#interesyCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="interesyCard"><h6 class="m-0 font-weight-bold text-primary">Интересы пользователя</h6></a>
+                <div class="collapse show" id="interesyCard"><div class="card-body" id="interesy"></div></div>
+             </div>
+             </div>
+               
+            <div class="col-xl-4"> 
+               <div class="card shadow mb-4">
+                <a href="#top5SubsCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="top5SubsCard"><h6 class="m-0 font-weight-bold text-primary">ТОП-5 Подписок пользователя</h6></a>
+                <div class="collapse show" id="top5SubsCard">
+                    <div class="card-body" id="top5Subs">
+                    
+                    </div>
+                </div>
+             </div>
+             </div>
+                
+        </div>
+-->
+                        
+<div class="row">
+<div class="col-lg-12 mb-4">
+<div class="card-deck">
+
+<div class="card ">
+<div class="card-body">
+
+<h5 class="card-title">А в попугаях-то я гораздо длиннее: размерности и системы измерений</h5>
+
+<p class="card-text">В чем можно измерять расстояния? Возможно, кто-то из Вас знает, что наряду  с метром и сантиметром для этого вполне подходит секунда. А можно ли измерять расстояние в килограммах? В химии основной единицей измерения является моль. Есть ли возможность заменить ее на что-то иное или вообще убрать? </p>
+
+<span class="badge badge-pill badge-secondary">НГУЭУ</span>
+<span class="badge badge-pill badge-success"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Школьники</span>
+<span class="badge badge-pill badge-danger">Danger</span>
+<span class="badge badge-pill badge-warning">Warning</span>   
+<br>
+<a href="#" class="btn btn-primary">Зарегистрироваться!</a>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+              
+
+            </div>
+            </div>
+            
+        </div>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
