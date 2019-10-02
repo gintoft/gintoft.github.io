@@ -1,21 +1,53 @@
 
-
+targetClass = ""
 
 $(function () {
 
 	$(".card").hide();
+    $("#main").show();
 
 $('#find').click(function(){
     
-    $("#main").show();
+    
+    $(targetClass).hide();
 
 })
 
+$('#reset').click(function(){
+    
+    targetClass = ""
+    $("#main").hide();
+    
+    $(".date").removeAttr("disabled");
+    $(".date").removeClass("btn-success");
+    $(".date").addClass("btn-light");
+    
+    $(".place").removeAttr("disabled");
+    $(".place").removeClass("btn-success");
+    $(".place").addClass("btn-light");
+    
+    $(".type").removeAttr("disabled");
+    $(".type").removeClass("btn-success");
+    $(".type").addClass("btn-light");
+    
+    $(".client").removeAttr("disabled");
+    $(".client").removeClass("btn-success");
+    $(".client").addClass("btn-light");
+    
+})
+    
+$('#fullRasp').click(function(){ // Открыть полный список мероприятий
+    
+    $(".jumbotron").hide();
+
+})
+    
 	
 // Дата проведения
 $('#1010').click(function(){
     
     $(".1010").show();
+    targetClass += ".1010"
     
     $(".date").attr("disabled", "");
     $("#1010").removeAttr("disabled"); // деактивировать все кнопки этого класса
@@ -26,7 +58,7 @@ $('#1010').click(function(){
 $('#1110').click(function(){
     
     $(".1110").show();
-    
+    targetClass += ".1110"
     $(".date").attr("disabled", "");
     $("#1110").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1110").removeClass("btn-light");
@@ -36,7 +68,7 @@ $('#1110').click(function(){
 $('#1210').click(function(){
     
     $(".1210").show();
-    
+    targetClass += ".1210"
     $(".date").attr("disabled", "");
     $("#1210").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1210").removeClass("btn-light");
@@ -46,7 +78,7 @@ $('#1210').click(function(){
 $('#1310').click(function(){
     
     $(".1310").show();
-    
+    targetClass += ".1310"
     $(".date").attr("disabled", "");
     $("#1310").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1310").removeClass("btn-light");
@@ -56,7 +88,7 @@ $('#1310').click(function(){
 $('#1410').click(function(){
     
     $(".1410").show();
-    
+    targetClass += ".1410"
     $(".date").attr("disabled", "");
     $("#1410").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1410").removeClass("btn-light");
@@ -66,7 +98,7 @@ $('#1410').click(function(){
 $('#1510').click(function(){
     
     $(".1510").show();
-    
+    targetClass += ".1510"
     $(".date").attr("disabled", "");
     $("#1510").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1510").removeClass("btn-light");
@@ -76,7 +108,7 @@ $('#1510').click(function(){
 $('#1610').click(function(){
     
     $(".1610").show();
-    
+    targetClass += ".1610"
     $(".date").attr("disabled", "");
     $("#1610").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1610").removeClass("btn-light");
@@ -86,7 +118,7 @@ $('#1610').click(function(){
 $('#1710').click(function(){
     
     $(".1710").show();
-    
+    targetClass += ".1710"
     $(".date").attr("disabled", "");
     $("#1710").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1710").removeClass("btn-light");
@@ -96,7 +128,7 @@ $('#1710').click(function(){
 $('#1810').click(function(){
     
     $(".1810").show();
-    
+    targetClass += ".1810"
     $(".date").attr("disabled", "");
     $("#1810").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1810").removeClass("btn-light");
@@ -106,7 +138,7 @@ $('#1810').click(function(){
 $('#1910').click(function(){
     
     $(".1910").show();
-    
+    targetClass += ".1910"
     $(".date").attr("disabled", "");
     $("#1910").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#1910").removeClass("btn-light");
@@ -116,7 +148,7 @@ $('#1910').click(function(){
 $('#2010').click(function(){
     
     $(".2010").show();
-    
+    targetClass += ".2010"
     $(".date").attr("disabled", "");
     $("#2010").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#2010").removeClass("btn-light");
@@ -126,7 +158,7 @@ $('#2010').click(function(){
 $('#2110').click(function(){
     
     $(".2110").show();
-    
+    targetClass += ".2110"
     $(".date").attr("disabled", "");
     $("#2110").removeAttr("disabled"); // деактивировать все кнопки этого класса
     $("#2110").removeClass("btn-light");
