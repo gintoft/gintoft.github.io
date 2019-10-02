@@ -15,6 +15,7 @@ $('#find').click(function(){
 
 $('#reset').click(function(){
     
+    document.location.reload(true);
     targetClass = ""
     $("#main").hide();
     
