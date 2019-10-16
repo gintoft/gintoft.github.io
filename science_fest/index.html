@@ -13,9 +13,9 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+
 <!--<script src="js/events.js"></script>-->
 <!--<script src="js/ob.js"></script>-->
-
 <script type="text/javascript" src="https://nsuem.ru/gintoft/events.js"></script>
 <script type="text/javascript" src="https://nsuem.ru/gintoft/ob.js"></script>
 </head>
@@ -27,12 +27,12 @@
 <div class="container">
 
 <div class="jumbotron">
-  <h1 class="display-6">Расписание мероприятий</h1>
+<h2 class="display-6">Программа фестиваля</h2>
 <hr class="my-4">
 <div id="filterResult" style="display: none"></div>
 <div id="filter">
-<h4 id="hid">Выберите подходящее мероприятие или откройте <a href="#" id="fullRasp">полный список</a></h4>
-<br>
+<h4 id="hid"><i class="fas fa-search"></i> Поиск мероприятий</a></h4>
+<p></p>
 <h5>По дате проведения</h5>
 <button type="button" id="1110" class="btn btn-light btn-sm date" style="margin-top: 3px" data-toggle="tooltip" data-placement="top">11 <br>октября</button>
 <button type="button" id="1210" class="btn btn-light btn-sm date" style="margin-top: 3px" data-toggle="tooltip" data-placement="top">12 <br>октября</button>
@@ -44,6 +44,7 @@
 <button type="button" id="1810" class="btn btn-light btn-sm date" style="margin-top: 3px" data-toggle="tooltip" data-placement="top">18 <br>октября</button>
 <button type="button" id="1910" class="btn btn-light btn-sm date" style="margin-top: 3px" data-toggle="tooltip" data-placement="top">19 <br>октября</button>
 <button type="button" id="2010" class="btn btn-light btn-sm date" style="margin-top: 3px" data-toggle="tooltip" data-placement="top">20 <br>октября</button>
+<button type="button" id="otherDate" class="btn btn-light btn-sm date" style="margin-top: 3px" data-toggle="tooltip" data-placement="top" title="До 11 октября или после 20 октября" >Другие <br>даты</button>
 
 <br><br><h5>По месту проведения</h5>
 <button type="button" id="MS" class="btn btn-light btn-sm place" style="margin-top: 3px">Школы, колледжи</button>
@@ -73,13 +74,13 @@
 <button type="button" id="SPEC" class="btn btn-light client btn-sm" style="margin-top: 3px">Специалисты</button>
 <button type="button" id="ADULTS" class="btn btn-light client btn-sm" style="margin-top: 3px">Взрослые</button>
 <br><br>
-<button type="button" id="find" class="btn btn-success">Найти мероприятия!</button>
-<a href="http://nsk.festivalnauki.ru/rasp" target="_self" style="color: gray; margin-left: 10px" class="reloadPage"><i class="fas fa-filter"></i> Сбросить фильтры.</a></h4>
-<!--<button type="button" class="btn btn-link reloadPage" style="color: gray"><i class="fas fa-filter"></i> Сбросить фильтр</button>-->
+<button type="button" id="find" class="btn btn-success">Применить фильтр</button>
+<a href="http://nsk.festivalnauki.ru/rasp" target="_self" style="color: gray; margin-left: 10px" class="reloadPage"><i class="fas fa-filter"></i> Сбросить фильтр</a>
 </div>
 </div>
 
-<div class="row" style="display: none" id="main">
+<!--<div class="row" style="display: none" id="main">-->
+<div class="row" id="main">
 <div class="col-lg-12 mb-4" id="cardholder">
 
 </div>

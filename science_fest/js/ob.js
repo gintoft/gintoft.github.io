@@ -3,7 +3,7 @@ targetClass = ".card";
 $(function () {
 
     fillCardholder();
-    $(".card").hide();
+    $('[data-toggle="tooltip"]').tooltip(); 
 
 $('#find').click(function(){
     
@@ -19,10 +19,8 @@ $('#find').click(function(){
     
     $("#filterResult").append(result);
     
-    '<h3>Выберите подходящее мероприятие или откройте<a href="http://nsk.festivalnauki.ru/rasp" target="_self" id="fullRasp">полный список</a></h3>'
-    
+    $(".card").hide();
     $("#filterResult").show();
-    $("#main").show();
     $(targetClass).show();
 
 })
@@ -39,6 +37,16 @@ $('#fullRasp').click(function(){
 })
 	
 // Дата проведения
+$('#otherDate').click(function(){
+    
+    targetClass += ".OTHDATE"
+    $(".date").attr("disabled", "");
+    $("#otherDate").removeAttr("disabled");
+    $("#otherDate").removeClass("btn-light");
+    $('#otherDate').addClass("btn-success");
+
+})
+    
 $('#1110').click(function(){
     
     targetClass += ".1110"
@@ -350,7 +358,7 @@ function fillCardholder(){
         drawCard(dataset[i].date, dataset[i].name, dataset[i].description, dataset[i].type, dataset[i].city, dataset[i].placeType, dataset[i].placeName, dataset[i].address, dataset[i].addressInfo, dataset[i].client, dataset[i].classList, dataset[i].link);
     }
     
-//    $('[data-toggle="tooltip"]').tooltip(); 
+    
     
 }
 
