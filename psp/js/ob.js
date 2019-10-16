@@ -22,7 +22,7 @@ events = [
 { event: 'Мультипликативный эффект продукта (удержание клиента)' , speaker: 'Спикер уточняется' , datetime: '5 ноября, 17.00' , place: '5-213' , eventID: '22' , link: 'https://docs.google.com/forms/d/18mWQMxjBfbzpw2y1yN_Ly35FF418TQgXyp2k3dg56YI/edit'},
 { event: 'Упаковка проекта для инвестора' , speaker: 'П. Новгородов, Ю. Коложвари' , datetime: '30 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '23' , link: 'https://docs.google.com/forms/d/1lwIuYVSx349--qK6x44X4CDy7SFaHjTQNKza7xHnq80/edit'},
 { event: 'Социальное предпринимательство' , speaker: 'Е. Дубровин' , datetime: '2-3 ноября' , place: 'Точка кипения НГТУ' , eventID: '24' , link: 'https://docs.google.com/forms/d/1O20RPl2AbmKxlDbdqc_oH_QBAfn-Ge1Bw3PtQO45Vkg/edit'},
-{ event: 'Тимбилдинг как корпоратив' , speaker: 'А. Подилько' , datetime: '43764' , place: 'Выездная площадка («Звезда»)' , eventID: '25' , link: 'https://docs.google.com/forms/d/1lOzoBHIFhUq7vp6-BfDNSrZWo3IKqXeFsppiCrh48yI/edit'},
+{ event: 'Тимбилдинг как корпоратив' , speaker: 'А. Подилько' , datetime: '26 октября' , place: 'Выездная площадка («Звезда»)' , eventID: '25' , link: 'https://docs.google.com/forms/d/1lOzoBHIFhUq7vp6-BfDNSrZWo3IKqXeFsppiCrh48yI/edit'},
 { event: 'Заявки на гранты' , speaker: 'Спикер уточняется' , datetime: 'Дата уточняется' , place: 'Аудитория уточняется' , eventID: '26' , link: 'https://docs.google.com/forms/d/1HSJut9vEVt_d4LRs8IZpihz4FFPyL5lh9FnMVsqybWs/edit'}
     
 ]
