@@ -1,17 +1,19 @@
 events = [
+    
 { event: 'Генерация бизнес-идей' , speaker: 'Д. Шабалин' , datetime: '12 октября, 12:00' , place: '5-109' , eventID: '1' , link: '#'},
-{ event: 'Основы маркетинга' , speaker: 'Спикер уточняется' , datetime: '21 октября, 17:00' , place: '5-213' , eventID: '2' , link: 'https://docs.google.com/forms/d/e/1FAIpQLSe4cbI6-tVg2w9vajKfoWgfZQ_eVaNPVFNfndltooxc0XBCtA/viewform'},
+{ event: 'Основы маркетинга' , speaker: 'А. Толстикова' , datetime: '21 октября, 17:00' , place: '5-213' , eventID: '2' , link: 'https://docs.google.com/forms/d/e/1FAIpQLSe4cbI6-tVg2w9vajKfoWgfZQ_eVaNPVFNfndltooxc0XBCtA/viewform'},
 { event: 'Основы формирования команды' , speaker: 'Д. Москвин' , datetime: '22 октября, 17:00' , place: '5-104' , eventID: '3' , link: 'https://docs.google.com/forms/d/1NAwZRXf6q0tajijAUTObyr1nClrofGkrBAJT0OHVMvc/edit'},
 { event: 'Продукт как потенциальная технология' , speaker: 'А. Старостин , Н. Дранишников' , datetime: '22 октября, 19:00' , place: '5-104' , eventID: '4' , link: 'https://docs.google.com/forms/d/1vdGASIl1Mpr7ZLaDQc69CeIdsrx48-Hd3EFPWW3EFDI/edit'},
 { event: 'Основы бюджетирования и привлечение ресурсов' , speaker: 'А.Морозов, С. Руськова, В.Китайцева' , datetime: '21 октября, 17:00' , place: '3-214 (+Бизнес-инкубатор НГУЭУ)' , eventID: '5' , link: 'https://docs.google.com/forms/d/1vomuab0vIPq6VUQhaHEGgN7k8l6cpf3etJx2nZyeGlU/edit'},
-{ event: 'SMM-маркетинг' , speaker: 'Спикер уточняется' , datetime: '29 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '6' , link: 'https://docs.google.com/forms/d/1gJGyOBTFepUO5P2jRM7Y0UogpqtpPDwPhw4mgawbz98/edit'},
+{ event: 'SMM-маркетинг' , speaker: 'А. Изотова' , datetime: '28 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '6' , link: 'https://docs.google.com/forms/d/1gJGyOBTFepUO5P2jRM7Y0UogpqtpPDwPhw4mgawbz98/edit'},
 { event: 'Подбор персонала, архитектура команды' , speaker: 'Ю. Масалова' , datetime: '28 октября, 17:00' , place: '5-213' , eventID: '7' , link: 'https://docs.google.com/forms/d/129BmoXfJcmt3TYnXkvIv8hlK8RM1nk6UXB5eYvbE72I/edit'},
 { event: 'Инжиниринг как компетенция' , speaker: 'Наноцентр СИГМА.Новосибирск' , datetime: '19 октября, 10:00 -20:00' , place: 'Ломоносова, 56, Актовый зал' , eventID: '8' , link: 'https://docs.google.com/forms/d/1kuEeMS5Lq-LkCLT3ynvQdBXGq8iD4UFPWiRJ9nhKnkk/edit'},
 { event: 'Экономика как калькуляция (бизнес-планирование)' , speaker: 'Спикер уточняется' , datetime: '23 октября, 17:00' , place: '5-104' , eventID: '9' , link: 'https://docs.google.com/forms/d/1DDfO6oLoEhcgMtfi5VVixQ7STj4DJAVzIW1Eh5_07vY/edit'},
 { event: 'Менеджмент как искусство' , speaker: 'Е. Десяткова' , datetime: '22 октября, 18:30' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '10' , link: 'https://docs.google.com/forms/d/1mpIUZ0ycKSt7xoAPbGHGWWiT4dOdTgObNYSpsy9ov20/edit'},
 { event: 'Личный бренд и брендинг компании' , speaker: 'Д. Петров' , datetime: '30 октября, 17:00' , place: '5-511' , eventID: '11' , link: 'https://docs.google.com/forms/d/1YkCnGkeZ0TwLgl1_m5daLhKalMdvtTM4Oc5a-oyUQH8/edit'},
 { event: 'Конфликтология и взаимоотношение с конкурентами' , speaker: 'Т. Зотова' , datetime: '29 октября, 18:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '12' , link: 'https://docs.google.com/forms/d/1B8PcaWssCuzyWa9a-mfo9RTeY1dJ93VpRs2jtxvMCfY/edit'},
-{ event: 'Юридическое сопровождение бизнеса. Расчетный счет и банковское обслуживание' , speaker: 'Спикер уточняется' , datetime: '1 ноября, 16:00' , place: 'Конференц-зал Сбербанка (ул. Серебренниковская, 20)' , eventID: '13' , link: 'https://docs.google.com/forms/d/1b0R0UKXir03BmyD8fAVlj5a2rug7Sju6LmZRgcMY9wA/edit'},{ event: 'Миссия и идеология бизнеса' , speaker: 'А. Лазарев' , datetime: '29 октября, 19:00' , place: '5-104' , eventID: '14' , link: 'https://docs.google.com/forms/d/13xew0UnCQ6IUr1nB-XEGlE-1gbKDDFxp7Mcw9FgCLog/edit'},
+{ event: 'Юридическое сопровождение бизнеса. Расчетный счет и банковское обслуживание' , speaker: 'Спикер уточняется' , datetime: '1 ноября, 16:00' , place: 'Конференц-зал Сбербанка (ул. Серебренниковская, 20)' , eventID: '13' , link: 'https://docs.google.com/forms/d/1b0R0UKXir03BmyD8fAVlj5a2rug7Sju6LmZRgcMY9wA/edit'},
+{ event: 'Миссия и идеология бизнеса' , speaker: 'А. Лазарев' , datetime: '29 октября, 19:00' , place: '5-104' , eventID: '14' , link: 'https://docs.google.com/forms/d/13xew0UnCQ6IUr1nB-XEGlE-1gbKDDFxp7Mcw9FgCLog/edit'},
 { event: 'Медиа-взаимодействие, PR' , speaker: 'А. Веселов' , datetime: '5 ноября, 17: 00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '15' , link: 'https://docs.google.com/forms/d/1p36P6JPV3gjwWWyhHuB6SOGAyqR3yWsrF6CgMK1ER2o/edit'},
 { event: 'Работа на развитие команды, корпоративная культура' , speaker: 'Д. Шабалин' , datetime: '30 октября, 17:00' , place: '5-518' , eventID: '16' , link: 'https://docs.google.com/forms/d/1Sk_MuL4wh8XgXCAe9o9YlB7wElkZUdn47-4_HIp26A0/edit'},
 { event: 'Упаковка продукта и упаковка франшизы' , speaker: 'А. Болотова' , datetime: '5 ноября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '17' , link: 'https://docs.google.com/forms/d/19eaeGzhX4rTXX7Jf1mj9CatrNgGEFqJKT2-cfDkbvbs/edit'},
@@ -32,7 +34,6 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     fillTable();
     
-    
 })
 
 function dravCell(event, speaker, datetime, place, enentID, link, currentCell) {
@@ -51,7 +52,7 @@ function fillTable(){
     for (i = 0; i < events.length; i++){
         
         currentCell = i + 1;
-        
         dravCell(events[i].event, events[i].speaker, events[i].datetime, events[i].place, events[i].eventID, events[i].link, '#' + currentCell);
         
-    }}
+    }
+}
