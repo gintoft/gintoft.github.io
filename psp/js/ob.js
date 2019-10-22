@@ -9,7 +9,6 @@ events = [
 { tooltipText: 'Зарегистрироваться!', event: 'Подбор персонала, архитектура команды' , speaker: 'Ю. Масалова' , datetime: '28 октября, 17:00' , place: '5-213' , eventID: '7' , link: 'https://docs.google.com/forms/d/129BmoXfJcmt3TYnXkvIv8hlK8RM1nk6UXB5eYvbE72I/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Инжиниринг как компетенция' , speaker: 'Наноцентр СИГМА.Новосибирск' , datetime: '19 октября, 10:00 -20:00' , place: 'Ломоносова, 56, Актовый зал' , eventID: '8' , link: 'https://docs.google.com/forms/d/1kuEeMS5Lq-LkCLT3ynvQdBXGq8iD4UFPWiRJ9nhKnkk/edit'},
 { tooltipText: 'Модуль отменен. Регистрация недоступна.', event: 'Экономика как калькуляция (бизнес-планирование)' , speaker: 'Спикер уточняется' , datetime: '23 октября, 17:00' , place: '5-104' , eventID: '9' , link: '#'},
-//{ tooltipText: 'Модуль отменен. Регистрация недоступна.', event: 'Экономика как калькуляция (бизнес-планирование)' , speaker: 'Спикер уточняется' , datetime: '23 октября, 17:00' , place: '5-104' , eventID: '9' , link: '#'},
 { tooltipText: 'Зарегистрироваться!', event: 'Менеджмент как искусство' , speaker: 'Е. Десяткова' , datetime: '22 октября, 18:30' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '10' , link: 'https://docs.google.com/forms/d/1mpIUZ0ycKSt7xoAPbGHGWWiT4dOdTgObNYSpsy9ov20/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Личный бренд и брендинг компании' , speaker: 'Д. Петров' , datetime: '30 октября, 17:00' , place: '5-511' , eventID: '11' , link: 'https://docs.google.com/forms/d/1YkCnGkeZ0TwLgl1_m5daLhKalMdvtTM4Oc5a-oyUQH8/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Конфликтология и взаимоотношение с конкурентами' , speaker: 'Т. Зотова' , datetime: '29 октября, 18:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '12' , link: 'https://docs.google.com/forms/d/1B8PcaWssCuzyWa9a-mfo9RTeY1dJ93VpRs2jtxvMCfY/edit'},
@@ -23,7 +22,6 @@ events = [
 { tooltipText: 'Зарегистрироваться!', event: 'Поиск новых рынков: технологии маркетинга' , speaker: 'Д. Петров' , datetime: '6 ноября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '20' , link: 'https://docs.google.com/forms/d/1TzqE_9jSds0eKGV7jp9kOLNv8eP1CcKF-5w3Nd3mGCo/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Делегирование полномочий и отчуждение проекта («…продай компанию»)' , speaker: 'Спикер уточняется' , datetime: '19 октября, 10:00 -20:00' , place: 'Ломоносова, 56, Актовый зал' , eventID: '21' , link: 'https://docs.google.com/forms/d/1EyVPGEgapMm5U3wwQKi1JgrJBbLs6-guZvl94536LFo/edit'},
 { tooltipText: 'Модуль отменен. Регистрация недоступна.', event: 'Мультипликативный эффект продукта (удержание клиента)' , speaker: 'Спикер уточняется' , datetime: '5 ноября, 19:00' , place: '5-213' , eventID: '22' , link: '#'},
-//{ tooltipText: 'Модуль отменен. Регистрация недоступна.', event: 'Мультипликативный эффект продукта (удержание клиента)' , speaker: 'Спикер уточняется' , datetime: '5 ноября, 19:00' , place: '5-213' , eventID: '22' , link: '#'},
 { tooltipText: 'Зарегистрироваться!', event: 'Упаковка проекта для инвестора' , speaker: 'П. Новгородов, Ю. Коложвари' , datetime: '30 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '23' , link: 'https://docs.google.com/forms/d/1lwIuYVSx349--qK6x44X4CDy7SFaHjTQNKza7xHnq80/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Социальное предпринимательство' , speaker: 'Е. Дубровин' , datetime: '2-3 ноября' , place: 'Точка кипения НГТУ' , eventID: '24' , link: 'https://docs.google.com/forms/d/1O20RPl2AbmKxlDbdqc_oH_QBAfn-Ge1Bw3PtQO45Vkg/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Тимбилдинг как корпоратив' , speaker: 'А. Подилько' , datetime: '26 октября' , place: 'Выездная площадка («Звезда»)' , eventID: '25' , link: 'https://docs.google.com/forms/d/1lOzoBHIFhUq7vp6-BfDNSrZWo3IKqXeFsppiCrh48yI/edit'},
@@ -36,13 +34,13 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     fillTable();
     
-    fillgray();
+    removeCanceledEvents();
     
 })
 
 function dravCell(event, speaker, datetime, place, enentID, link, currentCell, tooltipText) {
     
-    html = '<h6><a href="' + link + '" target="_blank" data-toggle="tooltip" data-placement="top" title="' + tooltipText + '">' + event + '</a></h6>';
+    html  = '<h6><a href="' + link + '" target="_blank" data-toggle="tooltip" data-placement="top" title="' + tooltipText + '">' + event + '</a></h6>';
     html += '<span class="badge badge-warning"><i class="fas fa-calendar-day"></i> ' + datetime + '</span>  ';
     html += '<span class="badge badge-success"><i class="fas fa-user"></i> ' + speaker + '</span>  <br>';
     html += '<span class="badge badge-light"><i class="fas fa-building"></i> ' + place + '</span>  <br>';
@@ -61,7 +59,7 @@ function fillTable(){
     }
 }
 
-function fillgray(){
+function removeCanceledEvents(){
     
     html = '<div><h6 style="color: gray">Модуль отменен</h6></div>';
     
