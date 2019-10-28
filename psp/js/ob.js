@@ -67,6 +67,8 @@ function fillTable(){
 
 function changeBadge(id){
     
+//    as
+    
     $('#time_' + id).removeClass('badge-warning');
     $('#time_' + id).addClass('badge-light');
     
