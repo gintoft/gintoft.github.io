@@ -5,8 +5,8 @@ events = [
 { tooltipText: 'Модуль завершен', event: 'Основы формирования команды' , speaker: 'Д. Москвин' , datetime: '22 октября, 17:00' , place: '5-104' , eventID: '3' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Продукт как потенциальная технология' , speaker: 'А. Старостин , Н. Дранишников' , datetime: '22 октября, 19:00' , place: '5-104' , eventID: '4' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Основы бюджетирования и привлечение ресурсов' , speaker: 'В.Китайцева' , datetime: '21 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '5' , link: '#'},
-{ tooltipText: 'Зарегистрироваться!', event: 'SMM-маркетинг' , speaker: 'А. Изотова' , datetime: '28 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '6' , link: 'https://docs.google.com/forms/d/1gJGyOBTFepUO5P2jRM7Y0UogpqtpPDwPhw4mgawbz98/edit'},
-{ tooltipText: 'Зарегистрироваться!', event: 'Подбор персонала, архитектура команды' , speaker: 'Ю. Масалова' , datetime: '28 октября, 17:00' , place: '5-213' , eventID: '7' , link: 'https://docs.google.com/forms/d/129BmoXfJcmt3TYnXkvIv8hlK8RM1nk6UXB5eYvbE72I/edit'},
+{ tooltipText: 'Модуль завершен', event: 'SMM-маркетинг' , speaker: 'А. Изотова' , datetime: '28 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '6' , link: '#'},
+{ tooltipText: 'Модуль завершен', event: 'Подбор персонала, архитектура команды' , speaker: 'Ю. Масалова' , datetime: '28 октября, 17:00' , place: '5-213' , eventID: '7' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Инжиниринг как компетенция' , speaker: 'Наноцентр СИГМА.Новосибирск' , datetime: '19 октября, 10:00 -20:00' , place: 'Ломоносова, 56, Актовый зал' , eventID: '8' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Экономика как калькуляция (бизнес-планирование)' , speaker: 'Спикер уточняется' , datetime: '23 октября, 17:00' , place: '5-104' , eventID: '9' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Менеджмент как искусство' , speaker: 'Е. Десяткова' , datetime: '22 октября, 18:30' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '10' , link: '#'},
@@ -17,7 +17,7 @@ events = [
 { tooltipText: 'Зарегистрироваться!', event: 'Медиа-взаимодействие, PR' , speaker: 'А. Веселов' , datetime: '5 ноября, 17: 00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '15' , link: 'https://docs.google.com/forms/d/1p36P6JPV3gjwWWyhHuB6SOGAyqR3yWsrF6CgMK1ER2o/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Работа на развитие команды, корпоративная культура' , speaker: 'Д. Шабалин' , datetime: '30 октября, 17:00' , place: '5-518' , eventID: '16' , link: 'https://docs.google.com/forms/d/1Sk_MuL4wh8XgXCAe9o9YlB7wElkZUdn47-4_HIp26A0/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Упаковка продукта и упаковка франшизы' , speaker: 'А. Болотова' , datetime: '5 ноября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '17' , link: 'https://docs.google.com/forms/d/19eaeGzhX4rTXX7Jf1mj9CatrNgGEFqJKT2-cfDkbvbs/edit'},
-{ tooltipText: 'Зарегистрироваться!', event: 'Финансовая модель (бизнес-моделирование)' , speaker: 'Д. Москвин' , datetime: '28 октября, 17:00' , place: '5-411' , eventID: '18' , link: 'https://docs.google.com/forms/d/18IbvCkNV2_eFA4ijaOluHVhbdpYxffmBArm4cokX-lc/edit'},
+{ tooltipText: 'Модуль завершен', event: 'Финансовая модель (бизнес-моделирование)' , speaker: 'Д. Москвин' , datetime: '28 октября, 17:00' , place: '5-411' , eventID: '18' , link: '#'},
 { tooltipText: 'Зарегистрироваться!', event: 'Поиск новых рынков: стратегия голубого океана' , speaker: 'А. Васенев' , datetime: '6 ноября, 17:00' , place: '5-213' , eventID: '19' , link: 'https://docs.google.com/forms/d/1f_Q-jb0v_q5YvQNG8wsMizCuFHnNweJkSauEEpZPk8E/edit'},
 { tooltipText: 'Зарегистрироваться!', event: 'Поиск новых рынков: технологии маркетинга' , speaker: 'Д. Петров' , datetime: '6 ноября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '20' , link: 'https://docs.google.com/forms/d/1TzqE_9jSds0eKGV7jp9kOLNv8eP1CcKF-5w3Nd3mGCo/edit'},
 { tooltipText: 'Модуль завершен', event: 'Делегирование полномочий и отчуждение проекта («…продай компанию»)' , speaker: 'Спикер уточняется' , datetime: '19 октября, 10:00 -20:00' , place: 'Ломоносова, 56, Актовый зал' , eventID: '21' , link: '#'},
@@ -34,7 +34,7 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     fillTable();
     
-    EventList = [1, 2, 3, 4, 5, 8, 9, 10, 21, 22, 25]
+    EventList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18, 21, 22, 25]
     
     for(i = 0; i < EventList.length; i++){
     
