@@ -12,7 +12,7 @@ events = [
 { tooltipText: 'Модуль завершен', event: 'Менеджмент как искусство' , speaker: 'Е. Десяткова' , datetime: '22 октября, 18:30' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '10' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Личный бренд и брендинг компании' , speaker: 'Д. Петров' , datetime: '30 октября, 19:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '11' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Конфликтология и взаимоотношение с конкурентами' , speaker: 'Т. Зотова' , datetime: '29 октября, 18:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '12' , link: '#'},
-{ tooltipText: 'Зарегистрироваться!', event: 'Юридическое сопровождение бизнеса. Расчетный счет и банковское обслуживание' , speaker: 'Спикер уточняется' , datetime: '1 ноября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '13' , link: 'https://docs.google.com/forms/d/1b0R0UKXir03BmyD8fAVlj5a2rug7Sju6LmZRgcMY9wA/edit'},
+{ tooltipText: 'Модуль завершен', event: 'Юридическое сопровождение бизнеса. Расчетный счет и банковское обслуживание' , speaker: 'Спикер уточняется' , datetime: '1 ноября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '13' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Миссия и идеология бизнеса' , speaker: 'А. Лазарев' , datetime: '29 октября, 19:00' , place: '5-104' , eventID: '14' , link: '#'},
 { tooltipText: 'Зарегистрироваться!', event: 'Медиа-взаимодействие, PR' , speaker: 'А. Веселов' , datetime: '5 ноября, 17: 00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '15' , link: 'https://docs.google.com/forms/d/1p36P6JPV3gjwWWyhHuB6SOGAyqR3yWsrF6CgMK1ER2o/edit'},
 { tooltipText: 'Модуль завершен', event: 'Работа на развитие команды, корпоративная культура' , speaker: 'Д. Шабалин' , datetime: '30 октября, 19:00' , place: '5-518' , eventID: '16' , link: '#'},
@@ -23,7 +23,7 @@ events = [
 { tooltipText: 'Модуль завершен', event: 'Делегирование полномочий и отчуждение проекта («…продай компанию»)' , speaker: 'Спикер уточняется' , datetime: '19 октября, 10:00 -20:00' , place: 'Ломоносова, 56, Актовый зал' , eventID: '21' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Мультипликативный эффект продукта (удержание клиента)' , speaker: 'Спикер уточняется' , datetime: '5 ноября, 19:00' , place: '5-213' , eventID: '22' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Упаковка проекта для инвестора' , speaker: 'П. Новгородов, Ю. Коложвари' , datetime: '30 октября, 17:00' , place: 'Бизнес-инкубатор НГУЭУ' , eventID: '23' , link: '#'},
-{ tooltipText: 'Зарегистрироваться!', event: 'Социальное предпринимательство' , speaker: 'Е. Дубровин' , datetime: '2-3 ноября' , place: 'Точка кипения НГТУ' , eventID: '24' , link: 'https://docs.google.com/forms/d/1O20RPl2AbmKxlDbdqc_oH_QBAfn-Ge1Bw3PtQO45Vkg/edit'},
+{ tooltipText: 'Модуль завершен', event: 'Социальное предпринимательство' , speaker: 'Е. Дубровин' , datetime: '2-3 ноября' , place: 'Точка кипения НГТУ' , eventID: '24' , link: '#'},
 { tooltipText: 'Модуль завершен', event: 'Тимбилдинг как корпоратив' , speaker: 'А. Подилько' , datetime: '26 октября' , place: 'Выездная площадка («Звезда»)' , eventID: '25' , link: '#'},
 { tooltipText: 'Зарегистрироваться!', event: 'Заявки на гранты' , speaker: 'Спикер уточняется' , datetime: 'Дата уточняется' , place: 'Аудитория уточняется' , eventID: '26' , link: 'https://docs.google.com/forms/d/1HSJut9vEVt_d4LRs8IZpihz4FFPyL5lh9FnMVsqybWs/edit'}
     
@@ -34,7 +34,7 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     fillTable();
     
-    EventList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 18, 21, 22, 23, 25]
+    EventList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 18, 21, 22, 23, 24, 25]
     
     for(i = 0; i < EventList.length; i++){
     
