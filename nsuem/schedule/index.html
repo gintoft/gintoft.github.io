@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>График учебного процесса</title>
+<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"crossorigin="anonymous">
+<link href="css/my.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+<script src="js/code.js"></script>
+</head>
+
+<body>
+<br>
+
+<div id="hiddenTable">
+<div class="container">     
+
+<h2>График учебного процесса</h2>
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+<div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Поток
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+    <button class="dropdown-item stream" type="button" data-streamname = "1 курс, Экономика" id="stream001">1 курс, Экономика</button>
+    <button class="dropdown-item stream" type="button" data-streamname = "2 курс, Экономика" id="stream002">2 курс, Экономика</button>
+    </div>
+</div>
+  
+    <button type="button" class="btn btn-secondary typeUP" id="theory">Теоретическое обучение</button>
+    <button type="button" class="btn btn-success typeUP" id="kanik">Каникулы</button>
+    <button type="button" class="btn btn-danger typeUP" id="session">Сессия</button>
+    <button type="button" class="btn btn-info typeUP" id="practice">Практика</button>
+
+</div>
+
+<br>
+<br>
+
+<div id="placeStream" style="display: none">
+<h5>Редактирование графика УП для потока: <span id="currentStream"></span></h5>
+</div>
+			
+<table class="table table-wrapper-scroll-y my-custom-scrollbar" style="vertical-align: middle" id="structTable">
+<thead class="thead-light">
+	<th rowspan="2">ДН</th>
+	<th colspan="15">2020</th>
+<tr>
+	<th colspan="5">Сентябрь</th>
+	<th colspan="5">Октябрь</th>
+	<th colspan="5">Ноябрь</th>
+</tr>
+</thead>
+   
+   <tr class="weekNumber">
+        <td class="weekNumber">№ недели</td>
+        <td class="weekNumber">0</td>
+        <td class="weekNumber">1</td>
+        <td class="weekNumber">2</td>
+        <td class="weekNumber">3</td>
+        <td class="weekNumber">4</td>
+        <td class="weekNumber">5</td>
+        <td class="weekNumber">6</td>
+        <td class="weekNumber">7</td>
+        <td class="weekNumber">8</td>
+        <td class="weekNumber">9</td>
+        <td class="weekNumber">10</td>
+        <td class="weekNumber">11</td>
+        <td class="weekNumber">12</td>
+        <td class="weekNumber">13</td>
+        <td class="weekNumber">14</td>
+    </tr>
+    
+    <tr>
+        <td style="width: 10%">Пн</td>
+        
+        <td class="noneDay"></td>
+        <td class="day" id="0209">2</td>
+        <td class="day" id="0909">9</td>
+        <td class="day" id="1609">16</td>
+        <td class="day" id="2309">23</td>
+
+        <td class="day" id="3009">30</td>
+        <td class="day" id="0710">7</td>
+        <td class="day" id="1410">14</td>
+        <td class="day" id="2110">21</td>
+        <td class="day" id="2810">28</td>
+        
+        <td class="day" id="0411">4</td>
+        <td class="day" id="1111">11</td>
+        <td class="day" id="1811">18</td>
+        <td class="day" id="2511">25</td>
+        <td class="day" id="0212">2</td>
+        
+    </tr>
+    <tr>
+        <td style="width: 10%">Вт</td>
+        
+        <td class="noneDay"></td>
+        <td class="day" id="0309">3</td>
+        <td class="day" id="1009">10</td>
+        <td class="day" id="1709">17</td>
+        <td class="day" id="2409">24</td>
+        
+        <td class="day" id="0110">1</td>
+        <td class="day" id="0810">8</td>
+        <td class="day" id="1510">15</td>
+        <td class="day" id="2210">22</td>
+        <td class="day" id="2910">29</td>
+        
+        <td class="day" id="0511">5</td>
+        <td class="day" id="1211">12</td>
+        <td class="day" id="1911">19</td>
+        <td class="day" id="2611">26</td>
+        <td class="day" id="0312">3</td>
+        
+    </tr>
+    
+    <tr>
+        <td style="width: 10%">Ср</td>
+        
+        <td class="noneDay"></td>
+        <td class="day" id="0409">4</td>
+        <td class="day" id="1109">11</td>
+        <td class="day" id="1809">18</td>
+        <td class="day" id="2509">25</td>
+        
+        <td class="day" id="0210">2</td>
+        <td class="day" id="0910">9</td>
+        <td class="day" id="1610">16</td>
+        <td class="day" id="2310">23</td>
+        <td class="day" id="3010">30</td>
+        
+        <td class="day" id="0611">6</td>
+        <td class="day" id="1311">13</td>
+        <td class="day" id="2011">20</td>
+        <td class="day" id="2711">27</td>
+        <td class="day" id="0412">4</td>
+        
+    </tr>
+    
+    <tr>
+        <td style="width: 10%">Чт</td>
+        
+        <td class="noneDay"></td>
+        <td class="day" id="0509">5</td>
+        <td class="day" id="1209">12</td>
+        <td class="day" id="1909">19</td>
+        <td class="day" id="2609">26</td>
+        
+        <td class="day" id="0310">3</td>
+        <td class="day" id="1010">10</td>
+        <td class="day" id="1710">17</td>
+        <td class="day" id="2410">24</td>
+        <td class="day" id="3110">31</td>
+        
+        <td class="day" id="0711">7</td>
+        <td class="day" id="1411">14</td>
+        <td class="day" id="2111">21</td>
+        <td class="day" id="2811">28</td>
+        <td class="day" id="0512">5</td>
+        
+    </tr>
+    
+    <tr>
+        <td style="width: 10%">Пт</td>
+        
+        <td class="noneDay"></td>
+        <td class="day" id="0609">6</td>
+        <td class="day" id="1309">13</td>
+        <td class="day" id="2009">20</td>
+        <td class="day" id="2709">27</td>
+        
+        <td class="day" id="0410">4</td>
+        <td class="day" id="1110">11</td>
+        <td class="day" id="1810">18</td>
+        <td class="day" id="2510">25</td>
+        <td class="day" id="0111">1</td>
+        
+        <td class="day" id="0811">8</td>
+        <td class="day" id="1511">15</td>
+        <td class="day" id="2211">22</td>
+        <td class="day" id="2911">29</td>
+        <td class="day" id="0612">6</td>
+        
+    </tr>
+    
+    <tr>
+        <td style="width: 10%">Сб</td>
+        
+        <td class="noneDay"></td>
+        <td class="day" id="0709">7</td>
+        <td class="day" id="1409">14</td>
+        <td class="day" id="2109">21</td>
+        <td class="day" id="2809">28</td>
+        
+        <td class="day" id="0510">5</td>
+        <td class="day" id="1210">12</td>
+        <td class="day" id="1910">19</td>
+        <td class="day" id="2610">26</td>
+        <td class="day" id="0211">2</td>
+        
+        <td class="day" id="0911">9</td>
+        <td class="day" id="1611">16</td>
+        <td class="day" id="2311">23</td>
+        <td class="day" id="3011">30</td>
+        <td class="day" id="0712">7</td>
+        
+    </tr>
+    
+    
+    <tr>
+        <td style="width: 10%">Вс</td>
+        
+        <td class="day" id="0109">1</td>
+        <td class="day" id="0809">8</td>
+        <td class="day" id="1509">15</td>
+        <td class="day" id="2209">22</td>
+        <td class="day" id="2909">29</td>
+        
+        <td class="day" id="0610">6</td>
+        <td class="day" id="1310">13</td>
+        <td class="day" id="2010">20</td>
+        <td class="day" id="2710">27</td>
+        <td class="day" id="0311">3</td>
+        
+        <td class="day" id="1011">10</td>
+        <td class="day" id="1711">17</td>
+        <td class="day" id="2411">24</td>
+        <td class="day" id="0112">1</td>
+        <td class="day" id="0812">8</td>
+        
+    </tr>
+</table>
+				
+
+<br>
+
+
+</div>
+
+
+</div>
+<style>
+
+.practice {
+	background: lightblue;
+}
+    
+.session {
+	background: red;
+}
+    
+.theory {
+	background: lightgray;
+}
+    
+.kanik {
+	background: lightgreen;
+}
+    
+td.day {
+        width: 6%;
+}
+    
+td.weekNumber {
+        background: antiquewhite;
+    color: darkgrey;
+}
+    
+</style>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+</body>
+
+</html>
