@@ -1,18 +1,7 @@
 
 $(function () {
     
-//    drawTable();
-    
-$.ajax({
-  url: 'js/ec.json',
-  success: function(data){
-    $('#ecDT').dynatable({
-      dataset: {
-        records: data
-      }
-    });
-  }
-});
+    drawTable();
     
     
 });
