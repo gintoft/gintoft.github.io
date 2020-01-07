@@ -6,7 +6,6 @@ currStyle = "";
 $(".typeUP").on("click", function() {
     
     currStyle = this.id;
-    console.log(currStyle);
     
 });
     
