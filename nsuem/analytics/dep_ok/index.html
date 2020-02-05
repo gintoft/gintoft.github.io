@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="ru">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Научные публикации</title>
+    <title>Штатное расписание</title>
     <link href="../req/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
-    <script type="text/javascript" src="../req/scripts/publications.js"></script>
+    <script type="text/javascript" src="../req/scripts/dep_ok.js"></script>
 
 
 <link href="./../req/css/my.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 <body>
 <div class="app-container app-theme-whsite body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow bg-midnight-bloom header-text-light">
-           <div style="margin-left: 30px; color: azure; font-size: 20px">NSUEM ANALYTICS HUB</div>
+           <div style="margin-left: 30px; color: azure; font-size: 25px">NSUEM ANALYTICS</div>
             <div class="app-header__menu">
                 <span>
                     <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
@@ -180,8 +180,8 @@
 <div class="page-title-wrapper">
 
 <div class="page-title-heading">
-    <div><h2>Экран контроля наличия научных публикаций</h2>
-        <div class="page-title-subheading">Для должностей доцент, профессор, заведующий кафедрой, декан по итогам 2019 года.<br><div id="upd"></div></div>
+    <div><h2>Информация о штатном расписании</h2>
+        <div class="page-title-subheading" id="upd"></div>
     </div>
 </div>
 
@@ -190,91 +190,25 @@
 <br>                           
 <div class="row">
 <div class="col-md-12 col-lg-12">
-<div class="main-card mb-3 card">
-<div class="no-gutters row">
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_wos">36</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">Web of Science</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_scopus">60</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">Scopus</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_eds">45</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">ESD</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_vak">393</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">ВАК</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-md-12 col-lg-12">
-
-<!--<button class="mb-2 mr-2 btn-transition btn btn-outline-danger" id="showOnlyLoser"></button>-->
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-link">Показать только без статей по факультетам</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФКЭП">ФКЭП</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФГС">ФГС</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФБП">ФБП</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ЮФ">ЮФ</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-link">
-<i style="font-size: 25px" class="fas fa-sync" data-toggle="tooltip" data-placement="top" title="Сбросить фильтр" id="resetFilter"></i>
-</button>
-</div>
-<div class="col-md-12 col-lg-12">
-<!--<table class="table my-custom-scrollbar table-wrapper-scroll-y" style="vertical-align: middle" id="publicationsTable">-->
-<table class="table" style="vertical-align: middle" id="publicationsTable">
+<table id="peopleTable" class="table table-shmixed">
 <thead class="thead-light" style="text-align: center">
 	<th rowspan="2">Факультет</th>
 	<th rowspan="2">Кафедра</th>
-	<th rowspan="2">Должность</th>
-	<th rowspan="2">Сотрудник</th>
-	<th colspan="4">Количество публикаций в 2019 году</th>
-	<th rowspan="2">Итого<br>публикаций</th>
-    <th rowspan="2">Полагается ли СВ</th>
+	<th colspan="3">Количество</th>
+	<th colspan="5">Распределение ставок</th>
+	
 <tr>
-	<th style="width: 7%">Web of Science</th>
-	<th style="width: 7%">ESD</th>
-	<th style="width: 7%">Scopus</th>
-	<th style="width: 7%">ВАК</th>
+	<th>Ставок</th>
+	<th>Сотрудников</th>
+	<th>Договоров</th>
+	
+	<th>Профессор</th>
+	<th>Доцент</th>
+	<th>Старший преподаватель</th>
+	<th>Преподаватель</th>
+	<th>Ассистент</th>
+	
+	
 </tr>
 </thead>
    
@@ -288,6 +222,14 @@
 </div>
 </div>
 <style>
+    
+.table-shmixed tbody {
+height: 200px;
+overflow-y: auto;
+width: 100%;
+}
+    
+    
 i {
     font-size: 35px;
 }
@@ -295,6 +237,7 @@ i {
 i {
         color: lightgray;
 }
+    
 </style>
 <script type="text/javascript" src="./../req/scripts/main.js"></script>
 </body>

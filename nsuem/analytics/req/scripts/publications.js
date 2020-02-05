@@ -1,5 +1,7 @@
 $(function () {
     
+    $('#publications').addClass('mm-active');
+    
     findClass = ""
     $('[data-toggle="tooltip"]').tooltip(); 
     
