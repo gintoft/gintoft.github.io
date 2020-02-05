@@ -2,7 +2,6 @@ $(function () {
     
     $('#scopus').addClass('mm-active');
     
-    $("#contentTable").hide();
     drawLine();
     
     $('#resetFilter').on('click', function() {
@@ -32,7 +31,7 @@ function drawLine(){
 //        $("#upd").append(timeUpdated);
         
         count = ds.length
-        console.log(ds)
+//        console.log(ds)
 
         for(var i = 1; i < count; i++){
             
@@ -49,6 +48,7 @@ function drawLine(){
             CitedByCount = ds[i].gsx$citedbycount.$t
             CitationCount = ds[i].gsx$citationcount.$t
             DocumentCount = ds[i].gsx$documentcount.$t
+
             
             html = "<tr class='univ " + uni + "'>"
             
@@ -64,9 +64,6 @@ function drawLine(){
             html +=  "</tr>";
             
             $("#contentTable").append(html);
-//            $('.preloader').hide();
-            $("#contentTable").show();
-            
             
         }
         
