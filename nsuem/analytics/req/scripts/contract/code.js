@@ -1,6 +1,7 @@
 
 $(function () {
     
+    $('#contract').addClass('mm-active');
     drawTable();
     
     
