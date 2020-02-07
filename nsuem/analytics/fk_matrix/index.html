@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="ru">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Научные публикации</title>
+    <title>Матрица показателей</title>
     <link href="../req/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
@@ -14,10 +14,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
-    <script type="text/javascript" src="../req/scripts/publications.js"></script>
+    <script type="text/javascript" src="../req/scripts/fk_matrix.js"></script>
 
-
-<link href="./../req/css/my.css" rel="stylesheet">
+<!--<link href="./../req/css/my.css" rel="stylesheet">-->
 <link href="./../req/css/main.css" rel="stylesheet">
 
 
@@ -67,10 +66,8 @@
 </div>
 <div class="widget-content-left  ml-3 header-user-info">
 <div class="widget-heading">
-Администратор
 </div>
 <div class="widget-subheading">
-НГУЭУ
 </div>
 </div>
 </div>
@@ -177,125 +174,134 @@
                          
 <div class="app-main__outer">
 <div class="app-main__inner">
-<div class="">
+<br>           
 <div class="page-title-wrapper">
-
 <div class="page-title-heading">
-    <div><h2>Экран контроля наличия научных публикаций</h2>
-        <div class="page-title-subheading">Для должностей доцент, профессор, заведующий кафедрой, декан по итогам 2019 года.<br><div id="upd"></div></div>
-    </div>
+    <div><h3>Правила начисления Фондов кафедр</h3></div>
 </div>
+</div>
+<br>
 
-</div>
-</div>            
-<br>                           
+
+
+
+
+
 <div class="row">
-<div class="col-md-12 col-lg-12">
-<div class="main-card mb-3 card">
-<div class="no-gutters row">
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_wos">36</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">Web of Science</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_scopus">60</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">Scopus</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_eds">45</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">ESD</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="widget-content">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-right ml-0 mr-3">
-                    <div class="widget-numbers text-success" id="total_vak">393</div>
-                </div>
-                <div class="widget-content-left">
-                    <div class="widget-heading">ВАК</div>
-                    <div class="widget-subheading">Без учета соавторства</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<div class="col-md-12 col-lg-12">
-
-<!--<button class="mb-2 mr-2 btn-transition btn btn-outline-danger" id="showOnlyLoser"></button>-->
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-link">Показать только без статей по факультетам</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФКЭП">ФКЭП</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФГС">ФГС</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФБП">ФБП</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ЮФ">ЮФ</button>
-<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-link">
-<i style="font-size: 25px" class="fas fa-sync" data-toggle="tooltip" data-placement="top" title="Сбросить фильтр" id="resetFilter"></i>
-</button>
-</div>
-<div class="col-md-12 col-lg-12">
-<!--<table class="table my-custom-scrollbar table-wrapper-scroll-y" style="vertical-align: middle" id="publicationsTable">-->
-<table class="table" style="vertical-align: middle" id="publicationsTable">
-<thead class="thead-light" style="text-align: center">
-	<th rowspan="2">Факультет</th>
-	<th rowspan="2">Кафедра</th>
-	<th rowspan="2">Должность</th>
-	<th rowspan="2">Сотрудник</th>
-	<th colspan="4">Количество публикаций в 2019 году</th>
-	<th rowspan="2">Итого<br>публикаций</th>
-    <th rowspan="2">Полагается ли СВ</th>
-<tr>
-	<th style="width: 7%">Web of Science</th>
-	<th style="width: 7%">ESD</th>
-	<th style="width: 7%">Scopus</th>
-	<th style="width: 7%">ВАК</th>
-</tr>
+<table class="mb-0 table table-bordered" style="vertical-align: middle" id="contentTable">
+<thead class="thead-light" style="text-align: center; vertical-align: text-top">
+	<th rowspan="2" class="Q">Категория</th>
+	<th rowspan="2">Показатель</th>
+	<th rowspan="2">Влияние на ФК1<br>(Q4 2019)</th>
+	<th rowspan="2">Влияние на ФК2<br>(Q4 2019)</th>
+    <th rowspan="2" class="Q">Q2 2019</th>
+    <th rowspan="2" class="Q">Q3 2019</th>
+    <th rowspan="2" class="Q">Q4 2019</th>
+    <th rowspan="2" class="Q">Q1 2020</th>
+    <th rowspan="2" class="Q">Q2 2020</th>
 </thead>
-   
 </table>
-
+</div>
+        
+        
+</div>
+</div>
+<br>
 
 </div>
 
 
-</div>
 </div>
 </div>
 <style>
-i {
-    font-size: 35px;
+
+i{
+    text-align: center;
+    font-size: 1.2rem;
+}    
+    
+.Q{
+    width: 5%;
+}
+
+.moneyPos{
+
+    font-size: .75rem;
+    color: green;
+    font-weight: bolder;
+    
 }
     
-i {
-        color: lightgray;
+.name{
+
+font-weight: bolder;
+
 }
+    
+.desc{
+
+font-size: .7rem;
+font-weight: bolder;
+
+}
+    
+    
+.moneyNeg{
+
+    font-size: .75rem;
+    color: indianred;
+    font-weight: bolder;
+    
+}
+
+td{
+/*    line-height:2px;*/
+    padding-bottom:1.8px;
+    padding-left:1.8px;
+    padding-right:1.8px;
+    padding-top:1.8px;
+}
+    
+td.neg {
+    background-color: #ffe6e6;
+}
+
+ td.pos {
+    background-color: #e6ffe6;
+}
+    
+.table-scroll-y {
+display: block;
+position: relative;
+height: 75%;
+overflow: auto;
+vertical-align: middle
+}
+
+i > td {
+    font-size: 20px;
+}
+.table .thead-light th {
+    border-color: #dee2e6;
+    vertical-align: middle;
+}
+tr.chairRow{
+    height: 5px;    
+    border-spacing: 0px;
+    text-align: center;
+}
+    
+td.lefts {
+    width: 10px;
+    text-align: left;
+    font-weight: bolder;
+}
+.accural {
+    width: 7%;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
 </style>
 <script type="text/javascript" src="./../req/scripts/main.js"></script>
 </body>
