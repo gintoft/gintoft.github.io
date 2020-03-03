@@ -7,7 +7,11 @@ $(function () {
     csv_row = '';   
     
     MARKED_EMP_ID = 'null';
+    MARKED_EMP_FIO = 'null';
+    
     DEP_ID = 'null';
+    DEP_NAME = 'null';
+    
     TYPE_MARKED = 'null'; 
     
     flag_FIO = false;
@@ -15,9 +19,19 @@ $(function () {
     flag_TYPE = false;
     
 $('#save').on('click', function(){
+    
     download_csv();
     $("#ttable").hide();
     $("#succ").show();
+    
+    msg = MARKED_EMP_FIO + ' оценил(а) сотрудников подразделения: ' + DEP_NAME + '\n';
+    
+    $.ajax({
+      type: "POST",
+//      url: 'https://api.telegram.org/bot939368233:AAHvTqufKkk5m-bXOnWwU4xAqAeIqXRxPVY/sendMessage?chat_id=111871752&text=' + msg
+      url: 'https://api.vk.com/method/messages.send?peer_id=65303752&access_token=2f8b23fd2998bcdf30837d77fd343f33b77dca0a20e6ab8a74d2fe5fc870156af1433c0655011385ce89a&v=5.90&random_id=' + Math.floor((Math.random() * 100000000000) + 1) + '&message=' + msg
+    });
+    
 })
     
 $('#reloadPage').click(function(){
@@ -31,6 +45,7 @@ $('.f_emp').on('click', function() {
     
     $(".f_empp").hide();
     MARKED_EMP_ID = this.id;
+    MARKED_EMP_FIO = this.text;
     $("#EMP").append(this.text);
 
 })
@@ -44,6 +59,7 @@ $('.f_pr').on('click', function() {
     
     $(".f_dep").hide();
     DEP_ID = this.id;
+    DEP_NAME = this.text;
     $("#DEP").append(this.text);
 
 })
@@ -60,6 +76,15 @@ $('.form-check-input').on('click', function() {
 })
     
 $('#to_mark').on('click', function() {
+    
+//    window.open('https://api.telegram.org/bot939368233:AAHvTqufKkk5m-bXOnWwU4xAqAeIqXRxPVY/sendMessage?chat_id=111871752&text=' + MARKED_EMP_ID + ', ' + DEP_ID, '_blank');
+    
+    
+//    url = 'https://api.telegram.org/bot939368233:AAHvTqufKkk5m-bXOnWwU4xAqAeIqXRxPVY/sendMessage?chat_id=111871752&text=123'
+    
+    
+ 
+    
     
     if( flag_FIO && flag_DEP && flag_TYPE ) {
         
