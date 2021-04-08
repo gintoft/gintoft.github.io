@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Калькулятор СВ ЭК АУП</title>
+<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/my.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"crossorigin="anonymous">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+<br>
+
+<div id="hiddenTable">
+<div class="container">     
+
+<br>
+<h3>Онлайн-калькулятор для расчета размера Стимулирующих выплат по эффективному контракту АУП</h3>
+
+<button type="button" class="btn btn-light" onclick="fillDemo()" data-toggle="tooltip" data-placement="bottom" title="Таблица будет заполнена демонстрационными данными.">
+<i class="fas fa-table"></i> | Заполнить демо-данными</button>
+
+<button type="button" class="btn btn-light" onclick="clearTable()" data-toggle="tooltip" data-placement="bottom" title="Все значения на странице будут очищены.">
+<i class="fas fa-broom"></i> | Очистить таблицу</button>
+
+<button type="button" class="btn btn-success" onclick="calcProfit()" data-toggle="tooltip" data-placement="bottom" title="Размер Вашей стимулирующей выплаты будет рассчитан исходя из введенных значений">
+<i class="fas fa-dollar-sign"></i> | Расчитать объем СВ</button>
+
+<br>
+<br>
+	
+<table class="table table-wrapper-scroll-y my-custom-scrollbar" style="vertical-align: middle" id="structTable">
+<tbody>
+
+<thead class="thead-light">
+	
+	<th>К1 / Объем <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-trigger='hover' data-placement='bottom' data-html="true" title="К1 / Объем" data-content="<ul><li>4 - Выполнение работы в полном объеме</li><li>3 - Наличие несущественных отклонений от установленного объема работы</li><li>2 - Невыполнение существенного объема работ и (или) невыполнение работы, повлекшие возникновение неблагоприятных последствий для Университета или повышение рисков их возникновения</li><li>1 - Невыполнение значительного объема работ и (или) намеренное уклонение от выполнения работы</li></ul>"><i class="fas fa-info"></i></button></th>
+	
+	<th>К2 / Сроки<button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-trigger='hover' data-placement='right' data-html="true" title="К2 / Сроки" data-content="<ul><li>4 - Выполнение работы в установленные сроки</li><li>3 - Наличие несущественных просрочек в отношении небольшого количества задач </li><li>2 - Наличие большого числа просрочек и (или) небольшого числа значительных просрочек при выполнении работ и (или) наличие просрочки, повлекшие возникновение неблагоприятных последствий для Университета или повышение рисков их возникновения</li><li>1 - Наличие системных (неоднократных) нарушений сроков работы, в том числе повлекших финансовые, репутационные и иные потери для Университета и (или) его сотрудников и (или) намеренный срыв сроков работы</li>"><i class="fas fa-info"></i></button></th>
+	
+	<th>К3 / Качество<button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-trigger='hover' data-placement='left' data-html="true" title="К3 / Качество" data-content="<ul><li>4 - Выполнение работы с требуемым качеством</li><li>3 - Наличие незначительного количества ошибок (отклонений) от норм качества, не влекущих возникновение неблагоприятных последствий для структурного подразделения, Университета</li><li>2 - Наличие большого количества ошибок (отклонений от норм качества) при выполнении работы и (или) допущение ошибки (отклонения от нормы), повлекшие возникновение существенных неблагоприятных последствий для Университета или повышение рисков их возникновения</li><li>1 - Низкое качество выполняемой работы, в том числе повлекшее финансовые, репутационные и иные потери для Университета и (или) его сотрудников и (или) намеренное уклонение от требований по обеспечению качества, в том числе при наличии у Работника дисциплинарных взысканий по причинам отклонений по качеству</li></ul>"><i class="fas fa-info"></i></button></th>
+	
+	<th>К4 / Интенсивность</th>
+	
+	<th>Коэффициент стимулирования</th>
+	
+	<th>Размер заработной платы</th>
+	
+	<th>Коэф отношения потерь рабочего времени</th>
+</thead>
+<tr>
+	<td style="width: 14% "><input type="text" class="form-control" id="K1" placeholder="" value="4" data-toggle="tooltip" data-placement="auto" data-html="true"></td>
+	<td style="width: 14% "><input type="text" class="form-control" id="K2" placeholder="" value="4"></td>
+	<td style="width: 14% "><input type="text" class="form-control" id="K3" placeholder="" value="4"></td>
+	<td style="width: 14% "><input type="text" class="form-control" id="K4" placeholder="" value="1.3"></td>
+	<td style="width: 14% "><input type="text" class="form-control" id="KS" placeholder="" value="0.45"></td>
+	<td style="width: 14% "><input type="text" class="form-control" id="ZP" placeholder="" value="29000"></td>
+	<td style="width: 14% "><input type="text" class="form-control" id="KPRV" placeholder="" value="0"></td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<div>
+<div class="alert alert-light" role="alert">
+
+<h2 style="text-align: center"><span id='formula'></span></h2>
+
+<h4>C целью расчета стимулирующей вылаты за достижение показателей эффективности деятельности, предусмотренных п. 4.2.2 Трдового договора , применяется следующая формула: СВ = (1-k) * ЗП * КС * (ОЭ / 1000)</h4>
+<br>
+<p class="text-info">k = Коэффиент, равный отношению потерь рабочего времени по причине нетрудоспособности, отсука либо иных случаев отсутствия работника на работе (в рабочих днях) к общему количеству рабочих дней в отчетном периоде.</p>
+
+<p class="text-success">ЗП = Размер ежемесячной заработной платы (с учетом должностного оклада и постоянный компенсационных и стимулирующих выплат)</p>
+
+<p class="text-warning">КС = Коэффициент стимулирования в виде конкретного значения (не ниже 0,4) или порядка его расчета, устанавливаемого приказом ректора с учетом объема средств, направленных работодателем лоя цеоей стимулирования работников (в том числе отдельного структурного подразделения).</p>
+
+<p class="text-primary">ОЭ = Оценка эффективности деятельности работника за отчетный период со стороны непосредственного руководителя или третьего лица, рассчитанная по формуле (К1+6)*(К1+6)*(К1+6)*К4</p>
+</div>
+
+</div>
+
+</div>
+<br>
+
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover();
+
+});
+</script>
+</body>
+
+</html>

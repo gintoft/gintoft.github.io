@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Elibrary</title>
+    <link href="../req/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+    <script type="text/javascript" src="../req/scripts/elibrary.js"></script>
+
+
+<link href="./../req/css/my.css" rel="stylesheet">
+<link href="./../req/css/main.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="app-container app-theme-whsite body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow bg-midnight-bloom header-text-light">
+           <div style="margin-left: 30px; color: azure; font-size: 20px">NSUEM ANALYTICS HUB</div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>    <div class="app-header__content">
+                <div class="app-header-left">
+
+
+<!--
+<ul class="header-menu nav">
+<li class="nav-item">
+    <a href="javascript:void(0);" class="nav-link"><i class="nav-link-icon fa fa-database"> </i>Кнопка 1</a>
+</li>
+<li class="nav-item">
+    <a href="javascript:void(0);" class="nav-link"><i class="nav-link-icon fa fa-database"> </i>Кнопка 2</a>
+</li>
+<li class="nav-item">
+    <a href="javascript:void(0);" class="nav-link"><i class="nav-link-icon fa fa-database"> </i>Кнопка 3</a>
+</li>
+
+</ul>        
+-->
+
+</div>
+<div class="app-header-right">
+<div class="header-btn-lg pr-0">
+<div class="widget-content p-0">
+<div class="widget-content-wrapper">
+<div class="widget-content-left">
+<div class="btn-group">
+<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+<!--<img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">-->
+</a>
+</div>
+</div>
+<div class="widget-content-left  ml-3 header-user-info">
+<div class="widget-heading">
+Администратор
+</div>
+<div class="widget-subheading">
+НГУЭУ
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="app-main">
+                   
+<div class="app-sidebar sidebar-shadow bg-midnight-bloom sidebar-text-light">
+<div class="app-header__logo">
+    <div class="logo-src"></div>
+    <div class="header__pane ml-auto">
+        <div>
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="app-header__mobile-menu">
+    <div>
+        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+</div>
+<div class="app-header__menu">
+    <span>
+        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+            <span class="btn-icon-wrapper">
+                <i class="fa fa-ellipsis-v fa-w-6"></i>
+            </span>
+        </button>
+    </span>
+</div>    
+                       
+                       
+<div class="scrollbar-sidebar">
+<div class="app-sidebar__inner">
+<ul class="vertical-nav-menu">
+
+<!--МЕНЮ-->
+
+<li class="app-sidebar__heading">Наукометрия</li>
+<li><a href="../publications/index.html" id="publications"><i class="metismenu-icon fas fa-file-alt"></i>Наличие статей 2019</a></li>
+<li><a href="../elibrary/index.html" id="elibrary"><i class="metismenu-icon fas fa-file-alt"></i>Elibrary</a></li>
+<li><a href="../scopus/index.html" id="scopus"><i class="metismenu-icon fas fa-file-alt"></i>Scopus</a></li>
+
+<li class="app-sidebar__heading">Фонды кафедр</li>
+<li>
+<a href="#"><i class="metismenu-icon fas fa-sliders-h" id="sp_divider"></i>Информация от СП<i class="metismenu-state-icon fas fa-angle-down caret-left"></i></a>
+
+<ul>
+    <li><a href="../dep_ok/index.html" id="dep_ok"><i class="metismenu-icon pe-7s-look"></i>Отдел кадров</a></li>
+</ul>
+<li><a href="../fk/index.html" id="fk"><i class="metismenu-icon fas fa-ruble-sign"></i>Размеры фондов</a></li>
+<li><a href="../fk_matrix/index.html" id="fk_matrix"><i class="metismenu-icon fab fa-buromobelexperte"></i>Матрица критериев</a></li>
+</li>
+
+<li class="app-sidebar__heading">Эффективный контракт</li>
+<li><a href="../contract/index.html" id="contract"><i class="metismenu-icon fas fa-calculator"></i>Результаты проверки</a></li>
+    
+<li class="app-sidebar__heading">Планы работы</li>
+
+<li>
+<a href="#"><i class="metismenu-icon fas fa-university"></i>Администратрация<i class="metismenu-state-icon fas fa-angle-down caret-left"></i></a>
+<ul>
+    <li><a href="https://nsuem.ru/NPA" target="_blank"><i class="metismenu-icon pe-7s-look"></i>П.А. Новгородов</a></li>
+    <li><a href="https://nsuem.ru/MVS" target="_blank"><i class="metismenu-icon pe-7s-look"></i>В.С. Мельников</a></li>
+    <li><a href="https://nsuem.ru/RVN" target="_blank"><i class="metismenu-icon pe-7s-look"></i>В.Н. Ромашин</a></li>
+    <li><a href="https://nsuem.ru/MAA" target="_blank"><i class="metismenu-icon pe-7s-look"></i>А.А. Макарцев</a></li>
+    <li><a href="https://nsuem.ru/NEV" target="_blank"><i class="metismenu-icon pe-7s-look"></i>Е.В. Неверова</a></li>
+    <li><a href="https://nsuem.ru/SOA" target="_blank"><i class="metismenu-icon pe-7s-look"></i>О.А. Шмаков</a></li>
+    <li><a href="https://docs.google.com/spreadsheets/d/1lGxKc9PovraBouvvPSXyOKk3TcySrblZ-nf98mYH-t8/edit#gid=886662424" target="_blank"><i class="metismenu-icon pe-7s-look"></i>Деканаты</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="metismenu-icon fas fa-users"></i>Факультеты<i class="metismenu-state-icon fas fa-angle-down caret-left"></i></a>
+<ul>
+    <li><a href="https://nsuem.ru/ПланФКЭП" target="_blank"><i class="metismenu-icon pe-7s-look"></i>ФКЭП</a></li>
+    <li><a href="https://nsuem.ru/ПланФГС" target="_blank"><i class="metismenu-icon pe-7s-look"></i>ФГС</a></li>
+    <li><a href="https://nsuem.ru/ПланФБП" target="_blank"><i class="metismenu-icon pe-7s-look"></i>ФБП</a></li>
+    <li><a href="https://nsuem.ru/ПланЮФ" target="_blank"><i class="metismenu-icon pe-7s-look"></i>ЮФ</a></li>
+</ul>
+</li>
+                                        
+</ul>
+</div>
+
+<!--МЕНЮ-->
+
+
+</div>
+</div>
+                 
+                         
+<div class="app-main__outer">
+<div class="app-main__inner">
+<div class="">
+<div class="page-title-wrapper">
+
+<div class="page-title-heading">
+    <div><h3>Наукометрические показатели авторов, аффилированных с <a target="_blank" href="https://elibrary.ru/org_profile.asp?id=1068">НГУЭУ</a> в Elibrary</h3>
+        <div id="upd">Опубликованы наукометрические показатели всех авторов, имеющих на данный момент аффилиацию с НГУЭУ.</div>
+    </div>
+</div>
+
+</div>
+</div>            
+<br>                           
+<div class="row">
+
+<div class="col-md-12 col-lg-12">
+
+<button class="mb-2 mr-2 border-0 btn-transition btn btn-success" id="onlyWithChair">Оставить только авторов c указанной кафедрой</button>
+<!--
+<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФКЭП">ФКЭП</button>
+<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФГС">ФГС</button>
+<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ФБП">ФБП</button>
+<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-danger facFilter" id="ЮФ">ЮФ</button>
+<button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-link">
+<i style="font-size: 25px" class="fas fa-sync" data-toggle="tooltip" data-placement="top" title="Сбросить фильтр" id="resetFilter"></i>
+</button>
+-->
+</div>
+<div class="col-md-12 col-lg-12">
+<!--<table class="table my-custom-scrollbar table-wrapper-scroll-y" style="vertical-align: middle" id="contentTable">-->
+<table class="table" style="vertical-align: middle" id="contentTable">
+<thead class="thead-light" style="text-align: center">
+	<th rowspan="2">Author ID</th>
+	<th rowspan="2">Кафедра</th>
+	<th rowspan="2">Автор</th>
+	<th colspan="5">Количество публикаций</th>
+	<th colspan="3">Количество цитирований</th>
+	<th colspan="3">Индекс Хирша</th>
+<tr>
+	<th data-toggle="tooltip" data-placement="top" title="Число публикаций, входящих в ядро РИНЦ" style="width: 5%">P1</th>
+	<th data-toggle="tooltip" data-placement="top" title="Число публикаций в РИНЦ" style="width: 5%">P2</th>
+	<th data-toggle="tooltip" data-placement="top" title="Общее число публикаций на elibrary.ru" style="width: 5%">P3</th>
+	<th data-toggle="tooltip" data-placement="top" title="Число публикаций в зарубежных журналах" style="width: 5%">P4</th>
+	<th data-toggle="tooltip" data-placement="top" title="Число публикаций в российских журналах из перечня ВАК" style="width: 5%">P5</th>
+	
+	<th data-toggle="tooltip" data-placement="top" title="Число цитирований всех публикаций автора из статей, опубликованных за последние 5 лет" style="width: 5%">C1</th>
+	<th data-toggle="tooltip" data-placement="top" title="Число цитирований из российских журналов из перечня ВАК" style="width: 5%">C2</th>
+	<th data-toggle="tooltip" data-placement="top" title="Число цитирований публикаций автора в РИНЦ" style="width: 5%">C3</th>
+
+	<th data-toggle="tooltip" data-placement="top" title="Индекс Хирша по ядру РИНЦ" style="width: 5%">H1</th>
+	<th data-toggle="tooltip" data-placement="top" title="Индекс Хирша по всем публикациям на elibrary.ru" style="width: 5%">H2</th>
+	<th data-toggle="tooltip" data-placement="top" title="Индекс Хирша без учета самоцитирований" style="width: 5%">H3</th>
+</tr>
+</thead>
+   
+</table>
+
+
+</div>
+
+
+</div>
+</div>
+</div>
+<style>
+i {
+    font-size: 20px;
+}
+    
+i {
+    color: lightgray;
+}
+</style>
+<script type="text/javascript" src="./../req/scripts/main.js"></script>
+
+<script>
+    $('[data-toggle="tooltip"]').tooltip(); 
+</script>
+
+</body>
+</html>

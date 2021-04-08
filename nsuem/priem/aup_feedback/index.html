@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ЭК АУП</title>
+    <link href="../req/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+    <script type="text/javascript" src="ec_aup.js"></script>
+
+<link href="./../req/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="app-container app-theme-whsite body-tabs-shadow fixed-header">
+<div class="app-header header-shadow bg-midnight-bloom header-text-light">
+<div style="margin-left: 30px; color: azure; font-size: 20px">Эффективный контракт АУП</div>
+<div class="app-header__menu">
+<span>
+<button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+<span class="btn-icon-wrapper">
+<i class="fa fa-ellipsis-v fa-w-6"></i>
+</span>
+</button>
+</span>
+</div>    <div class="app-header__content">
+<div class="app-header-left">
+
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">   
+               
+<!--<h2>Оценка работы сотрудников в феврале 2020</h2>-->
+<br>
+<div id="succ" style="display: none">
+<div class="alert alert-alterntare" role="alert">
+  <h4>Файл с оценками успешно сохранен на компьютере.</h4>
+  <hr>
+  Пожалуйста, отправьте этот файл на почту <a href="mailto:contract@nsuem.ru">contract@nsuem.ru</a>
+</div>
+</div>
+
+<div id="err" style="display: none">
+<div class="alert alert-alterntare" role="alert">
+  <h4>Оценка подчиненных временно недоступна</h4>
+  <hr>
+  Пожалуйста, загрузите файл <a href="https://gintoft.host/%D0%9E%D1%86%D0%B5%D0%BD%D0%BA%D0%B8%20%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9.xlsx">по ссылке</a>, заполните поля с синей заливкой и отправьте заполненный документ на почту <a href="mailto:contract@nsuem.ru">contract@nsuem.ru</a>
+</div>
+</div>
+
+
+
+
+<div class="jumbotron" id="settings">
+  <h1 class="display-6">Оценка работы сотрудников в феврале 2020</h1>
+<!--  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>-->
+  <hr class="my-6">
+  
+  <h5>Выберите Ваше ФИО из списка: <span class="bolder" id="EMP"></span>
+  <div class="btn-group f_empp">
+          <button type="button" class="btn btn-light">Фамилия Имя Отчество</button>
+          <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+          </button>
+          <div class="dropdown-menu">
+            
+<a class='dropdown-item f_emp' id='5290/DEP_ID_41'>Абдулаев Алексей Якубович</a>
+<a class='dropdown-item f_emp' id='5363/DEP_ID_34'>Абельдинова Ольга Борисовна</a>
+<a class='dropdown-item f_emp' id='1602/DEP_ID_88'>Абишева Светлана Викторовна</a>
+<a class='dropdown-item f_emp' id='5350/DEP_ID_75'>Абрамова Анна Владимировна</a>
+<a class='dropdown-item f_emp' id='8537/DEP_ID_34'>Авек Ольга Владимировна</a>
+<a class='dropdown-item f_emp' id='3910/DEP_ID_51'>Акимова Наталия Ивановна</a>
+<a class='dropdown-item f_emp' id='6846/DEP_ID_54'>Акрамов Вазых Галиаскарович</a>
+<a class='dropdown-item f_emp' id='1456/DEP_ID_46'>Акулова Анастасия Григорьевна</a>
+<a class='dropdown-item f_emp' id='3255/DEP_ID_95'>Александров Андрей Геннадьевич</a>
+<a class='dropdown-item f_emp' id='8603/DEP_ID_5'>Алексеенко Валентина Николаевна</a>
+<a class='dropdown-item f_emp' id='5887/DEP_ID_80'>Алимов Евгений Николаевич</a>
+<a class='dropdown-item f_emp' id='7013/DEP_ID_78'>Антонычева Светлана Геннадьевна</a>
+<a class='dropdown-item f_emp' id='1846/DEP_ID_35'>Апаликова Екатерина Викторовна</a>
+<a class='dropdown-item f_emp' id='6397/DEP_ID_55'>Афанасьева Татьяна Сергеевна</a>
+<a class='dropdown-item f_emp' id='2362/DEP_ID_54'>Баёв Александр Петрович</a>
+<a class='dropdown-item f_emp' id='7615/DEP_ID_56'>Балаева Екатерина Андреевна</a>
+<a class='dropdown-item f_emp' id='2945/DEP_ID_34'>Балясов Николай Валерьевич</a>
+<a class='dropdown-item f_emp' id='2673/DEP_ID_34'>Балясова Галина Николаевна</a>
+<a class='dropdown-item f_emp' id='1725/DEP_ID_55'>Бауман Михаил Львович</a>
+<a class='dropdown-item f_emp' id='4210/DEP_ID_92'>Бахарева Елена Павловна</a>
+<a class='dropdown-item f_emp' id='8702/DEP_ID_75'>Беляева Марианна Евгеньевна</a>
+<a class='dropdown-item f_emp' id='5507/DEP_ID_37'>Березина Надежда Николаевна</a>
+<a class='dropdown-item f_emp' id='6346/DEP_ID_43'>Беспалов Евгений Николаевич</a>
+<a class='dropdown-item f_emp' id='4219/DEP_ID_82'>Бесчастнова Светлана Юрьевна</a>
+<a class='dropdown-item f_emp' id='2036/DEP_ID_53'>Битенко Наталья Владимировна</a>
+<a class='dropdown-item f_emp' id='5933/DEP_ID_34'>Блошкин Виктор Николаевич</a>
+<a class='dropdown-item f_emp' id='3061/DEP_ID_63'>Болдина Анна Юрьевна</a>
+<a class='dropdown-item f_emp' id='7810/DEP_ID_55'>Болдина Вероника Игоревна</a>
+<a class='dropdown-item f_emp' id='1939/DEP_ID_34'>Борисова Любовь Ивановна</a>
+<a class='dropdown-item f_emp' id='8356/DEP_ID_3'>Бородина Оксана Владимировна</a>
+<a class='dropdown-item f_emp' id='6545/DEP_ID_54'>Борохов Александр Васильевич</a>
+<a class='dropdown-item f_emp' id='4131/DEP_ID_56'>Бояркеева Екатерина Сергеевна</a>
+<a class='dropdown-item f_emp' id='6605/DEP_ID_64'>Брилева Карина Сергеевна</a>
+<a class='dropdown-item f_emp' id='6571/DEP_ID_34'>Бричеева Наталья Викторовна</a>
+<a class='dropdown-item f_emp' id='2350/DEP_ID_50'>Бровко Екатерина Андреевна</a>
+<a class='dropdown-item f_emp' id='5242/DEP_ID_34'>Брылякова Елизавета Андреевна</a>
+<a class='dropdown-item f_emp' id='7379/DEP_ID_92'>Буданова Юлия Викторовна</a>
+<a class='dropdown-item f_emp' id='8488/DEP_ID_4'>Бузукин Максим Викторович</a>
+<a class='dropdown-item f_emp' id='3452/DEP_ID_61'>Бутрина Вероника Викторовна</a>
+<a class='dropdown-item f_emp' id='8214/DEP_ID_50'>Бутрина Ирина Леонидовна</a>
+<a class='dropdown-item f_emp' id='6063/DEP_ID_7'>Вагайцева Ольга Сергеевна</a>
+<a class='dropdown-item f_emp' id='4578/DEP_ID_35'>Варнавский Евгений Андреевич</a>
+<a class='dropdown-item f_emp' id='5570/DEP_ID_34'>Васильева Людмила Анатольевна</a>
+<a class='dropdown-item f_emp' id='5264/DEP_ID_93'>Ведерникова Анна Андреевна</a>
+<a class='dropdown-item f_emp' id='6166/DEP_ID_53'>Вейнгардт Ирина Александровна</a>
+<a class='dropdown-item f_emp' id='7499/DEP_ID_92'>Венидиктова Екатерина Андреевна</a>
+<a class='dropdown-item f_emp' id='2586/DEP_ID_3'>Вериго Ольга Ильинична</a>
+<a class='dropdown-item f_emp' id='3585/DEP_ID_34'>Ветошкина Надежда Константиновна</a>
+<a class='dropdown-item f_emp' id='1917/DEP_ID_93'>Вильтовская Юлия Юрьевна</a>
+<a class='dropdown-item f_emp' id='1932/DEP_ID_34'>Власенко Елена Викторовна</a>
+<a class='dropdown-item f_emp' id='3181/DEP_ID_61'>Вовкадун Ксения Андреевна</a>
+<a class='dropdown-item f_emp' id='5758/DEP_ID_6'>Вовкудан Иван Владимирович</a>
+<a class='dropdown-item f_emp' id='5509/DEP_ID_98'>Вознюк Александр Игоревич</a>
+<a class='dropdown-item f_emp' id='7232/DEP_ID_54'>Вощенко Игорь Анатольевич</a>
+<a class='dropdown-item f_emp' id='4153/DEP_ID_74'>Гинтофт Александр Сергеевич</a>
+<a class='dropdown-item f_emp' id='5117/DEP_ID_3'>Глазкова Оксана Владимировна</a>
+<a class='dropdown-item f_emp' id='1007/DEP_ID_3'>Глазычев Кирилл Александрович</a>
+<a class='dropdown-item f_emp' id='1947/DEP_ID_8'>Глущенко Роман Валерьевич</a>
+<a class='dropdown-item f_emp' id='4710/DEP_ID_95'>Головина Татьяна Сергеевна</a>
+<a class='dropdown-item f_emp' id='8246/DEP_ID_93'>Горбунова Лидия Владимировна</a>
+<a class='dropdown-item f_emp' id='3891/DEP_ID_34'>Гребенник Любовь Александровна</a>
+<a class='dropdown-item f_emp' id='3962/DEP_ID_93'>Григорьева Полина Дмитриевна</a>
+<a class='dropdown-item f_emp' id='7534/DEP_ID_34'>Гринёв Александр Анатольевич</a>
+<a class='dropdown-item f_emp' id='7533/DEP_ID_72'>Гришакина Валентина Петровна</a>
+<a class='dropdown-item f_emp' id='2921/DEP_ID_72'>Гусева Юлия Владимировна</a>
+<a class='dropdown-item f_emp' id='5611/DEP_ID_54'>Гусельников Евгений Сергеевич</a>
+<a class='dropdown-item f_emp' id='2724/DEP_ID_98'>Денисова Александра Владимировна</a>
+<a class='dropdown-item f_emp' id='6331/DEP_ID_57'>Дербенева Татьяна Алексеевна</a>
+<a class='dropdown-item f_emp' id='5357/DEP_ID_35'>Державина Александра Владимировна</a>
+<a class='dropdown-item f_emp' id='8666/DEP_ID_47'>Долгова Наталья Юрьевна</a>
+<a class='dropdown-item f_emp' id='5641/DEP_ID_55'>Домрачев Виктор Геннадьевич</a>
+<a class='dropdown-item f_emp' id='4576/DEP_ID_57'>Доценко Валерий Иванович</a>
+<a class='dropdown-item f_emp' id='3666/DEP_ID_55'>Дубов Евгений Васильевич</a>
+<a class='dropdown-item f_emp' id='1349/DEP_ID_61'>Егорова Анна Альбертовна</a>
+<a class='dropdown-item f_emp' id='8651/DEP_ID_51'>Епифанова Елена Алексеевна</a>
+<a class='dropdown-item f_emp' id='4527/DEP_ID_51'>Ерохина Светлана Шамшутдиновна</a>
+<a class='dropdown-item f_emp' id='8753/DEP_ID_34'>Жердева Оксана Владимировна</a>
+<a class='dropdown-item f_emp' id='2192/DEP_ID_41'>Жерядин Андрей Николаевич</a>
+<a class='dropdown-item f_emp' id='7498/DEP_ID_34'>Жигулина Марина Владимировна</a>
+<a class='dropdown-item f_emp' id='8456/DEP_ID_53'>Заболотская Марина Валентиновна</a>
+<a class='dropdown-item f_emp' id='3024/DEP_ID_55'>Заваруева Наталья Николаевна</a>
+<a class='dropdown-item f_emp' id='3999/DEP_ID_5'>Зайцева Юлия Васильевна</a>
+<a class='dropdown-item f_emp' id='3155/DEP_ID_45'>Захаренко Алла Равильевна</a>
+<a class='dropdown-item f_emp' id='8489/DEP_ID_71'>Захарчук Татьяна Александровна</a>
+<a class='dropdown-item f_emp' id='8515/DEP_ID_46'>Зверева Алина Аркадьевна</a>
+<a class='dropdown-item f_emp' id='2695/DEP_ID_95'>Звонкович Ксения Сергеевна</a>
+<a class='dropdown-item f_emp' id='8169/DEP_ID_92'>Золотухина Марина Викторовна</a>
+<a class='dropdown-item f_emp' id='8044/DEP_ID_45'>Зюбина Тамара Семеновна</a>
+<a class='dropdown-item f_emp' id='1430/DEP_ID_2'>Иванов Михаил Иванович</a>
+<a class='dropdown-item f_emp' id='8477/DEP_ID_51'>Иванова Людмила Анатольевна</a>
+<a class='dropdown-item f_emp' id='7759/DEP_ID_50'>Иванова Наталья Павловна</a>
+<a class='dropdown-item f_emp' id='7815/DEP_ID_2'>Игнатцев Антон Александрович</a>
+<a class='dropdown-item f_emp' id='1861/DEP_ID_2'>Игнатцева Евгения Николаевна</a>
+<a class='dropdown-item f_emp' id='4577/DEP_ID_45'>Изюмов Александр Олегович</a>
+<a class='dropdown-item f_emp' id='3325/DEP_ID_8'>Ипатова Наталья Ивановна</a>
+<a class='dropdown-item f_emp' id='3198/DEP_ID_51'>Кабацкая Оксана Николаевна</a>
+<a class='dropdown-item f_emp' id='4721/DEP_ID_62'>Калинин Дмитрий Сергеевич</a>
+<a class='dropdown-item f_emp' id='6069/DEP_ID_38'>Калинина Ирина Владимировна</a>
+<a class='dropdown-item f_emp' id='5225/DEP_ID_66'>Карнаухова Любовь Леонидовна</a>
+<a class='dropdown-item f_emp' id='3887/DEP_ID_63'>Карнушин Дмитрий Владимирович</a>
+<a class='dropdown-item f_emp' id='4179/DEP_ID_69'>Карякина Евгения Александровна</a>
+<a class='dropdown-item f_emp' id='1874/DEP_ID_34'>Кириллов Сергей Александрович</a>
+<a class='dropdown-item f_emp' id='5568/DEP_ID_41'>Киселев Павел Федорович</a>
+<a class='dropdown-item f_emp' id='7744/DEP_ID_43'>Киселева Елена Николаевна</a>
+<a class='dropdown-item f_emp' id='1148/DEP_ID_5'>Клепикова Елена Александровна</a>
+<a class='dropdown-item f_emp' id='5236/DEP_ID_8'>Клименко Яна Константиновна</a>
+<a class='dropdown-item f_emp' id='8129/DEP_ID_59'>Климкина Елена Константиновна</a>
+<a class='dropdown-item f_emp' id='8836/DEP_ID_34'>Кокорина Елена Николаевна</a>
+<a class='dropdown-item f_emp' id='7768/DEP_ID_61'>Колесник Алла Валентиновна</a>
+<a class='dropdown-item f_emp' id='8235/DEP_ID_45'>Колесникова Вера Михайловна</a>
+<a class='dropdown-item f_emp' id='2408/DEP_ID_81'>Коложвари Эдуард Сергеевич</a>
+<a class='dropdown-item f_emp' id='3997/DEP_ID_7'>Комлева Татьяна Михайловна</a>
+<a class='dropdown-item f_emp' id='8403/DEP_ID_93'>Кондратенко Светлана Владимировна</a>
+<a class='dropdown-item f_emp' id='4536/DEP_ID_6'>Кондратьев Сергей Александрович</a>
+<a class='dropdown-item f_emp' id='2417/DEP_ID_2'>Конева Татьяна Алексеевна</a>
+<a class='dropdown-item f_emp' id='5073/DEP_ID_34'>Конончук Виктория Александровна</a>
+<a class='dropdown-item f_emp' id='6212/DEP_ID_88'>Коратаева Юлия Николаевна</a>
+<a class='dropdown-item f_emp' id='5101/DEP_ID_61'>Коржова Алёна Михайловна</a>
+<a class='dropdown-item f_emp' id='1980/DEP_ID_61'>Королева Ирина Эдуардовна</a>
+<a class='dropdown-item f_emp' id='2886/DEP_ID_6'>Коротких Игорь Анатольевич</a>
+<a class='dropdown-item f_emp' id='4014/DEP_ID_52'>Коротков Дмитрий Владимирович</a>
+<a class='dropdown-item f_emp' id='8554/DEP_ID_83'>Короткова Татьяна Геннадьевна</a>
+<a class='dropdown-item f_emp' id='7477/DEP_ID_44'>Костман Олег Леонидович</a>
+<a class='dropdown-item f_emp' id='2100/DEP_ID_8'>Костромитина Татьяна Валентиновна</a>
+<a class='dropdown-item f_emp' id='6756/DEP_ID_53'>Кофанова Светлана Борисовна</a>
+<a class='dropdown-item f_emp' id='6761/DEP_ID_48'>Кохан Дарья Александровна</a>
+<a class='dropdown-item f_emp' id='4293/DEP_ID_41'>Кравцов Юрий Михайлович</a>
+<a class='dropdown-item f_emp' id='8277/DEP_ID_72'>Кравченко Татьяна Дмитриевна</a>
+<a class='dropdown-item f_emp' id='5302/DEP_ID_48'>Краснова Мария Валерьевна</a>
+<a class='dropdown-item f_emp' id='6726/DEP_ID_53'>Краснова Мария Игоревна</a>
+<a class='dropdown-item f_emp' id='8691/DEP_ID_93'>Красюк Елена Анатольевна</a>
+<a class='dropdown-item f_emp' id='1570/DEP_ID_64'>Криничная Елена Владимировна</a>
+<a class='dropdown-item f_emp' id='5387/DEP_ID_41'>Крылова Екатерина Викторовна</a>
+<a class='dropdown-item f_emp' id='3940/DEP_ID_75'>Кувшинова Ольга Леонидовна</a>
+<a class='dropdown-item f_emp' id='8541/DEP_ID_84'>Кудухов Олег Михайлович</a>
+<a class='dropdown-item f_emp' id='5146/DEP_ID_54'>Кузьменко Константин Владимирович</a>
+<a class='dropdown-item f_emp' id='6873/DEP_ID_88'>Кулешова Светлана Сергеевна</a>
+<a class='dropdown-item f_emp' id='6278/DEP_ID_51'>Куприенко Наталья Валерьевна</a>
+<a class='dropdown-item f_emp' id='4750/DEP_ID_6'>Курков Борис Юрьевич</a>
+<a class='dropdown-item f_emp' id='3964/DEP_ID_46'>Куткина Александра Леонидовна</a>
+<a class='dropdown-item f_emp' id='1278/DEP_ID_51'>Лепустина Елена Анатольевна</a>
+<a class='dropdown-item f_emp' id='8903/DEP_ID_61'>Лобис Елена Александровна</a>
+<a class='dropdown-item f_emp' id='2906/DEP_ID_64'>Ломоносов Александр Викторович</a>
+<a class='dropdown-item f_emp' id='1266/DEP_ID_34'>Лоренц Лариса Витальевна</a>
+<a class='dropdown-item f_emp' id='7507/DEP_ID_5'>Лосева Ольга Ивановна</a>
+<a class='dropdown-item f_emp' id='2814/DEP_ID_55'>Лужанская Наталья Сергеевна</a>
+<a class='dropdown-item f_emp' id='6628/DEP_ID_8'>Лялина Ирина Геннадьевна</a>
+<a class='dropdown-item f_emp' id='6357/DEP_ID_45'>Макаренкова Наталья Вячеславовна</a>
+<a class='dropdown-item f_emp' id='6300/DEP_ID_62'>Мамаева Жанна Геннадьевна</a>
+<a class='dropdown-item f_emp' id='6697/DEP_ID_49'>Манафова Наталья Викторовна</a>
+<a class='dropdown-item f_emp' id='4938/DEP_ID_5'>Матейс Елена Васильевна</a>
+<a class='dropdown-item f_emp' id='3716/DEP_ID_34'>Меняйлова Юлия Сергеевна</a>
+<a class='dropdown-item f_emp' id='1553/DEP_ID_1'>Митковская Елена Геннадьевна</a>
+<a class='dropdown-item f_emp' id='2258/DEP_ID_65'>Михеева Дина Игоревна</a>
+<a class='dropdown-item f_emp' id='5452/DEP_ID_74'>Моносзон Дмитрий Евгеньевич</a>
+<a class='dropdown-item f_emp' id='3386/DEP_ID_48'>Моринко Ирина Александровна</a>
+<a class='dropdown-item f_emp' id='8275/DEP_ID_8'>Мороз Юлия</a>
+<a class='dropdown-item f_emp' id='1670/DEP_ID_58'>Мочкина Елена Алексеевна</a>
+<a class='dropdown-item f_emp' id='3752/DEP_ID_36'>Муратова Оксана Михайловна</a>
+<a class='dropdown-item f_emp' id='3171/DEP_ID_93'>Мышелова Ольга Юрьевна</a>
+<a class='dropdown-item f_emp' id='1139/DEP_ID_88'>Мясникова Виктория Андреевна</a>
+<a class='dropdown-item f_emp' id='7329/DEP_ID_70'>Нагайцева Мария Евгеньевна</a>
+<a class='dropdown-item f_emp' id='1762/DEP_ID_7'>Неустроева Нигорахон Алимжановна</a>
+<a class='dropdown-item f_emp' id='5336/DEP_ID_63'>Нечкасов Евгений Алексеевич</a>
+<a class='dropdown-item f_emp' id='4284/DEP_ID_67'>Никитин Михаил Юрьевич</a>
+<a class='dropdown-item f_emp' id='6245/DEP_ID_8'>Николаева Елизавета Вячеславовна</a>
+<a class='dropdown-item f_emp' id='1240/DEP_ID_8'>Ничупиенко Оксана Евгеньевна</a>
+<a class='dropdown-item f_emp' id='3100/DEP_ID_55'>Новикова Екатерина Александровна</a>
+<a class='dropdown-item f_emp' id='1770/DEP_ID_75'>Носырева Юлия Игоревна</a>
+<a class='dropdown-item f_emp' id='4213/DEP_ID_74'>Обуховский Денис Александрович</a>
+<a class='dropdown-item f_emp' id='4532/DEP_ID_85'>Олешко Оксана Николаевна</a>
+<a class='dropdown-item f_emp' id='3197/DEP_ID_95'>Ольков Иван Сергеевич</a>
+<a class='dropdown-item f_emp' id='4437/DEP_ID_34'>Осинцева Татьяна Владимировна</a>
+<a class='dropdown-item f_emp' id='2638/DEP_ID_73'>Павлова Елена Владимировна</a>
+<a class='dropdown-item f_emp' id='3432/DEP_ID_39'>Панкратов Евгений Владимирович</a>
+<a class='dropdown-item f_emp' id='5638/DEP_ID_8'>Пахомова Анастасия Станиславовна</a>
+<a class='dropdown-item f_emp' id='3019/DEP_ID_41'>Передерей Игорь Владимирович</a>
+<a class='dropdown-item f_emp' id='5893/DEP_ID_34'>Петрова Наталья Владимировна</a>
+<a class='dropdown-item f_emp' id='6336/DEP_ID_94'>Печеркина Надежда Николаевна</a>
+<a class='dropdown-item f_emp' id='3495/DEP_ID_41'>Пиксаев Александр Семенович</a>
+<a class='dropdown-item f_emp' id='7360/DEP_ID_7'>Писаревская Евгения Игоревна</a>
+<a class='dropdown-item f_emp' id='8830/DEP_ID_51'>Писаренко Ольга Анатольевна</a>
+<a class='dropdown-item f_emp' id='4793/DEP_ID_64'>Плитус Виктория Валерьевна</a>
+<a class='dropdown-item f_emp' id='1623/DEP_ID_34'>Плотникова Раиса Михайловна</a>
+<a class='dropdown-item f_emp' id='1269/DEP_ID_88'>Подлесная Наталья Евгеньевна</a>
+<a class='dropdown-item f_emp' id='5927/DEP_ID_8'>Показанова Татьяна Дмитриевна</a>
+<a class='dropdown-item f_emp' id='6835/DEP_ID_55'>Полозкова Екатерина Павловна</a>
+<a class='dropdown-item f_emp' id='7330/DEP_ID_2'>Полозкова Татьяна Валентиновна</a>
+<a class='dropdown-item f_emp' id='5268/DEP_ID_8'>Полухин Никита Дмитриевич</a>
+<a class='dropdown-item f_emp' id='2452/DEP_ID_8'>Полухина Виктория Дмитриевна</a>
+<a class='dropdown-item f_emp' id='8531/DEP_ID_62'>Поникарева Галина Алексеевна</a>
+<a class='dropdown-item f_emp' id='6145/DEP_ID_56'>Портнова Ольга Александровна</a>
+<a class='dropdown-item f_emp' id='8173/DEP_ID_74'>Протас Нина Геннадьевна</a>
+<a class='dropdown-item f_emp' id='8178/DEP_ID_8'>Рагино Лидия Алексеевна</a>
+<a class='dropdown-item f_emp' id='5233/DEP_ID_51'>Райчук Александра Николаевна</a>
+<a class='dropdown-item f_emp' id='8467/DEP_ID_63'>Ракислова Татьяна Владимировна</a>
+<a class='dropdown-item f_emp' id='7621/DEP_ID_34'>Рахматулина Диляра Гарифовна</a>
+<a class='dropdown-item f_emp' id='3356/DEP_ID_56'>Рейнгардт Наталья Вячеславовна</a>
+<a class='dropdown-item f_emp' id='1274/DEP_ID_93'>Ротанова Анастасия Олеговна</a>
+<a class='dropdown-item f_emp' id='3651/DEP_ID_80'>Руднева Елена Владимировна</a>
+<a class='dropdown-item f_emp' id='1739/DEP_ID_43'>Рыбинцев Андрей Юрьевич</a>
+<a class='dropdown-item f_emp' id='6831/DEP_ID_93'>Рыженкова Галина Васильевна</a>
+<a class='dropdown-item f_emp' id='5288/DEP_ID_74'>Рымар Карина Александровна</a>
+<a class='dropdown-item f_emp' id='7087/DEP_ID_66'>Сазонова Дарья Витальевна</a>
+<a class='dropdown-item f_emp' id='5512/DEP_ID_68'>Салин Константин Олегович</a>
+<a class='dropdown-item f_emp' id='6162/DEP_ID_56'>Самотесова Наталья Андреевна</a>
+<a class='dropdown-item f_emp' id='4575/DEP_ID_34'>Сараева Ольга Викторовна</a>
+<a class='dropdown-item f_emp' id='1289/DEP_ID_61'>Саранцева Лариса Геннадьевна</a>
+<a class='dropdown-item f_emp' id='1494/DEP_ID_61'>Сафронова Зоя Александровна</a>
+<a class='dropdown-item f_emp' id='8000/DEP_ID_52'>Свиридович Юрий Ильич</a>
+<a class='dropdown-item f_emp' id='2690/DEP_ID_53'>Семенова Елена Александровна</a>
+<a class='dropdown-item f_emp' id='4500/DEP_ID_49'>Семченко Нина Николаевна</a>
+<a class='dropdown-item f_emp' id='7084/DEP_ID_57'>Сеньков Владимир Викторович</a>
+<a class='dropdown-item f_emp' id='2523/DEP_ID_8'>Сергеева Татьяна Сергеевна</a>
+<a class='dropdown-item f_emp' id='6467/DEP_ID_71'>Силкина Оксана Анатольевна</a>
+<a class='dropdown-item f_emp' id='5628/DEP_ID_8'>Симанова Ксения Сергеевна</a>
+<a class='dropdown-item f_emp' id='2108/DEP_ID_58'>Симонова Екатерина Юрьевна</a>
+<a class='dropdown-item f_emp' id='6904/DEP_ID_98'>Синянская Дарья Андреевна</a>
+<a class='dropdown-item f_emp' id='4413/DEP_ID_51'>Сиховская Марина Юрьевна</a>
+<a class='dropdown-item f_emp' id='6747/DEP_ID_51'>Скосырская Светлана Леонидовна</a>
+<a class='dropdown-item f_emp' id='7132/DEP_ID_64'>Смолякова Дарья Павловна</a>
+<a class='dropdown-item f_emp' id='7428/DEP_ID_55'>Соколов Алексей Леонидович</a>
+<a class='dropdown-item f_emp' id='2962/DEP_ID_98'>Соколова Наталья Николаевна</a>
+<a class='dropdown-item f_emp' id='2499/DEP_ID_7'>Соколова Ольга Викторовна</a>
+<a class='dropdown-item f_emp' id='8832/DEP_ID_56'>Солдаткина Ольга Игоревна</a>
+<a class='dropdown-item f_emp' id='3025/DEP_ID_92'>Солейникова Виктория Евгеньевна</a>
+<a class='dropdown-item f_emp' id='5372/DEP_ID_55'>Солодовников Алексей Сергеевич</a>
+<a class='dropdown-item f_emp' id='3384/DEP_ID_94'>Солодушкина Валентина Михайловна</a>
+<a class='dropdown-item f_emp' id='3611/DEP_ID_93'>Соломонова Елена Владимировна</a>
+<a class='dropdown-item f_emp' id='8404/DEP_ID_55'>Стараковская Марина Юрьевна</a>
+<a class='dropdown-item f_emp' id='1756/DEP_ID_79'>Старцева Лариса Анатольевна</a>
+<a class='dropdown-item f_emp' id='6560/DEP_ID_53'>Степанова Татьяна Викторовна</a>
+<a class='dropdown-item f_emp' id='3230/DEP_ID_7'>Степанченко Алена Андреевна</a>
+<a class='dropdown-item f_emp' id='3648/DEP_ID_2'>Стерич Артем Викторович</a>
+<a class='dropdown-item f_emp' id='7164/DEP_ID_8'>Стоцкий Олег Станиславович</a>
+<a class='dropdown-item f_emp' id='5537/DEP_ID_6'>Страшко Борис Григорьевич</a>
+<a class='dropdown-item f_emp' id='5481/DEP_ID_8'>Стрельников Александр Петрович</a>
+<a class='dropdown-item f_emp' id='3269/DEP_ID_55'>Суханов Андрей Леонидович</a>
+<a class='dropdown-item f_emp' id='3304/DEP_ID_74'>Сухоруков Константин Юрьевич</a>
+<a class='dropdown-item f_emp' id='7392/DEP_ID_2'>Сушков Виталий Викторович</a>
+<a class='dropdown-item f_emp' id='2286/DEP_ID_43'>Тайлакова Алёна Сергеевна</a>
+<a class='dropdown-item f_emp' id='1610/DEP_ID_62'>Тартакова Мария Андреевна</a>
+<a class='dropdown-item f_emp' id='2240/DEP_ID_34'>Тевосян Аревик Валентиновна</a>
+<a class='dropdown-item f_emp' id='7804/DEP_ID_72'>Темербаева Яна Николаевна</a>
+<a class='dropdown-item f_emp' id='7014/DEP_ID_88'>Терентьева Ирина Викторовна</a>
+<a class='dropdown-item f_emp' id='4686/DEP_ID_56'>Терехова Татьяна Сергеевна</a>
+<a class='dropdown-item f_emp' id='1072/DEP_ID_46'>Терешкина Наталия Евгеньевна</a>
+<a class='dropdown-item f_emp' id='1865/DEP_ID_53'>Тищенко Юлия Александровна</a>
+<a class='dropdown-item f_emp' id='1491/DEP_ID_59'>Топтыгина Анна Юрьевна</a>
+<a class='dropdown-item f_emp' id='8396/DEP_ID_44'>Торопова Юлия Александровна</a>
+<a class='dropdown-item f_emp' id='7536/DEP_ID_34'>Трефилова Татьяна Михайловна</a>
+<a class='dropdown-item f_emp' id='8553/DEP_ID_77'>Трощенко Сергей Вячеславович</a>
+<a class='dropdown-item f_emp' id='6058/DEP_ID_46'>Туманова Татьяна Александровна</a>
+<a class='dropdown-item f_emp' id='3669/DEP_ID_43'>Тюпина Марина Сергеевна</a>
+<a class='dropdown-item f_emp' id='7125/DEP_ID_8'>Тюрина Екатерина Леонидовна</a>
+<a class='dropdown-item f_emp' id='5899/DEP_ID_56'>Углянская Александра Валерьевна</a>
+<a class='dropdown-item f_emp' id='4676/DEP_ID_34'>Уздяева Марина Викторовна</a>
+<a class='dropdown-item f_emp' id='6751/DEP_ID_34'>Ульбрехт Людмила Александровна</a>
+<a class='dropdown-item f_emp' id='3085/DEP_ID_34'>Федорова Татьяна Викторовна</a>
+<a class='dropdown-item f_emp' id='5819/DEP_ID_34'>Филатова Елена Владимировна</a>
+<a class='dropdown-item f_emp' id='1015/DEP_ID_46'>Филатова Евгения Ивановна</a>
+<a class='dropdown-item f_emp' id='7472/DEP_ID_57'>Филичева Анастасия Валерьевна</a>
+<a class='dropdown-item f_emp' id='4989/DEP_ID_56'>Фокина Валентина Михайловна</a>
+<a class='dropdown-item f_emp' id='4283/DEP_ID_78'>Фольверт Александр Михайлович</a>
+<a class='dropdown-item f_emp' id='6201/DEP_ID_51'>Фролова Ольга Николаевна</a>
+<a class='dropdown-item f_emp' id='2966/DEP_ID_54'>Халитов Рафаиль Камильевич</a>
+<a class='dropdown-item f_emp' id='1147/DEP_ID_8'>Хаперских Анастасия Алексеевна</a>
+<a class='dropdown-item f_emp' id='5971/DEP_ID_5'>Харламова Дарья Юрьевна</a>
+<a class='dropdown-item f_emp' id='1394/DEP_ID_8'>Хачатрян Анна Арменовна</a>
+<a class='dropdown-item f_emp' id='8641/DEP_ID_95'>Холкина Татьяна Александровна</a>
+<a class='dropdown-item f_emp' id='6643/DEP_ID_60'>Цуриков Сергей Витальевич</a>
+<a class='dropdown-item f_emp' id='2103/DEP_ID_49'>Чанчикова Любовь Александровна</a>
+<a class='dropdown-item f_emp' id='4625/DEP_ID_88'>Чердынцева Маргарита Викторовна</a>
+<a class='dropdown-item f_emp' id='1407/DEP_ID_7'>Чернова Варвара Николаевна</a>
+<a class='dropdown-item f_emp' id='3434/DEP_ID_35'>Чернолуцкая Кристина Владимировна</a>
+<a class='dropdown-item f_emp' id='5374/DEP_ID_34'>Чистилина Светлана Геннадьевна</a>
+<a class='dropdown-item f_emp' id='5163/DEP_ID_54'>Чубаров Валерий Павлович</a>
+<a class='dropdown-item f_emp' id='6364/DEP_ID_58'>Шарпатая Наталья Анатольевна</a>
+<a class='dropdown-item f_emp' id='5976/DEP_ID_35'>Шахлин Валерий Александрович</a>
+<a class='dropdown-item f_emp' id='8751/DEP_ID_93'>Шахтарина Софья Дмитриевна</a>
+<a class='dropdown-item f_emp' id='5562/DEP_ID_65'>Швецова Наталья Сергеевна</a>
+<a class='dropdown-item f_emp' id='8696/DEP_ID_8'>Шеховцев Иван Сергеевич</a>
+<a class='dropdown-item f_emp' id='7550/DEP_ID_71'>Шигаева Ольга Анатольевна</a>
+<a class='dropdown-item f_emp' id='7441/DEP_ID_2'>Шлютова Елена Леонидовна</a>
+<a class='dropdown-item f_emp' id='3044/DEP_ID_44'>Шулепова Наталья Алексеевна</a>
+<a class='dropdown-item f_emp' id='7528/DEP_ID_56'>Шустова Анна Сергеевна</a>
+<a class='dropdown-item f_emp' id='5441/DEP_ID_34'>Щедрина Татьяна Александровна</a>
+<a class='dropdown-item f_emp' id='1547/DEP_ID_43'>Эсаулова Марина Алексеевна</a>
+<a class='dropdown-item f_emp' id='5332/DEP_ID_34'>Эскина Светлана Анатольевна</a>
+<a class='dropdown-item f_emp' id='3991/DEP_ID_35'>Юшина Кристина Станиславовна</a>
+<a class='dropdown-item f_emp' id='5950/DEP_ID_66'>Яковлев Роман Игоревич</a>
+<a class='dropdown-item f_emp' id='6504/DEP_ID_92'>Яковлева Яна Вячеславовна</a>
+</div>
+<!--<i id="resetFIO" class="far fa-times-circle" style="display: none; color: gray; padding-top: 6px; padding-left: 10px" title="Изменить ФИО" data-toggle="tooltip" data-placement="top"></i>-->
+        </h5>
+
+
+<div id="typeMark" style="display: none">
+
+<h5>Выберите режим оценивания: <span class="bolder" id="TYPE"></span></h5>
+<div class="f_type">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="MS" value="Самооценка" text="Самооценка">
+  <label class="form-check-label">Самооценка</label>
+  <i class="fas fa-question-circle small" title="Оценка собственных показателей эффективности работы." data-toggle="tooltip" data-placement="top"></i>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="MP" value="Оценка подчиненных">
+  <label class="form-check-label">Оценка подчиненных</label>
+  <i class="fas fa-question-circle small" title="Оценка показателей эффективности работы сотрудников, находящихся в подчинении." data-toggle="tooltip" data-placement="top"></i>
+</div>
+<br>
+</div>
+</div>
+
+<!--
+<div id="deps" style="display: none">
+
+<h5>Выберите подразделение, сотрудников которого Вы оцениваете: <span class="bolder" id="DEP"></span></h5>
+<div class="f_dep">
+<div class="btn-group">
+<button type="button" class="btn btn-alternate">П.А. Новгородов</button>
+<button type="button" class="btn btn-alternate dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</button>
+<div class="dropdown-menu">
+
+<a class='dropdown-item f_pr' id='DEP_ID_8'>Информационный центр</a>
+<a class='dropdown-item f_pr' id='DEP_ID_51'>Отдел бухгалтерского учета и отчетности</a>
+<a class='dropdown-item f_pr' id='DEP_ID_59'>Отдел международного сотрудничества</a>
+<a class='dropdown-item f_pr' id='DEP_ID_74'>Проектный офис</a>
+<a class='dropdown-item f_pr' id='DEP_ID_80'>Управление бухгалтерского учета и финансов</a>
+<a class='dropdown-item f_pr' id='DEP_ID_92'>Финансово-экономический отдел</a>
+
+</div>
+</div>
+
+<div class="btn-group">
+<button type="button" class="btn btn-alternate">В.Н. Ромашин</button>
+<button type="button" class="btn btn-alternate dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</button>
+<div class="dropdown-menu">
+<a class='dropdown-item f_pr' id='DEP_ID_3'>Бэк-офис</a>
+<a class='dropdown-item f_pr' id='DEP_ID_5'>Бюро расписаний</a>
+<a class='dropdown-item f_pr' id='DEP_ID_7'>Информационно-библиографический центр</a>
+<a class='dropdown-item f_pr' id='DEP_ID_46'>Методический отдел</a>
+<a class='dropdown-item f_pr' id='DEP_ID_47'>Научная библиотека</a>
+<a class='dropdown-item f_pr' id='DEP_ID_48'>Научно-организационный отдел</a>
+<a class='dropdown-item f_pr' id='DEP_ID_58'>Отдел лицензирования и аккредитации</a>
+<a class='dropdown-item f_pr' id='DEP_ID_61'>Отдел обслуживания</a>
+<a class='dropdown-item f_pr' id='DEP_ID_63'>Отдел оперативной полиграфии</a>
+<a class='dropdown-item f_pr' id='DEP_ID_69'>Отдел развития и продвижения дополнительного образования</a>
+<a class='dropdown-item f_pr' id='DEP_ID_70'>Отдел развития электронной информационной образовательной среды</a>
+<a class='dropdown-item f_pr' id='DEP_ID_72'>Отдел формирования информационно-библиотечных ресурсов</a>
+<a class='dropdown-item f_pr' id='DEP_ID_73'>Отдел электронного обучения</a>
+<a class='dropdown-item f_pr' id='DEP_ID_75'>Редакционно-издательский отдел</a>
+<a class='dropdown-item f_pr' id='DEP_ID_79'>Управление "Ресурсный центр"</a>
+<a class='dropdown-item f_pr' id='DEP_ID_81'>Управление дополнительного образования</a>
+<a class='dropdown-item f_pr' id='DEP_ID_88'>Учебный отдел</a>
+<a class='dropdown-item f_pr' id='DEP_ID_93'>Фронт-офис</a>
+</div>
+</div>
+
+<div class="btn-group">
+<button type="button" class="btn btn-alternate">В.С. Мельников</button>
+<button type="button" class="btn btn-alternate dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</button>
+<div class="dropdown-menu">
+
+<a class='dropdown-item f_pr' id='DEP_ID_35'>Контрактная служба</a>
+<a class='dropdown-item f_pr' id='DEP_ID_50'>Отдел анализа и обработки информации</a>
+<a class='dropdown-item f_pr' id='DEP_ID_53'>Отдел делопроизводства</a>
+<a class='dropdown-item f_pr' id='DEP_ID_55'>Отдел информатизации</a>
+<a class='dropdown-item f_pr' id='DEP_ID_56'>Отдел кадров</a>
+<a class='dropdown-item f_pr' id='DEP_ID_98'>Юридический отдел</a>
+
+</div>
+</div>
+
+<div class="btn-group">
+<button type="button" class="btn btn-alternate">А.А. Макарцев</button>
+<button type="button" class="btn btn-alternate dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</button>
+<div class="dropdown-menu">
+<a class='dropdown-item f_pr' id='DEP_ID_44'>Медиа-центр</a>
+<a class='dropdown-item f_pr' id='DEP_ID_60'>Отдел научных исследований и разработок</a>
+<a class='dropdown-item f_pr' id='DEP_ID_62'>Отдел общественных связей</a>
+<a class='dropdown-item f_pr' id='DEP_ID_64'>Отдел организации приемной кампании</a>
+</div>
+</div>
+
+
+<div class="btn-group">
+<button type="button" class="btn btn-alternate">Е.В. Неверова</button>
+<button type="button" class="btn btn-alternate dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</button>
+<div class="dropdown-menu">
+
+<a class='dropdown-item f_pr' id='DEP_ID_2'>Бассейн НГУЭУ "Водолей"</a>
+<a class='dropdown-item f_pr' id='DEP_ID_34'>Комбинат питания</a>
+<a class='dropdown-item f_pr' id='DEP_ID_45'>Медицинский пункт</a>
+<a class='dropdown-item f_pr' id='DEP_ID_49'>Общежитие</a>
+<a class='dropdown-item f_pr' id='DEP_ID_65'>Отдел по воспитательной работе и социальной адаптации</a>
+<a class='dropdown-item f_pr' id='DEP_ID_66'>Отдел по организации внеучебной работы</a>
+<a class='dropdown-item f_pr' id='DEP_ID_71'>Отдел социального обеспечения</a>
+<a class='dropdown-item f_pr' id='DEP_ID_78'>Спортивный клуб</a>
+<a class='dropdown-item f_pr' id='DEP_ID_82'>Управление молодежной политики</a>
+<a class='dropdown-item f_pr' id='DEP_ID_83'>Управление социальной политики</a>
+<a class='dropdown-item f_pr' id='DEP_ID_95'>Центр культуры и творчества</a>
+
+</div>
+</div>
+<div class="btn-group">
+<button type="button" class="btn btn-alternate">О.А. Шмаков</button>
+<button type="button" class="btn btn-alternate dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+</button>
+<div class="dropdown-menu">
+
+<a class='dropdown-item f_pr' id='DEP_ID_1'>База отдыха "Олимп"</a>
+<a class='dropdown-item f_pr' id='DEP_ID_4'>Бюро пропусков</a>
+<a class='dropdown-item f_pr' id='DEP_ID_6'>Гараж</a>
+<a class='dropdown-item f_pr' id='DEP_ID_36'>Корпус №1 (административный)</a>
+<a class='dropdown-item f_pr' id='DEP_ID_37'>Корпус №2 (учебный)</a>
+<a class='dropdown-item f_pr' id='DEP_ID_38'>Корпус №3 (учебно-лабораторный)</a>
+<a class='dropdown-item f_pr' id='DEP_ID_39'>Корпус №5 (учебно-лабораторный)</a>
+<a class='dropdown-item f_pr' id='DEP_ID_41'>Лаборатория программно-технической поддержки</a>
+<a class='dropdown-item f_pr' id='DEP_ID_43'>Лаборатория сопровождения компьютерных классов</a>
+<a class='dropdown-item f_pr' id='DEP_ID_52'>Отдел гражданской обороны</a>
+<a class='dropdown-item f_pr' id='DEP_ID_54'>Отдел инженерных коммуникаций</a>
+<a class='dropdown-item f_pr' id='DEP_ID_57'>Отдел капитального строительства и текущего ремонта</a>
+<a class='dropdown-item f_pr' id='DEP_ID_67'>Отдел по управлению имущественным комплексом</a>
+<a class='dropdown-item f_pr' id='DEP_ID_68'>Отдел программно-технической поддержки</a>
+<a class='dropdown-item f_pr' id='DEP_ID_77'>Служба охраны труда и пожарной безопасности</a>
+<a class='dropdown-item f_pr' id='DEP_ID_84'>Управление строительства и инженерных коммуникаций</a>
+<a class='dropdown-item f_pr' id='DEP_ID_85'>Управление эксплуатации</a>
+<a class='dropdown-item f_pr' id='DEP_ID_94'>Хозяйственный отдел</a>
+
+</div>
+</div>
+
+<br><br>
+</div>
+</div>
+-->
+
+
+<br>
+<button class="btn-wide btn btn-success" id="to_mark" style="display: none">Перейти к оценке!</button>
+
+</div>
+
+<div class="row" id="ttable">
+<div class="col-md-12">
+
+<div class="table-responsive">
+<table class="align-middle mb-0 table" id="contentTable">
+<thead>
+<tr>
+<th class="text-center" style="width: 20%">Подразделение</th>
+<th class="text-center" style="width: 35%">Сотрудник</th>
+<th class="text-center" style="width: 15%">Качество</th>
+<th class="text-center" style="width: 15%">Объем</th>
+<th class="text-center" style="width: 15%">Сроки</th>
+</tr>
+</thead>
+<tbody>
+
+</tbody>
+</table>
+</div>
+<div class="d-block text-center card-footer">
+<button class="btn-wide btn btn-lg btn-alternate" id="save">Сохранить результаты</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<style>
+    
+tr.me{
+    background-color: aliceblue;
+}
+.table th, .table td {
+    padding: 5px;    
+}
+.bolder{
+    font-weight: bold;
+}
+
+tr{
+    padding: 0px;
+}
+
+i.fas{
+    font-size: 2.3em;
+    padding: 3px;
+    color: lightgray;
+}
+
+i.small{
+    font-size: 1.3em;
+    color: black;
+    padding-left: 5px;
+}
+
+i.fa-grin-hearts:hover{
+    color: green
+}
+
+i.fa-grin-alt:hover{
+    color: limegreen;
+}
+
+i.fa-meh:hover{
+    color: coral;
+}
+
+i.fa-frown-open:hover{
+    color: red;
+}
+
+    
+</style>
+</body>
+</html>

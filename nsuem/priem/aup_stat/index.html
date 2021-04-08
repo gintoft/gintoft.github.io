@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Результаты оценки</title>
+    <link href="../req/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+    <script type="text/javascript" src="airtable.browser.js"></script>
+    <script type="text/javascript" src="ec_aup.js"></script>
+
+<link href="./../req/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="app-container app-theme-whsite body-tabs-shadow fixed-header">
+<div class="app-header header-shadow bg-midnight-bloom header-text-light">
+<div style="margin-left: 30px; color: azure; font-size: 20px">Результаты за февраль</div>
+<div class="app-header__menu">
+<span>
+<button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+<span class="btn-icon-wrapper">
+<i class="fa fa-ellipsis-v fa-w-6"></i>
+</span>
+</button>
+</span>
+</div>    <div class="app-header__content">
+<div class="app-header-left">
+
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+<div class="row" id="ttable">
+
+<table class="align-middle mb-0 table" id="contentTable">
+<thead style="text-align: center">
+
+	<th rowspan="2" style="width: 10%">Подразделение</th>
+	<th rowspan="2" style="width: 10%">Сотрудник</th>
+	
+	<th colspan="3">Объем</th>
+	<th colspan="3">Сроки</th>
+	<th colspan="3">Качество</th>
+	<th colspan="2">Общая оценка</th>
+	<th colspan="3">Расхождение</th>
+<tr>
+
+    <th><i class="fas fa-user-alt" data-toggle="tooltip" data-placement="top" title="Самооценка сотрудника"></i></th>
+    <th><i class="fas fa-user-tie" data-toggle="tooltip" data-placement="top" title="Оценка руководителя"></i></th>
+    <th><i class="fas fa-chart-bar" data-toggle="tooltip" data-placement="top" title="Сравнение оценок"></i></th>
+    
+    <th><i class="fas fa-user-alt" data-toggle="tooltip" data-placement="top" title="Самооценка сотрудника"></i></th>
+    <th><i class="fas fa-user-tie" data-toggle="tooltip" data-placement="top" title="Оценка руководителя"></i></th>
+    <th><i class="fas fa-chart-bar" data-toggle="tooltip" data-placement="top" title="Сравнение оценок"></i></th>
+    
+    <th><i class="fas fa-user-alt" data-toggle="tooltip" data-placement="top" title="Самооценка сотрудника"></i></th>
+    <th><i class="fas fa-user-tie" data-toggle="tooltip" data-placement="top" title="Оценка руководителя"></i></th>
+    <th><i class="fas fa-chart-bar" data-toggle="tooltip" data-placement="top" title="Сравнение оценок"></i></th>
+    
+    <th><i class="fas fa-user-alt" data-toggle="tooltip" data-placement="top" title="Самооценка сотрудника"></i></th>
+    <th><i class="fas fa-user-tie" data-toggle="tooltip" data-placement="top" title="Оценка руководителя"></i></th>
+    
+    <th  style="width: 8%">Разница<br>в баллах</th>
+    <th  style="width: 8%">Со стороны<br>сотрудника</th>
+    <th  style="width: 8%">Со стороны<br>руководителя</th>
+    
+</tr>
+</thead>
+</table>
+
+
+</div>
+</div>
+<style>
+
+/*
+.table{
+    border: 1px solid gray;
+}
+*/
+
+.table thead th {
+    padding: 3px;
+    vertical-align: middle;
+}
+    
+td.cellDep{
+
+/*    font-size: .9em;*/
+    width: 10%;
+    text-align: left;
+    vertical-align: middle;
+
+}
+    
+td.cellEmployer{
+    
+    width: 10%;
+    font-size: 1em;
+    text-align: left;
+    vertical-align: middle;
+
+}
+    
+td {
+vertical-align: middle;
+text-align: center;
+font-weight: bold;
+
+}
+
+.bolder{
+    font-weight: bold;
+}
+
+tr{
+    padding: 0px;
+    vertical-align: middle;
+}
+
+td.digitMark{
+    font-size: 1.7em;
+    width: 5%;
+}
+    
+td.TextMark{
+    font-size: 1.7em;
+    width: 8%;
+}
+
+i.fa-user-alt{
+    font-size: 1.8em;
+}
+    
+i.fa-user-tie{
+    font-size: 1.8em;
+}
+    
+i.fa-chart-bar{
+    font-size: 1.8em;
+}
+    
+/*
+i{
+    font-size: 1.7em;
+    padding: 3px;
+    color: lightgray;
+}
+*/
+
+i.fa-grin-hearts{
+    color: green
+}
+
+i.fa-grin-alt{
+    color: limegreen;
+}
+
+i.fa-meh{
+    color: coral;
+}
+
+i.fa-frown-open{
+    color: red;
+}
+
+    
+</style>
+</body>
+</html>
