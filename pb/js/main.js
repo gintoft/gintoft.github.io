@@ -9,7 +9,6 @@ $(function () {
 
         findClass = ""
         findClass += this.id;
-        console.log(findClass)
         $('.chairRow').hide();
         $('.' + findClass).show();
 
@@ -31,13 +30,13 @@ function drawLine(){
         console.log(ds)
         
         for(var i = 1; i < count; i++){
-
+            
             html = "<div class='chairRow row " + ds[i].gsx$каф.$t + "'>"
             html += '<div class="col-sm-4">'
             html += "<h5>"
 //            html += '<span class="badge badge-pill badge-info">' + ds[i].gsx$каф.$t + '</span>'
             html += '<span class="badge badge badge-light">' + ds[i].gsx$сотрудник.$t + '</span>'
-//            html += '<span class="badge badge-pill badge-success">' + ds[i].gsx$общийитог.$t + '</span>'
+            html += '<span class="badge badge-pill badge-success">' + ds[i].gsx$общийитог.$t + ' ₽</span>'
             html += '</h5>'
             html += '</div>'
             

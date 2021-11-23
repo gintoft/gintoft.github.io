@@ -1,12 +1,6 @@
 $(function () {
 
-var cost = {
-
-    hot: 100.10,
-    cold: 17.16,
-    sliv: 13.17
-
-}
+var cost = {hot: 100.10, cold: 17.16, sliv: 13.17}
 
 var total = {
 
@@ -18,8 +12,6 @@ var total = {
 
 var hot = 0;
 var cold = 0;
-
-
 
 document.querySelector("#hot_more").onclick = function (e) {
 

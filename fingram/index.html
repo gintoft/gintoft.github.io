@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Финансовая грамотность</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/npm.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/lab3.js"></script>
+</head>
+
+<iframe width="100%" height="55px" src="header.html" frameborder="0"></iframe>
+
+<body>
+
+<div class="container">      
+
+<div id="questions" class="container">
+<!--<h3>Анкетирование по финансовой грамотности</h3>-->
+ 
+
+<h3>Вопрос 1: Есть ли у вас долгосрочный финансовый план (цели, имеющие четкое определение: в какой срок будут реализованы и сколько это будет стоить)?</h3>
+    <input type="radio" name="v1" id="a1_1"> 1.1.	Планирую до 6 месяцев <br>
+    <input type="radio" name="v1" id="a1_2"> 1.2.	Планирую на 1-3 года<br>
+    <input type="radio" name="v1" id="a1_3"> 1.3.	Есть на срок более 5 лет <br>
+<br>
+
+<h3>Вопрос 2: Пользуетесь ли вы льготами и бонусами от государства?</h3>
+    <input type="radio" name="v2" id="a2_1"> 2.1 Ничего о них не знаю<br>
+    <input type="radio" name="v2" id="a2_2"> 2.2. знаю какими мерами соц. поддержки могу воспользоваться, получаю имущественные и социальные налоговые вычеты<br>
+    <input type="radio" name="v2" id="a2_3"> 2.3. пункт 2.2.+инвестиционные налоговые вычеты <br>
+<br>
+
+<h3>Вопрос 3: Что из нижеперечисленного дает возможность получить  дополнительный доход от повседневных расходов? </h3>
+    <input type="radio" name="v3" id="a3_1"> 3.1	Использование карт с начислением % на остаток, банковский кэшбэк, получение налоговых вычетов от государства за лечение, образовательные услуги и др.<br>
+    <input type="radio" name="v3" id="a3_2"> 3.2	Расчеты наличными деньгами, использование банковских карт без программ лояльности<br>
+    <input type="radio" name="v3" id="a3_3"> Ничего из перечисленного <br>
+<br>
+
+<h3>Вопрос 4: В чем преимущество инвестирования посредством индивидуального инвестиционного счета в сравнении с брокерским счетом?</h3>
+    <input type="radio" name="v4" id="a4_1"> 4.1	Отсутствие комиссий<br>
+    <input type="radio" name="v4" id="a4_2"> 4.2	Покупка ценных бумаг по фиксированной цене<br>
+    <input type="radio" name="v4" id="a4_3"> 4.3	Налоговые льготы<br>
+<br>
+
+<h3>Вопрос 5: Как долго вы сможете прожить, если не будете работать?</h3>
+    <input type="radio" name="v5" id="a5_1"> 5.1	Не смогу, запасов денег нет<br>
+    <input type="radio" name="v5" id="a5_2"> 5.2	Резерва хватит на 1-3 месяца <br>
+    <input type="radio" name="v5" id="a5_3"> 5.3	Проживу более полугода <br>
+<br>
+
+<h3>Вопрос 6: Удается ли вам сберегать часть своего дохода?</h3>
+    <input type="radio" name="v6" id="a6_1"> 6.1	Нет <br>
+    <input type="radio" name="v6" id="a6_2"> 6.2	Регулярно откладываю 10% от дохода <br>
+    <input type="radio" name="v6" id="a6_3"> 6.3	Регулярно откладываю от 10-25% дохода<br>
+<br>
+
+<h3>Вопрос 7: Ваши деньги работают на Вас?</h3>
+    <input type="radio" name="v7" id="a7_1"> 7.1	Живу от зарплаты до зарплаты<br>
+    <input type="radio" name="v7" id="a7_2"> 7.2	Пользуюсь банковским вкладом<br>
+    <input type="radio" name="v7" id="a7_3"> 7.3	Инвестирую<br>
+<br>
+
+<h3>Вопрос 8: Есть ли финансовая защита кормильцев семьи на случай потери трудоспособности?</h3>
+    <input type="radio" name="v8" id="a8_1"> 8.1	Полисов страхования жизни и здоровья нет<br>
+    <input type="radio" name="v8" id="a8_2"> 8.2	Есть полис страхования жизни и здоровья, открыт при получении ипотеки<br>
+    <input type="radio" name="v8" id="a8_3"> 8.3	Да, есть полис, страховая сумма которого покрывает расходы на два года (и более) жизни семьи<br>
+<br>
+
+<h3>Вопрос 9: Какой у вас размер кредитной нагрузки? Плата по всем долгам (потребительские кредиты, ипотека, кредитные карты и др)</h3>
+    <input type="radio" name="v9" id="a9_1"> 9.1	У меня нет кредитов<br>
+    <input type="radio" name="v9" id="a9_2"> 9.2	До 20% от дохода  <br>
+    <input type="radio" name="v9" id="a9_3"> 9.3	20-40% <br>
+    <input type="radio" name="v9" id="a9_4"> 9.4	Больше 40%<br>
+<br>
+
+<h3>Вопрос 10: Позволяет ли ваш ежемесячный пассивный доход покрыть ежемесячные расходы?</h3>
+    <input type="radio" name="v10" id="a10_1"> 10.1	Пассивного дохода нет, расходы покрываются за счет активного дохода (зарплата, бонусы, премии) <br>
+    <input type="radio" name="v10" id="a10_2"> 10.2	Пассивный доход покрывает до 30 % расходов <br>
+    <input type="radio" name="v10" id="a10_3"> 10.3	Пассивный доход покрывает до 50 % расходов и более<br>
+<br>
+
+
+<div class="btn btn-primary" id="calculate">Получить результаты!</div>
+<br><br>
+</div>
+
+
+<div class="alert" id="points" style="display: none;">
+<br>
+<br>
+</div>
+
+
+<!--<div id="nextQ">-->
+<div id="nextQ" style="display: none;">
+<br>
+
+<h2>Просим вас ответить на несколько вопросов:</h2>
+
+    <h4>1.Довольны ли Вы уровнем своего финансового благополучия?</h4>
+    <textarea rows="3" cols="100%" name="message"></textarea><br>
+
+    <h4>2.	Что Вы ранее предпринимали для его повышения? Возможно проходили обучающие курсы-какие, были ли они полезны?</h4>
+    <textarea rows="3" cols="100" name="message"></textarea><br>
+
+    <h4>3.	Чего не хватает для роста финансового благополучия (обучающие мероприятия, наставничество и т.д.)?</h4>
+    <textarea rows="3" cols="100" name="message"></textarea><br>
+<br>
+<div class="btn btn-success btn-lg" id="exit">Завершить тестирование</div>
+</div>
+
+<div id="exit" style="display: none">
+    <h2>Спасибо за участие в тестировании!</h2>
+</div>
+
+<br>
+<br>
+<br>
+
+<style>
+    i.fa {        
+        width: 20px;
+        font-size: 110%;
+        text-align: center;
+    }
+</style>
+
+</div>
+</body>
+</html>
