@@ -28,7 +28,7 @@ function getCountRecords(table, expert){
     var neprov = 0   
     
     var Airtable = require('airtable');
-    var base = new Airtable({apiKey: 'keyQgI4FGSD2KRlbJ'}).base('appxQcWlqbS1MIkQo');
+    var base = new Airtable({apiKey: ''}).base('');
 
     base(table).select({view: "Отчеты", filterByFormula: '{Результат проверки} = BLANK()'}).eachPage(function page(records, fetchNextPage) {
         records.forEach(function(record) {

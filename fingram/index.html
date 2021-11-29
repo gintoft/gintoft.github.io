@@ -7,9 +7,10 @@
     <title>Финансовая грамотность</title>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/npm.js"></script>
+<!--    <script src="js/npm.js"></script>-->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/air.js"></script>
     <script src="js/lab3.js"></script>
 </head>
 
@@ -21,7 +22,28 @@
 
 <div id="questions" class="container">
 <!--<h3>Анкетирование по финансовой грамотности</h3>-->
- 
+
+<h3>Укажите Ваш пол</h3>
+    <input type="radio" name="sex" id="g_man"> Мужской<br>
+    <input type="radio" name="sex" id="g_woman"> Женский<br>
+<br>
+
+<h3>Укажите Ваш возраст</h3>
+    <input type="radio" name="age" id="age_14m"> До 14 лет<br>
+    <input type="radio" name="age" id="age_1418"> 14-18 лет<br>
+    <input type="radio" name="age" id="age_1924"> 19-24 года<br>
+    <input type="radio" name="age" id="age_2534"> 25-34 года<br>
+    <input type="radio" name="age" id="age_3544"> 35-44 года<br>
+    <input type="radio" name="age" id="age_4555"> 45-54 года<br>
+    <input type="radio" name="age" id="age_55p"> 55 и старше<br>
+<br>
+
+<h3>Выберите сферу деятельности</h3>
+    <input type="radio" name="sphere" id="sphere_usl"> Сфера услуг<br>
+    <input type="radio" name="sphere" id="sphere_proisv"> Производство<br>
+    <input type="radio" name="sphere" id="sphere_torg"> Торговля<br>
+    <input type="radio" name="sphere" id="sphere_other"> Другое<br>
+<br>
 
 <h3>Вопрос 1: Есть ли у вас долгосрочный финансовый план (цели, имеющие четкое определение: в какой срок будут реализованы и сколько это будет стоить)?</h3>
     <input type="radio" name="v1" id="a1_1"> 1.1.	Планирую до 6 месяцев <br>
@@ -38,7 +60,7 @@
 <h3>Вопрос 3: Что из нижеперечисленного дает возможность получить  дополнительный доход от повседневных расходов? </h3>
     <input type="radio" name="v3" id="a3_1"> 3.1	Использование карт с начислением % на остаток, банковский кэшбэк, получение налоговых вычетов от государства за лечение, образовательные услуги и др.<br>
     <input type="radio" name="v3" id="a3_2"> 3.2	Расчеты наличными деньгами, использование банковских карт без программ лояльности<br>
-    <input type="radio" name="v3" id="a3_3"> Ничего из перечисленного <br>
+    <input type="radio" name="v3" id="a3_3"> 3.3	Ничего из перечисленного <br>
 <br>
 
 <h3>Вопрос 4: В чем преимущество инвестирования посредством индивидуального инвестиционного счета в сравнении с брокерским счетом?</h3>
@@ -84,8 +106,26 @@
     <input type="radio" name="v10" id="a10_3"> 10.3	Пассивный доход покрывает до 50 % расходов и более<br>
 <br>
 
+<div id="nextQ">
 
-<div class="btn btn-primary" id="calculate">Получить результаты!</div>
+
+<h2>Просим вас ответить еще на несколько вопросов</h2>
+
+    <h4>1. Довольны ли Вы уровнем своего финансового благополучия?</h4>
+    <textarea rows="3" id='text1' cols="100%" name="message"></textarea><br>
+
+    <h4>2. Что Вы ранее предпринимали для его повышения? Возможно проходили обучающие курсы-какие, были ли они полезны?</h4>
+    <textarea rows="3" id='text2' cols="100" name="message"></textarea><br>
+
+    <h4>3. Чего не хватает для роста финансового благополучия (обучающие мероприятия, наставничество и т.д.)?</h4>
+    <textarea rows="3" id='text3' cols="100" name="message"></textarea><br>
+<br>
+
+<!--<div class="btn btn-success btn-lg" id="exit">Завершить тестирование</div>-->
+</div>
+
+
+<div class="btn btn-success btn-lg" id="calculate">Получить результаты!</div>
 <br><br>
 </div>
 
@@ -93,25 +133,6 @@
 <div class="alert" id="points" style="display: none;">
 <br>
 <br>
-</div>
-
-
-<!--<div id="nextQ">-->
-<div id="nextQ" style="display: none;">
-<br>
-
-<h2>Просим вас ответить на несколько вопросов:</h2>
-
-    <h4>1.Довольны ли Вы уровнем своего финансового благополучия?</h4>
-    <textarea rows="3" cols="100%" name="message"></textarea><br>
-
-    <h4>2.	Что Вы ранее предпринимали для его повышения? Возможно проходили обучающие курсы-какие, были ли они полезны?</h4>
-    <textarea rows="3" cols="100" name="message"></textarea><br>
-
-    <h4>3.	Чего не хватает для роста финансового благополучия (обучающие мероприятия, наставничество и т.д.)?</h4>
-    <textarea rows="3" cols="100" name="message"></textarea><br>
-<br>
-<div class="btn btn-success btn-lg" id="exit">Завершить тестирование</div>
 </div>
 
 <div id="exit" style="display: none">
